@@ -1,0 +1,31 @@
+.rating {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.experience__rating {
+}
+.satisfied__rating {
+}
+.success__rating {
+}
+
+.title__rating {
+}
+.digit {
+}
+.digits h1 {
+  font-size: 4em;
+}
+.Award__rating {
+}
+.title__rating {
+  margin-top: -20%;
+}
+.title__rating p {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.546);
+}
