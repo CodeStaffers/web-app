@@ -1,48 +1,54 @@
 import React from "react";
-import "./footer.css";
 
-function Footer() {
+import "./footer.css";
+function Footer({ page }) {
   return (
     <>
-      <div className="footer">
+      <div
+        className="footer"
+        style={{ backgroundColor: page.footer && page.footer.bgColor }}
+      >
         <div className="left__footer">
           <div className="footer__left__card">
             <div className="footer__left__card__title">
-              <h1>We're here to help.</h1>
+              <h1>{page.footer && page.footer.left.title}.</h1>
             </div>
             <div className="left__footer__card__desc">
-              <p>we're here to help you,refine. design and build.</p>
+              <p>{page.footer && page.footer.left.subTitle}</p>
             </div>
             <div className="left__footer__image">
-              <img
-                src="https://cdn.pixabay.com/photo/2015/12/04/07/55/logodesign-1076200__340.png"
-                alt=""
-              />
+              <img src={page.footer && page.footer.left.image} alt="" />
             </div>
           </div>
         </div>
         <div className="right__footer">
-          <div className="footerCard">
-            <div className="visual__design">
-              <div className="visual__image">
-                <img src="" alt="" />
-              </div>
+          <div className="right__footerCard">
+            {page.footer &&
+              page.footer.right.map((item, index) => {
+                return (
+                  <div
+                    className="right__design"
+                    key={index}
+                    style={{ backgroundColor: item.bgColor, color: item.color }}
+                  >
+                    <div className="right__image">
+                      <img src={item.logo} alt="" />
+                    </div>
 
-              <div className="viusal__title">
-                <h1>Visual Design</h1>
-              </div>
+                    <div className="right__title">
+                      <h1>{item.title}</h1>
+                    </div>
 
-              <div className="visual__desc">
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-                  doloribus!
-                </p>
-              </div>
+                    <div className="right__desc">
+                      <p>{item.subTitle && item.subTitle}</p>
+                    </div>
 
-              <div className="visual__arrow">
-                <span>➡</span>
-              </div>
-            </div>
+                    <div className="right__arrow">
+                      <span>{item.icon} </span>
+                    </div>
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>

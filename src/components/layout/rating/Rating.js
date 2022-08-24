@@ -1,20 +1,25 @@
 import React from "react";
 import "./rating.css";
 
-function Rating() {
+function Rating({ page }) {
   return (
     <>
       <div className="rating">
-        <div className="experience__rating">
-          <div className="digits">
-            <h1>10+</h1>
-          </div>
-          <div className="title__rating">
-            <p>Years of experience</p>
-          </div>
-        </div>
+        {page.rating &&
+          page.rating.map((rat, index) => {
+            return (
+              <div key={index} className="experience__rating">
+                <div className="digits">
+                  <h1>{rat.ratSelf}+</h1>
+                </div>
+                <div className="title__rating">
+                  <p>{rat.text}</p>
+                </div>
+              </div>
+            );
+          })}
 
-        <div className="satisfied__rating">
+        {/* <div className="satisfied__rating">
           <div className="digits">
             <h1>80+</h1>
           </div>
@@ -22,6 +27,7 @@ function Rating() {
             <p>Satisfied Clients</p>
           </div>
         </div>
+
 
         <div className="success__rating">
           <div className="digits">
@@ -32,6 +38,7 @@ function Rating() {
           </div>
         </div>
 
+
         <div className="Award__rating">
           <div className="digits">
             <h1>48+</h1>
@@ -39,7 +46,7 @@ function Rating() {
           <div className="title__rating">
             <p>Award Gained</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -2,14 +2,18 @@ import React from "react";
 import "./header.css";
 import { AiFillStar } from "react-icons/ai";
 import { CgMenuRound } from "react-icons/cg";
-function Header() {
+function Header({ page }) {
   return (
     <>
       <div className="header__container">
         <nav>
           <ul className="nav">
             <li className="nav__items nav__logo">
-              <img className="logo__nav" src="./image/logo.jpeg" alt="" />
+              <img
+                className="logo__nav"
+                src={page.logo && page.logo.fields.file.url}
+                alt=""
+              />
             </li>
             <li className="nav__items home__item">
               <AiFillStar className="star__icon" />
