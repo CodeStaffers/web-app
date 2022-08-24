@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { client } from "./client";
 import "./App.css";
-import Content from "./components/content-section/Content";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import Rating from "./components/rating/Rating";
+import ThemeOne from "./components/templates/app/index";
 
 function App() {
   const [page, setPage] = useState([]);
@@ -25,10 +22,7 @@ function App() {
   }, []);
   return (
     <div className="App1">
-      <Header />
-      <Content page={page} />
-      <Rating />
-      <Footer />
+      <ThemeOne page={page} />
     </div>
   );
 }
