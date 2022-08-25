@@ -4,6 +4,8 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function Content({ page }) {
+  console.log(page);
+
   return (
     <>
       <div className="content_section">
@@ -14,20 +16,21 @@ function Content({ page }) {
             for mindful brands :)
           </h1> */}
           <h1>{documentToReactComponents(page?.heading)}</h1>
-          <h2>{page?.name}</h2>
         </div>
 
         <div className="content_sub_title">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            <br />
-            alias blanditiis
-          </p>
+          <p>{page?.name}</p>
         </div>
 
-        <div className="start_project_content__btn">
-          <button className="start__project__btn">
-            Start a project &nbsp;
+        <div className="start_project_content__div">
+          <button
+            className="start__project__btn"
+            style={{
+              backgroundColor: page.homeBtn && page.homeBtn.bgColor,
+              color: page.homeBtn && page.homeBtn.btnColor,
+            }}
+          >
+            {page.homeBtn && page.homeBtn.btnText}&nbsp;
             <div className="btn_content_icon">
               <BsFillArrowRightCircleFill size={25} />
             </div>

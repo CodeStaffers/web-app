@@ -7,10 +7,10 @@ import Footer from "../../layout/footer/Footer";
 function ThemeOne({ page }) {
   return (
     <>
-      <Header />
+      <Header page={page} />
       <Content page={page} />
-      <Rating />
-      <Footer />
+      <Rating page={page} />
+      <Footer page={page} />
     </>
   );
 }

@@ -12,6 +12,7 @@ function App() {
         content_type: "landingPage",
       });
       const responseData = response && response.items[0].fields;
+
       if (responseData) setPage(responseData);
     } catch (err) {
       console.error(err);
@@ -20,6 +21,7 @@ function App() {
   useEffect(() => {
     getPage();
   }, []);
+
   return (
     <div className="App1">
       <ThemeOne page={page} />

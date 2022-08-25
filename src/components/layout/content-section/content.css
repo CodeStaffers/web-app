@@ -10,7 +10,8 @@
   text-align: center;
 }
 .content__title h1 {
-  font-size: 4.5em;
+  line-height: 0.4em;
+  font-size: 4.4em;
   color: rgba(0, 0, 0, 0.737);
 }
 .content_sub_title {
@@ -22,18 +23,18 @@
   color: rgba(12, 7, 2, 0.594);
   font-weight: 500;
 }
-.start_project_content__btn {
+.start_project_content__div {
   margin-top: 2%;
   border-radius: 30px;
   padding: 3px;
-  border: 1px solid rgba(115, 202, 39, 0.655);
+  border: 1px solid #73ca27a7;
 }
 
 .start__project__btn {
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: rgba(115, 202, 39, 0.655);
+  /* background-color: #73ca27a7; */
   height: 3.3em;
   padding: 0 3em 0 3em;
   font-size: 15px;
