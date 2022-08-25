@@ -1,0 +1,40 @@
+.mainFooter {
+  padding: 5em;
+}
+.mainFooter_nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.mainFooter_nav1 {
+  flex: 1;
+}
+
+.mainFooter_content {
+  padding: 10px;
+}
+.mainFooter_content p {
+  color: rgba(0, 0, 0, 0.813);
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.mainFooter_icon img {
+  width: 40px;
+  cursor: pointer;
+  border-radius: 50px;
+  margin: 10px;
+}
+.mainFooterNav2 {
+  flex: 1;
+}
+.mainFooterNav3 {
+  flex: 1;
+}
+.mainFooterNav4 {
+  flex: 1;
+}
+.mainFooterNav5 {
+  flex: 1;
+}

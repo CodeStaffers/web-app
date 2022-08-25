@@ -1,0 +1,50 @@
+.funFact {
+  padding: 1em;
+}
+.funFact_card {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.funFact_title {
+}
+.funFact_title h1 {
+  font-size: 2.5em;
+  color: rgba(4, 4, 4, 0.655);
+}
+.funFact_reviews {
+  width: 100%;
+  margin-top: 3em;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+}
+.funFact_review_items {
+}
+.review_title {
+}
+.review_title h1 {
+  font-size: 3em;
+  color: #040404b6;
+}
+.review_comments {
+  margin-top: -15%;
+}
+.review_comments p {
+  color: #040404b6;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.funFact_all_review {
+  margin-top: 3em;
+}
+.funFact_all_review a {
+  font-weight: bold;
+  font-size: 18px;
+}
