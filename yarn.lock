@@ -3288,6 +3288,11 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
+countup.js@^2.2.0:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/countup.js/-/countup.js-2.3.2.tgz#9a91d95780be1c908d1e6feb548625f353f57988"
+  integrity sha512-dQ7F/CmKGjaO6cDfhtEXwsKVlXIpJ89dFs8PvkaZH9jBVJ2Z8GU4iwG/qP7MgY8qwr+1skbwR6qecWWQLUzB8Q==
+
 cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
@@ -4546,7 +4551,7 @@ fs.realpath@^1.0.0:
 
 fsevents@^2.3.2, fsevents@~2.3.2:
   version "2.3.2"
-  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.2.tgz#8a526f78b8fdf4623b709e0b975c52c24c02fd1a"
+  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz"
   integrity sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==
 
 function-bind@^1.1.1:
@@ -7358,6 +7363,13 @@ react-app-polyfill@^3.0.0:
     regenerator-runtime "^0.13.9"
     whatwg-fetch "^3.6.2"
 
+react-countup@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/react-countup/-/react-countup-6.3.0.tgz#9a345674d571f76c1046a0ded89fc86dbe52a2f0"
+  integrity sha512-uZsE+kuisXp/3OZeAuq2lzp6sXKmzw331Et5CRy4ueR9VcOp7z7T6/O1F04BC2Pa2frKmIITsghi3Hh933qWXQ==
+  dependencies:
+    countup.js "^2.2.0"
+
 react-dev-utils@^12.0.1:
   version "12.0.1"
   resolved "https://registry.npmjs.org/react-dev-utils/-/react-dev-utils-12.0.1.tgz"
@@ -7400,6 +7412,13 @@ react-error-overlay@^6.0.11:
   version "6.0.11"
   resolved "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-6.0.11.tgz"
   integrity sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==
+
+react-favicon@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-favicon/-/react-favicon-1.0.1.tgz#0524bede1cfbdf4e57b262aa52ae9513b27445b1"
+  integrity sha512-tbMjIfIE5cLj4BpnkJznQ1U7Dmvdp3iN02AyzXTSzfhxAGFjuf7tMBmapMRSdK7v1zX6+CktuOG1CT1jlrjPXw==
+  dependencies:
+    prop-types "^15.8.1"
 
 react-icons@^4.4.0:
   version "4.4.0"

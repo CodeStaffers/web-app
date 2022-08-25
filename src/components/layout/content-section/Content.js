@@ -4,8 +4,6 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function Content({ page }) {
-  console.log(page);
-
   return (
     <>
       <div className="content_section">
