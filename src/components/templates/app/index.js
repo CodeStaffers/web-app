@@ -4,11 +4,8 @@ import Header from "../../layout/header/Header";
 import Rating from "../../layout/rating/Rating";
 
 import Favicon from "react-favicon";
-import Section from "../../layout/section/Section";
 
 function ThemeOne({ page }) {
-  console.log(page);
-
   const { featureIcon, titleHome } = page;
 
   // set title of home page
@@ -20,7 +17,6 @@ function ThemeOne({ page }) {
       <Header page={page} />
       <Content page={page} />
       <Rating page={page} />
-      <Section page={page} />
     </>
   );
 }
