@@ -18,7 +18,7 @@ function FunFact({ page }) {
             {funFactReview &&
               funFactReview.map((review, index) => {
                 return (
-                  <div className="funFact_review_items">
+                  <div className="funFact_review_items" key={index}>
                     <div className="review_title">
                       <h1>
                         <CountUp end={review.ratSelf} duration={3} />
@@ -35,7 +35,7 @@ function FunFact({ page }) {
 
           <div className="funFact_all_review">
             <a
-              href="#"
+              href={funFactAllReview && funFactAllReview.url}
               style={{ color: funFactAllReview && funFactAllReview.color }}
             >
               {funFactAllReview && funFactAllReview.title}
