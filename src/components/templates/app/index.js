@@ -4,10 +4,11 @@ import Header from "../../layout/header/Header";
 import Rating from "../../layout/rating/Rating";
 import Footer from "../../layout/footer/Footer";
 import Favicon from "react-favicon";
-import Section from "../../layout/section/Section";
 import FunFact from "../../layout/funFact/FunFact";
 import MainFooter from "../../layout/mainFooter/MainFooter";
 import BtnPlusTop from "../../layout/btnPlus/BtnPlusTop";
+import Service from "../../layout/service/Service";
+import Testnomial from "../../layout/testnomials/Testnomial";
 
 function ThemeOne({ page }) {
   // console.log(page);
@@ -24,8 +25,11 @@ function ThemeOne({ page }) {
       <Header page={page} />
       <Content page={page} />
       <Rating page={page} />
-      <Section page={page} />
+      <Service page={page} />
       <FunFact page={page} />
+
+      <Testnomial />
+
       <Footer page={page} />
 
       <MainFooter page={page} />

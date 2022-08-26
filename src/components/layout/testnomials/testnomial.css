@@ -1,0 +1,56 @@
+.testnomialWrapper {
+  padding: 20px;
+  /* position: relative;
+  top: 0;
+  left: 0; */
+}
+.carousel-container {
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.testnomialCard {
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+}
+.testnomialCardItems {
+  cursor: pointer;
+  padding: 1em;
+  width: 25%;
+}
+.star_image {
+}
+.star_image img {
+  display: block;
+  object-fit: contain;
+  height: 70px;
+}
+.testnomialSummary {
+  color: rgba(0, 0, 0, 0.651);
+  font-weight: 500;
+  margin-top: 10px;
+}
+.testnomialAuthor {
+  margin-top: 5%;
+}
+.testnomialAuthor img {
+  display: block;
+  object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.testnomialBtn {
+  position: relative;
+  top: -3em;
+  z-index: 40;
+  display: flex;
+  justify-content: space-between;
+}
+.prevTest,
+.nextTest {
+  cursor: pointer;
+  /* border: 1px solid rgba(16, 16, 16, 0.989); */
+  padding: 2px;
+  border-radius: 50%;
+}
