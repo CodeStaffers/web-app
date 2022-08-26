@@ -3,28 +3,38 @@
 }
 .mainFooter_nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: baseline;
 }
 .mainFooter_nav1 {
-  flex: 1;
+  padding: 10px;
+  flex: 1.5;
 }
 
-.mainFooter_content {
-  padding: 10px;
-}
 .mainFooter_content p {
-  color: rgba(0, 0, 0, 0.813);
+  color: #00000099;
   font-size: 17px;
   font-weight: 500;
 }
-
-.mainFooter_icon img {
-  width: 40px;
+.mainFooter_icon {
+  display: flex;
+}
+.mainFooterIcon {
+  text-align: center;
   cursor: pointer;
-  border-radius: 50px;
-  margin: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid #23232431;
+}
+.linkdnIcon,
+.twitterIcon,
+.pinterestIcon,
+.faceBookIcon {
+  margin: 0 auto;
+  display: block;
+  padding: 7px;
 }
 .mainFooterNav2 {
   flex: 1;
@@ -37,4 +47,33 @@
 }
 .mainFooterNav5 {
   flex: 1;
+}
+
+.addressList {
+  cursor: pointer;
+  /* line-height: 1.5em; */
+}
+.contactNumber p {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: 500;
+}
+.website a {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: 500;
+  text-decoration: none;
+}
+.locationUrl {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.locationUrl p {
+  display: inline;
+  margin-left: 10px;
+  font-weight: 500;
+}
+.mainFooter_nav_hover:hover {
+  text-decoration: underline !important;
+  color: rgba(0, 0, 255, 0.767) !important;
 }

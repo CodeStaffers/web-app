@@ -1,0 +1,41 @@
+.service {
+  margin-top: 2%;
+  padding: 10px;
+  margin-bottom: 3%;
+}
+.serviseTitle {
+  text-align: center;
+}
+.serviseTitle h1 {
+  font-size: 3em;
+}
+.serviceCardWrapper {
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cardItem {
+  width: 20%;
+  padding: 2em;
+  margin: 1.5em;
+  border-radius: 13px;
+  background-color: #eaeaea69;
+  cursor: pointer;
+}
+
+.serviceLogo img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.serviceSummary {
+  color: rgba(0, 0, 0, 0.683);
+  font-weight: 500;
+  font-size: 15px;
+}
+.service_link {
+  text-decoration: none;
+}
