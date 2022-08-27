@@ -4,7 +4,17 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import CountUp from "react-countup";
 
 function FunFact({ page }) {
-  const { funFactAllReview, funFactReview, funFactTitle } = page;
+  const {
+    allReviewTitle,
+    reviewUrl,
+    downlaodTitle,
+    download,
+    postiveReviewTitle,
+    postiveCount,
+    activeTitle,
+    active,
+    funFactTitle,
+  } = page;
 
   return (
     <>
@@ -15,31 +25,44 @@ function FunFact({ page }) {
           </div>
 
           <div className="funFact_reviews">
-            {funFactReview &&
-              funFactReview.map((review, index) => {
-                return (
-                  <div className="funFact_review_items" key={index}>
-                    <div className="review_title">
-                      <h1>
-                        <CountUp end={review.ratSelf} duration={3} />
-                        M+
-                      </h1>
-                    </div>
-                    <div className="review_comments">
-                      <p>{review.text}</p>
-                    </div>
-                  </div>
-                );
-              })}
+            <div className="funFact_review_items">
+              <div className="review_title">
+                <h1>
+                  <CountUp end={download} duration={3} />
+                  M+
+                </h1>
+              </div>
+              <div className="review_comments">
+                <p>{downlaodTitle}</p>
+              </div>
+            </div>
+
+            <div className="funFact_review_items">
+              <div className="review_title">
+                <h1>
+                  <CountUp end={active} duration={3} />
+                  M+
+                </h1>
+              </div>
+              <div className="review_comments">
+                <p>{activeTitle}</p>
+              </div>
+            </div>
+            <div className="funFact_review_items">
+              <div className="review_title">
+                <h1>
+                  <CountUp end={postiveCount} duration={3} />
+                  M+
+                </h1>
+              </div>
+              <div className="review_comments">
+                <p>{postiveReviewTitle}</p>
+              </div>
+            </div>
           </div>
 
           <div className="funFact_all_review">
-            <a
-              href={funFactAllReview && funFactAllReview.url}
-              style={{ color: funFactAllReview && funFactAllReview.color }}
-            >
-              {funFactAllReview && funFactAllReview.title}
-            </a>
+            <a href={reviewUrl}>{allReviewTitle}</a>
           </div>
         </div>
       </div>

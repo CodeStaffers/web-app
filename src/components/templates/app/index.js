@@ -28,7 +28,7 @@ function ThemeOne({ page }) {
       <Service page={page} />
       <FunFact page={page} />
 
-      <Testnomial />
+      <Testnomial page={page} />
 
       <Footer page={page} />
 

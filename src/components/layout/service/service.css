@@ -21,9 +21,11 @@
   width: 20%;
   padding: 2em;
   margin: 1.5em;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   border-radius: 13px;
-  background-color: #eaeaea69;
+  background-color: #ecebeb7c;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
 .serviceLogo img {
@@ -38,4 +40,7 @@
 }
 .service_link {
   text-decoration: none;
+}
+.cardItem:hover {
+  transform: translateY(-20px);
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./service.css";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import ServiceCard from "./ServiceCard";
 
 function Service({ page }) {
   const {
@@ -30,78 +30,25 @@ function Service({ page }) {
         <div className="serviseTitle">
           <h1>Ours Services</h1>
         </div>
-
         <div className="serviceCardWrapper">
-          <div className="cardItem">
-            <a href={businessUrl} className="service_link">
-              <div className="serviceLogo">
-                <img
-                  src={business_strategy && business_strategy.fields.file.url}
-                  alt="cardLogo"
-                />
-              </div>
-              <div className="serviceSummary">
-                {documentToReactComponents(business_summary)}
-              </div>
-            </a>
-          </div>
-
-          <div className="cardItem">
-            <a href={marketingUrl} className="service_link">
-              <div className="serviceLogo">
-                <img
-                  src={marketingReporting && marketingReporting.fields.file.url}
-                  alt="cardLogo"
-                />
-              </div>
-              <div className="serviceSummary">
-                {documentToReactComponents(marketingSummary)}
-              </div>
-            </a>
-          </div>
-          <div className="cardItem">
-            <a href={websiteUrl} className="service_link">
-              <div className="serviceLogo">
-                <img
-                  src={websiteDev && websiteDev.fields.file.url}
-                  alt="cardLogo"
-                />
-              </div>
-              <div className="serviceSummary">
-                {documentToReactComponents(websiteSummary)}
-              </div>
-            </a>
-          </div>
-          <div className="cardItem">
-            <a href={other1Url} className="service_link">
-              <div className="serviceLogo">
-                <img src={other1 && other1.fields.file.url} alt="cardLogo" />
-              </div>
-              <div className="serviceSummary">
-                {documentToReactComponents(other1Summary)}
-              </div>
-            </a>
-          </div>
-          <div className="cardItem">
-            <a href={other2Url} className="service_link">
-              <div className="serviceLogo">
-                <img src={other2 && other2.fields.file.url} alt="cardLogo" />
-              </div>
-              <div className="serviceSummary">
-                {documentToReactComponents(other2Summary)}
-              </div>
-            </a>
-          </div>
-          <div className="cardItem">
-            <a href={other3Url} className="service_link">
-              <div className="serviceLogo">
-                <img src={other3 && other3.fields.file.url} alt="cardLogo" />
-              </div>
-              <div className="serviceSummary">
-                {documentToReactComponents(other3Summary)}
-              </div>
-            </a>
-          </div>
+          <ServiceCard
+            logo={business_strategy}
+            summary={business_summary}
+            url={businessUrl}
+          />
+          <ServiceCard
+            logo={marketingReporting}
+            summary={marketingSummary}
+            url={marketingUrl}
+          />
+          <ServiceCard
+            logo={websiteDev}
+            summary={websiteSummary}
+            url={websiteUrl}
+          />
+          <ServiceCard logo={other1} summary={other1Summary} url={other1Url} />
+          <ServiceCard logo={other2} summary={other2Summary} url={other2Url} />
+          <ServiceCard logo={other3} summary={other3Summary} url={other3Url} />
         </div>
       </div>
     </>

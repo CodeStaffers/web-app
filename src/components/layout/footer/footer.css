@@ -3,41 +3,39 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 8em;
+  padding: 6em;
+  background-color: #48489df9;
   box-sizing: border-box !important;
 }
 .left__footer {
   flex: 1;
 }
 .footer__left__card {
-  height: 90vh;
-  background-color: #6666c4e4;
+  background-color: #5a5a9d59;
   border-radius: 15px;
   box-sizing: border-box;
-  padding: 10px 20px 10px 20px;
-
+  padding: 10px 40px 10px 40px;
   box-sizing: border-box !important;
 }
-
-.footer__left__card__title h1 {
-  font-size: 2.8em;
-  color: white;
-}
-
-.left__footer__card__desc p {
-  color: rgba(255, 255, 255, 0.667);
-  font-size: 18px;
+.footer__left__card__title {
   font-weight: 500;
 }
-
-.left__footer__image {
+.footer__left__card__title h1 {
+  color: white;
+  font-size: 2.5em;
+}
+.footer__left__card__title p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.756);
+}
+.left__footer__image img {
   object-fit: cover;
   width: 100%;
+  height: 60vh;
 }
-
 .right__footer {
   flex: 2;
-  padding: 5em;
+  padding: 3em;
   box-sizing: border-box;
 }
 .right__footerCard {
@@ -47,22 +45,44 @@
   flex-direction: row;
 }
 .right__design {
-  /* background-color: white; */
-  width: 47%;
-  padding: 3em;
-  border-radius: 35px;
+  color: rgba(255, 255, 255, 0.817);
+  width: 40%;
+  padding: 2em;
+  border-radius: 30px;
   box-sizing: border-box;
   cursor: pointer;
   margin: 10px;
+  transition: all 0.6s;
 }
-.right__title h1 {
-  font-size: 1.6em;
+.right__arrow {
+  margin-top: 2em;
+  color: white;
 }
-.right__image {
-  /* border: 5px solid red; */
-}
+
 .right__image img {
   height: 25%;
   width: 25%;
   border-radius: 50%;
+}
+
+.visual_design {
+  color: rgba(39, 37, 37, 0.744);
+  background-color: white;
+}
+.arrow_visual {
+  color: rgba(39, 37, 37, 0.744);
+}
+.right__design p {
+  color: rgba(0, 0, 0, 0.815);
+  font-weight: 500;
+}
+.right__design:hover > .right__arrow {
+  color: black;
+}
+.right__design:hover {
+  color: rgba(39, 37, 37, 0.744);
+  background-color: rgba(255, 255, 255, 0.922);
+}
+.right__design:hover > .right__design h1 {
+  color: red;
 }

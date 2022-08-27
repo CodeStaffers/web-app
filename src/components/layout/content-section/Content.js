@@ -4,6 +4,8 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function Content({ page }) {
+  const { homeBtn, homeBtnBgColor, homeBtnUrl } = page;
+
   return (
     <>
       <div className="content_section">
@@ -24,11 +26,12 @@ function Content({ page }) {
           <button
             className="start__project__btn"
             style={{
-              backgroundColor: page.homeBtn && page.homeBtn.bgColor,
+              backgroundColor: homeBtnBgColor,
               color: page.homeBtn && page.homeBtn.btnColor,
             }}
+            onClick={() => (window.location.href = homeBtnUrl)}
           >
-            {page.homeBtn && page.homeBtn.btnText}&nbsp;
+            {homeBtn}&nbsp;
             <div className="btn_content_icon">
               <BsFillArrowRightCircleFill size={25} />
             </div>

@@ -1,33 +1,36 @@
 .testnomialWrapper {
-  padding: 20px;
-  /* position: relative;
-  top: 0;
-  left: 0; */
+  margin-top: 6%;
+  box-sizing: border-box;
+  margin-bottom: 5%;
 }
-.carousel-container {
-  margin: 0 auto;
-  border: 1px solid red;
-}
+
 .testnomialCard {
-  /* display: flex; */
-  /* justify-content: space-evenly; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .testnomialCardItems {
-  cursor: pointer;
-  padding: 1em;
+  margin-top: -1%;
   width: 25%;
+  padding: 10px;
 }
-.star_image {
-}
+
 .star_image img {
   display: block;
   object-fit: contain;
-  height: 70px;
+  height: 100px;
+  width: 100px;
 }
 .testnomialSummary {
-  color: rgba(0, 0, 0, 0.651);
+  margin-top: -10%;
+  color: rgba(6, 6, 6, 0.934);
+  font-weight: 400;
+}
+.testnomialSummary p {
+  color: rgba(0, 0, 0, 0.877);
   font-weight: 500;
-  margin-top: 10px;
+  font-size: 15px;
 }
 .testnomialAuthor {
   margin-top: 5%;
@@ -39,18 +42,18 @@
   height: 40px;
   border-radius: 50%;
 }
-
-.testnomialBtn {
-  position: relative;
-  top: -3em;
-  z-index: 40;
-  display: flex;
-  justify-content: space-between;
+.autherName {
+  height: 50px;
+  box-sizing: border-box;
 }
-.prevTest,
-.nextTest {
-  cursor: pointer;
-  /* border: 1px solid rgba(16, 16, 16, 0.989); */
-  padding: 2px;
-  border-radius: 50%;
+.autherName p {
+  box-sizing: border-box;
+}
+
+.user_loveUs {
+  margin-top: -1%;
+}
+.user_loveUs h1 {
+  font-size: 2.6em;
+  margin-left: 6.2%;
 }
