@@ -6,7 +6,10 @@ function BtnPlusTop() {
   const [showBtn, setShowBtn] = useState(false);
 
   const moveTop = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   function updateDom() {

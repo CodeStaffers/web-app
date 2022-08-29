@@ -1,7 +1,7 @@
 .funFact {
-  padding: 1em;
-  margin-top: 3%;
-  margin-bottom: 5%;
+  background-color: #f5f3f379;
+  padding: 5%;
+  margin-top: 2%;
 }
 .funFact_card {
   display: flex;
@@ -12,11 +12,10 @@
   flex-direction: column;
   align-items: center;
 }
-.funFact_title {
-}
+
 .funFact_title h1 {
-  font-size: 2.5em;
-  color: rgba(4, 4, 4, 0.655);
+  font-size: 3em;
+  color: black;
 }
 .funFact_reviews {
   width: 100%;
@@ -31,21 +30,65 @@
 }
 .review_title h1 {
   font-size: 3em;
-  color: #040404b6;
+  color: black;
 }
 .review_comments {
   margin-top: -15%;
 }
 .review_comments p {
-  color: #040404b6;
-  font-weight: bold;
-  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-.funFact_all_review {
-  margin-top: 2em;
+/* responsie code */
+
+@media screen and (max-width: 823px) {
+  .funFact_title h1 {
+    line-height: 1em;
+    font-size: 2em;
+  }
+
+  .review_title h1 {
+    font-size: 2em;
+    color: #040404b6;
+  }
 }
-.funFact_all_review a {
-  font-weight: bold;
-  font-size: 18px;
+@media screen and (max-width: 783px) {
+  .funFact_title h1 {
+    line-height: 1em;
+  }
+  .review_title h1 {
+    font-size: 1.5em;
+    color: #757575;
+  }
+  .funFact_reviews {
+    margin-top: 2em;
+  }
+}
+@media screen and (max-width: 672px) {
+  .funFact_title h1 {
+    line-height: 1.3em;
+    font-size: 1.5em;
+  }
+  .review_title h1 {
+    font-size: 1.5em;
+    color: #757575;
+  }
+}
+@media screen and (max-width: 528px) {
+  .funFact_reviews {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .funFact_review_items {
+    margin: 20px;
+    height: 3em;
+    width: 100%;
+    display: block;
+    line-height: 0.8em;
+  }
 }

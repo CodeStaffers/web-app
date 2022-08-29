@@ -1,36 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import "./header.css";
-import { AiFillStar } from "react-icons/ai";
-import { CgMenuRound } from "react-icons/cg";
-function Header({ page }) {
+import { MenuItems } from "./MenuItems";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
+import { Button } from "../button/Button";
+
+function Header() {
+  const [clicked, setClicked] = useState(false);
+  const [scroll, setScroll] = useState(false);
+
+  const onScrollChange = () => {
+    if (window.scrollY >= 80) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+  };
+
+  window.addEventListener("scroll", onScrollChange);
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
+
   return (
     <>
-      <div className="header__container">
-        <nav>
-          <ul className="nav">
-            <li className="nav__items nav__logo">
-              <img
-                className="logo__nav"
-                src={page.logo && page.logo.fields.file.url}
-                alt=""
-              />
-            </li>
-            <li className="nav__items home__item">
-              <AiFillStar className="star__icon" />
-              Home
-              <AiFillStar className="star__icon" />
-            </li>
-            <li className="nav__items">
-              <div className="header__menu">
-                <div className="btn__menu__header">Menu </div>&nbsp;
-                <div className="btn__icon">
-                  <CgMenuRound size={30} background="black" />
-                </div>
-              </div>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <nav className={scroll ? "NavbarItems nav-bg " : "NavbarItems "}>
+        <h1 className="navbar-logo">CodeStaffers</h1>
+        <div className="menu-icons" onClick={handleClick}>
+          {clicked ? (
+            <AiOutlineClose className="mobile-icon" />
+          ) : (
+            <HiOutlineMenuAlt1 className="mobile-icon" />
+          )}
+        </div>
+
+        <ul className={clicked ? "nav-menu active" : "nav-menu"}>
+          {MenuItems.map((item, index) => {
+            return (
+              <li key={index}>
+                <a className={item.cName} href={item.url}>
+                  {item.title}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+        <Button>Get Started</Button>
+      </nav>
     </>
   );
 }

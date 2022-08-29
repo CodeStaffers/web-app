@@ -15,7 +15,7 @@ function Content({ page }) {
             <br />
             for mindful brands :)
           </h1> */}
-          <h1>{documentToReactComponents(page?.heading)}</h1>
+          {documentToReactComponents(page?.heading)}
         </div>
 
         <div className="content_sub_title">
