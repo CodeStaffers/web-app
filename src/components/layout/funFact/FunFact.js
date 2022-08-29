@@ -5,8 +5,6 @@ import CountUp from "react-countup";
 
 function FunFact({ page }) {
   const {
-    allReviewTitle,
-    reviewUrl,
     downlaodTitle,
     download,
     postiveReviewTitle,
@@ -59,10 +57,6 @@ function FunFact({ page }) {
                 <p>{postiveReviewTitle}</p>
               </div>
             </div>
-          </div>
-
-          <div className="funFact_all_review">
-            <a href={reviewUrl}>{allReviewTitle}</a>
           </div>
         </div>
       </div>

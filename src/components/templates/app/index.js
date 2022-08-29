@@ -1,8 +1,7 @@
 import React from "react";
 import Content from "../../layout/content-section/Content";
 import Header from "../../layout/header/Header";
-import Rating from "../../layout/rating/Rating";
-import Footer from "../../layout/footer/Footer";
+// import Footer from "../../layout/footer/Footer";
 import Favicon from "react-favicon";
 import FunFact from "../../layout/funFact/FunFact";
 import MainFooter from "../../layout/mainFooter/MainFooter";
@@ -10,7 +9,8 @@ import BtnPlusTop from "../../layout/btnPlus/BtnPlusTop";
 import Service from "../../layout/service/Service";
 import Testnomial from "../../layout/testnomials/Testnomial";
 
-function ThemeOne({ page }) {
+function ThemeOne(props) {
+  const { page, serviceData, testnomial } = props;
   // console.log(page);
 
   const { featureIcon, titleHome } = page;
@@ -24,14 +24,11 @@ function ThemeOne({ page }) {
       <BtnPlusTop />
       <Header page={page} />
       <Content page={page} />
-      <Rating page={page} />
-      <Service page={page} />
+      {/* rating part */}
+      <Service serviceData={serviceData} />
       <FunFact page={page} />
-
-      <Testnomial page={page} />
-
-      <Footer page={page} />
-
+      <Testnomial testnomial={testnomial} />
+      {/* <Footer page={page} /> */}
       <MainFooter page={page} />
     </>
   );

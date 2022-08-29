@@ -63,7 +63,7 @@ function MainFooter({ page }) {
           <div className="mainFooterNav2">
             <div className="apps">
               <div className="appTitle">
-                <h1>Apps</h1>
+                <h2>Apps</h2>
               </div>
               <div className="appList">
                 {apps &&
@@ -92,7 +92,7 @@ function MainFooter({ page }) {
           <div className="mainFooterNav3">
             <div className="aboutUs">
               <div className="aboutTitle">
-                <h1>About Us</h1>
+                <h2>About Us</h2>
               </div>
               <div className="aboutList">
                 {aboutUs &&
@@ -121,7 +121,7 @@ function MainFooter({ page }) {
           <div className="mainFooterNav4">
             <div className="service">
               <div className="serviceTitle">
-                <h1>service</h1>
+                <h2>service</h2>
               </div>
               <div className="serviceList">
                 {service &&
@@ -150,7 +150,7 @@ function MainFooter({ page }) {
           <div className="mainFooterNav5">
             <div className="address">
               <div className="addressTitle">
-                <h1>Address</h1>
+                <h2>Address</h2>
               </div>
               <div className="addressList">
                 <div className="contactNumber">
@@ -159,9 +159,7 @@ function MainFooter({ page }) {
                 </div>
                 <div className="website">
                   <FcTreeStructure size={20} />
-                  <a href={website} style={{ color: "black" }}>
-                    {website}
-                  </a>
+                  <a href={website}>{website}</a>
                 </div>
                 <div className="locationUrl">
                   <FcMindMap size={20} />

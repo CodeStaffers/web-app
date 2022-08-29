@@ -7,7 +7,10 @@ import ThemeOne from "./components/templates/app/index";
 const clientId = process.env.REACT_APP_ACCESS_ID;
 function App() {
   const [page, setPage] = useState([]);
+  const [serviceData, setServiceData] = useState([]);
+  const [testnomial, setTestnomial] = useState([]);
   const [user, setUser] = useState({});
+
   function handleCallbackResponse(response) {
     var obj = jwt_decode(response.credential);
     console.log(obj.exp);
@@ -27,6 +30,31 @@ function App() {
       console.error(err);
     }
   };
+
+  const getServicePage = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "serviceCard",
+      });
+      const responseData = response && response.items;
+      if (responseData) setServiceData(responseData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const getTestinomial = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "testinomials",
+      });
+      const responseData = response && response.items;
+      if (responseData) setTestnomial(responseData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
@@ -39,6 +67,8 @@ function App() {
       size: "large",
     });
     getPage();
+    getServicePage();
+    getTestinomial();
   }, []);
 
   return (
@@ -50,7 +80,11 @@ function App() {
       )} */}
 
       {Object.keys(user).length !== 0 ? (
-        <ThemeOne page={page} />
+        <ThemeOne
+          page={page}
+          serviceData={serviceData}
+          testnomial={testnomial}
+        />
       ) : (
         <div
           style={{

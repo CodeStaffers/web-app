@@ -1,0 +1,5 @@
+rich test : .serviceSummary {
+    color: #000000a1;
+    font-weight: 500;
+    font-size: 18px;
+}
