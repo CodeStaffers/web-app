@@ -1,7 +1,6 @@
 .service {
-  margin-top: 2%;
   padding: 10px;
-  margin-bottom: 3%;
+  padding-bottom: 4em;
 }
 .serviseTitle {
   text-align: center;
@@ -10,7 +9,6 @@
   font-size: 3em;
 }
 .serviceCardWrapper {
-  margin-top: 3%;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -18,29 +16,61 @@
 }
 
 .cardItem {
-  width: 20%;
-  padding: 2em;
-  margin: 1.5em;
+  width: 22%;
+  padding: 2.2em;
+  margin: 1.2em;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-  border-radius: 13px;
-  background-color: #ecebeb7c;
+  border-radius: 10px;
+  background-color: #ecebeb6d;
   cursor: pointer;
   transition: all 0.3s;
 }
-
+.serviceCardTitle h3 {
+  font-weight: bold;
+}
 .serviceLogo img {
   width: 45px;
   height: 45px;
   border-radius: 50%;
 }
 .serviceSummary {
-  color: rgba(0, 0, 0, 0.683);
+  color: #757575;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 16px;
 }
 .service_link {
   text-decoration: none;
 }
 .cardItem:hover {
-  transform: translateY(-20px);
+  transform: translateY(-5px);
+}
+
+/* responsive code */
+@media screen and (max-width: 823px) {
+  .service {
+    margin-top: -10%;
+  }
+  .cardItem {
+    width: 30%;
+    /* width: 25%; */
+  }
+}
+@media screen and (max-width: 953px) {
+  .service {
+    margin-top: -10%;
+  }
+  .cardItem {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 653px) {
+  .cardItem {
+    width: 100%;
+    display: block;
+    margin: 10px;
+  }
+  .serviseTitle h1 {
+    font-size: 2em;
+  }
 }

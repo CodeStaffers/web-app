@@ -1,17 +1,17 @@
 .testnomialWrapper {
-  margin-top: 6%;
+  margin-top: 5em;
+  padding: 5em;
   box-sizing: border-box;
-  margin-bottom: 5%;
 }
 
 .testnomialCard {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .testnomialCardItems {
-  margin-top: -1%;
+  margin: 10px;
   width: 25%;
   padding: 10px;
 }
@@ -24,13 +24,11 @@
 }
 .testnomialSummary {
   margin-top: -10%;
-  color: rgba(6, 6, 6, 0.934);
-  font-weight: 400;
 }
 .testnomialSummary p {
-  color: rgba(0, 0, 0, 0.877);
+  color: black;
+  font-size: 16px;
   font-weight: 500;
-  font-size: 15px;
 }
 .testnomialAuthor {
   margin-top: 5%;
@@ -38,8 +36,8 @@
 .testnomialAuthor img {
   display: block;
   object-fit: cover;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 .autherName {
@@ -54,6 +52,51 @@
   margin-top: -1%;
 }
 .user_loveUs h1 {
-  font-size: 2.6em;
-  margin-left: 6.2%;
+  font-size: 2.5em;
+  margin-left: 9.5%;
+}
+
+/* responsive code */
+@media screen and (max-width: 823px) {
+  .testnomialAuthor img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 953px) {
+  .testnomialWrapper {
+    padding: 0px;
+    /* border: 2px solid red; */
+  }
+  .user_loveUs h1 {
+    margin-left: 8%;
+  }
+
+  .testnomialAuthor img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 653px) {
+  .user_loveUs h1 {
+    font-size: 2em;
+    margin-left: 5%;
+  }
+  .testnomialCard {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .testnomialCardItems {
+    width: 100%;
+  }
+  .star_image {
+    margin-bottom: 2em;
+  }
+
+  .testnomialAuthor img {
+    width: 60px;
+    height: 60px;
+  }
 }

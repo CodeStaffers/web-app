@@ -1,21 +1,9 @@
 import React from "react";
 import "./testnomial.css";
-import "react-multi-carousel/lib/styles.css";
+
 import TestnimialCard from "./TestnimialCard";
 
-function Testnomial({ page }) {
-  const {
-    ratingImage1,
-    ratingImage2,
-    ratingImage3,
-    authorImage1,
-    authorImage2,
-    authorImage3,
-    summary1,
-    summary2,
-    summary3,
-  } = page.testnomials ? page.testnomials.fields : "";
-
+function Testnomial({ testnomial }) {
   return (
     <div className="testnomialWrapper">
       <div className="user_loveUs">
@@ -23,21 +11,17 @@ function Testnomial({ page }) {
       </div>
 
       <div className="testnomialCard">
-        <TestnimialCard
-          logo={ratingImage1}
-          summary={summary1}
-          author={authorImage1}
-        />
-        <TestnimialCard
-          logo={ratingImage2}
-          summary={summary2}
-          author={authorImage2}
-        />
-        <TestnimialCard
-          logo={ratingImage3}
-          summary={summary3}
-          author={authorImage3}
-        />
+        {testnomial &&
+          testnomial.map((item, index) => {
+            return (
+              <TestnimialCard
+                key={index}
+                logo={item.fields.rating}
+                summary={item.fields.content}
+                author={item.fields.author}
+              />
+            );
+          })}
       </div>
     </div>
   );
