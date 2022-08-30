@@ -25,6 +25,7 @@
   align-items: center;
 }
 .funFact_review_items {
+  line-height: 2em;
 }
 .review_title {
 }
@@ -56,6 +57,7 @@
 }
 @media screen and (max-width: 783px) {
   .funFact_title h1 {
+    font-size: 2.5em;
     line-height: 1em;
   }
   .review_title h1 {
@@ -69,7 +71,7 @@
 @media screen and (max-width: 672px) {
   .funFact_title h1 {
     line-height: 1.3em;
-    font-size: 1.5em;
+    font-size: 2em;
   }
   .review_title h1 {
     font-size: 1.5em;
