@@ -3,8 +3,6 @@ import "./heroSection.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function Section({ heroSection }) {
-  console.log(heroSection);
-
   const {
     btnUrl,
     content,

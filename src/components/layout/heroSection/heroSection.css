@@ -1,6 +1,4 @@
 .section__body {
-  position: relative;
-  z-index: -10;
   box-sizing: border-box;
   margin-top: 6em;
   padding: 4em;

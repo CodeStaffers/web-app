@@ -8,6 +8,7 @@ import BtnPlusTop from "../../layout/btnPlus/BtnPlusTop";
 import Service from "../../layout/service/Service";
 import Testnomial from "../../layout/testnomials/Testnomial";
 import HeroSection from "../../layout/heroSection/HeroSection";
+import Project from "../../layout/project/Project";
 
 function ThemeOne(props) {
   const { page, serviceData, testnomial, heroSection } = props;
@@ -29,7 +30,8 @@ function ThemeOne(props) {
       <FunFact page={page} />
       <HeroSection heroSection={heroSection} />
       <Testnomial testnomial={testnomial} />
-      {/* <Footer page={page} /> */}
+
+      <Project />
       <MainFooter page={page} />
     </>
   );
