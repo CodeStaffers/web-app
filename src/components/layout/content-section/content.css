@@ -1,3 +1,6 @@
+:root {
+  --primary--content: black;
+}
 .content_section {
   height: 70vh;
   display: flex;
@@ -12,7 +15,7 @@
 .content__title h1 {
   font-size: 4em;
   line-height: 0.9em;
-  color: rgb(0, 0, 0);
+  color: var(--primary--content);
 }
 .content_sub_title {
   margin-top: -1%;
@@ -20,15 +23,13 @@
 }
 .content_sub_title p {
   font-size: 18px;
-  color: black;
+  color: var(--primary--content);
   font-weight: 500;
 }
 .start_project_content__div {
   box-sizing: border-box;
   margin-top: 2%;
-  border-radius: 30px;
   padding: 3px;
-  border: 1px solid #73ca27a7;
 }
 
 .start__project__btn {
@@ -51,6 +52,11 @@
 
 /* responsie code */
 
+@media screen and (max-width: 868px) {
+  .content__title h1 {
+    font-size: 2.5em;
+  }
+}
 @media screen and (max-width: 823px) {
   .content__title h1 {
     line-height: 1em;
@@ -60,12 +66,22 @@
 @media screen and (max-width: 783px) {
   .content__title h1 {
     line-height: 1em;
-    font-size: 3em;
+    font-size: 2.8em;
   }
 }
 @media screen and (max-width: 558px) {
   .content__title h1 {
     line-height: 1em;
-    font-size: 2em;
+    font-size: 2.5em;
+  }
+  .start_project_content__div {
+    margin-top: 4%;
+    padding: 1px;
+  }
+  .start__project__btn {
+    font-size: 12px;
+  }
+  .btn_content_icon {
+    font-size: 30px;
   }
 }

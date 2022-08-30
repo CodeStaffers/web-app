@@ -1,6 +1,7 @@
 .NavbarItems {
   width: 100%;
   position: fixed;
+  z-index: 1000;
   background: #fff;
   height: 80px;
   display: flex;
