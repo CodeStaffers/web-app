@@ -19,6 +19,7 @@ function Service({ serviceData }) {
                   title={item.fields.title}
                   summary={item.fields.description}
                   url={item.fields.url}
+                  color={item.fields.color}
                 />
               );
             })}
