@@ -1,18 +1,19 @@
 import React from "react";
 import "./heroSection.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Button } from "../button/Button";
 
 function Section({ heroSection }) {
   console.log(heroSection);
 
   const {
-    btnUrl,
+    // btnUrl,
     content,
     contentImage,
     direction,
     featureTitle,
     featureUrl,
-    titleBtn,
+    // titleBtn,
   } = heroSection && heroSection[0].fields;
 
   return (
@@ -30,7 +31,9 @@ function Section({ heroSection }) {
                 {content && documentToReactComponents(content)}
               </div>
               <div className="content_btn">
-                <button
+                <Button cName={"hero_btn_try"}>Try It Free</Button>
+
+                {/* <button
                   className="hero_btn_try"
                   style={{
                     backgroundColor: "maroon",
@@ -39,7 +42,7 @@ function Section({ heroSection }) {
                   onClick={() => (window.location.href = btnUrl)}
                 >
                   {titleBtn && titleBtn}
-                </button>
+                </button> */}
                 <a
                   href={featureUrl}
                   className="content_see_all"

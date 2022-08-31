@@ -1,22 +1,20 @@
 .testnomialWrapper {
-  /* width: 95%; */
   margin-top: 5em;
   padding: 5em;
+  background-color: #f5f3f379;
+
   box-sizing: border-box;
 }
-
+/* 
 .testnomialCard {
-  margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 auto;
-}
+} */
 .testnomialCardItems {
   margin: 10px;
-  width: 90%;
-  /* width: 25%; */
+  width: 20%;
   padding: 10px;
 }
 
@@ -70,7 +68,7 @@
 }
 @media screen and (max-width: 953px) {
   .testnomialWrapper {
-    padding: 0px;
+    padding: 10px;
     /* border: 2px solid red; */
   }
   .user_loveUs h1 {
@@ -88,11 +86,11 @@
     font-size: 2em;
     margin-left: 5%;
   }
-  /* .testnomialCard {
+  .testnomialCard {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-  } */
+  }
   .testnomialCardItems {
     /* width: 90%; */
     width: 90%;

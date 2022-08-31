@@ -2,9 +2,9 @@ import React from "react";
 import "./content.css";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
+import { Button } from "../button/Button";
 function Content({ page }) {
-  const { homeBtn, homeBtnBgColor, homeBtnUrl } = page;
+  const { homeBtnUrl } = page;
 
   return (
     <>
@@ -18,7 +18,14 @@ function Content({ page }) {
         </div>
 
         <div className="start_project_content__div">
-          <button
+          <Button buttonStyle={"btn--primary"} url={homeBtnUrl}>
+            Start a project &nbsp;
+            <div className="btn_content_icon">
+              <BsFillArrowRightCircleFill size={25} />
+            </div>
+          </Button>
+
+          {/* <button
             className="start__project__btn"
             style={{
               backgroundColor: homeBtnBgColor,
@@ -26,11 +33,8 @@ function Content({ page }) {
             }}
             onClick={() => (window.location.href = homeBtnUrl)}
           >
-            {homeBtn}&nbsp;
-            <div className="btn_content_icon">
-              <BsFillArrowRightCircleFill size={25} />
-            </div>
-          </button>
+            {homeBtn}
+          </button> */}
         </div>
       </div>
     </>

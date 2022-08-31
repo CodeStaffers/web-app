@@ -1,57 +1,78 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./testnomial.css";
 
+import Carousel from "./Carousel";
+
 import TestnimialCard from "./TestnimialCard";
-import Slider from "react-slick";
 
 function Testnomial({ testnomial }) {
-  // make
-  const settings = {
-    dots: true,
-    infinite: true,
-    className: "center",
-    speed: 500,
-    centerPadding: "60px",
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    adaptiveHeight: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 681,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  const MobileView = 700;
+  const TabletView = 1224;
 
-  // end
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const resizeHandler = () => {
+      setWidth(window.innerWidth);
+      console.log(window.innerWidth);
+    };
+    window.addEventListener("resize", resizeHandler);
+    return () => window.removeEventListener("resize", resizeHandler);
+  });
+
+  const DesktopComponent = ({ no }) => {
+    return (
+      <Carousel show={no}>
+        {/* <div className="testnomialCard"> */}
+        {testnomial &&
+          testnomial.map((item, index) => {
+            return (
+              <TestnimialCard
+                key={index}
+                logo={item.fields.rating}
+                summary={item.fields.content}
+                author={item.fields.author}
+              />
+            );
+          })}
+        {/* </div>{" "} */}
+      </Carousel>
+    );
+  };
+  const TabletComponent = ({ no }) => {
+    return (
+      <Carousel show={no}>
+        {testnomial &&
+          testnomial.map((item, index) => {
+            return (
+              <TestnimialCard
+                key={index}
+                logo={item.fields.rating}
+                summary={item.fields.content}
+                author={item.fields.author}
+              />
+            );
+          })}
+      </Carousel>
+    );
+  };
+  const MobileComponent = ({ no }) => {
+    return (
+      <Carousel show={no}>
+        {testnomial &&
+          testnomial.map((item, index) => {
+            return (
+              <TestnimialCard
+                key={index}
+                logo={item.fields.rating}
+                summary={item.fields.content}
+                author={item.fields.author}
+              />
+            );
+          })}
+      </Carousel>
+    );
+  };
 
   return (
     <div className="testnomialWrapper">
@@ -59,33 +80,26 @@ function Testnomial({ testnomial }) {
         <h1>User Love Us</h1>
       </div>
 
-      <Slider {...settings} className="testnomialCard">
-        {testnomial &&
-          testnomial.map((item, index) => {
-            return (
-              <TestnimialCard
-                key={index}
-                logo={item.fields.rating}
-                summary={item.fields.content}
-                author={item.fields.author}
-              />
-            );
-          })}
-      </Slider>
+      {/* start */}
 
-      {/* <div className="testnomialCard">
-        {testnomial &&
-          testnomial.map((item, index) => {
-            return (
-              <TestnimialCard
-                key={index}
-                logo={item.fields.rating}
-                summary={item.fields.content}
-                author={item.fields.author}
-              />
-            );
-          })}
-      </div> */}
+      <div
+        style={{
+          maxWidth: 1500,
+          marginLeft: "auto",
+          marginRight: "auto",
+          marginTop: 64,
+        }}
+      >
+        {width <= MobileView ? (
+          <MobileComponent no={1} />
+        ) : width >= MobileView && width <= TabletView ? (
+          <TabletComponent no={2} />
+        ) : (
+          <DesktopComponent no={3} />
+        )}
+      </div>
+
+      {/* end */}
     </div>
   );
 }

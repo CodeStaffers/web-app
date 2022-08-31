@@ -1,6 +1,4 @@
 .section__body {
-  position: relative;
-  z-index: -10;
   box-sizing: border-box;
   margin-top: 6em;
   padding: 4em;
@@ -36,15 +34,6 @@
   align-items: baseline;
 }
 
-.hero_btn_try {
-  outline: none;
-  border: none;
-  padding: 20px;
-  font-weight: bold;
-  width: 20%;
-  cursor: pointer;
-  border-radius: 4px;
-}
 .content_see_all {
   margin-left: 2em;
   font-weight: bold;
@@ -70,7 +59,7 @@
 @media screen and (max-width: 580px) {
   .hero_btn_try {
     display: block;
-    width: 25%;
-    padding: 15px;
+    width: 35%;
+    padding: 10px;
   }
 }
