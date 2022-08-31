@@ -16,22 +16,27 @@
 }
 
 .cardItem {
-  width: 22%;
+  width: 21%;
   padding: 2.2em;
   margin: 1.2em;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   border-radius: 10px;
-  background-color: #ecebeb6d;
+  background-color: #f6f6f6;
   cursor: pointer;
   transition: all 0.3s;
 }
 .serviceCardTitle h3 {
   font-weight: bold;
+  margin-bottom: 19px;
+  font-weight: 600;
 }
+
 .serviceLogo img {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  height: 2.5em;
+  width: 2.5em;
+  /* border: 1px solid red; */
 }
 .serviceSummary {
   color: #757575;

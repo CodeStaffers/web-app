@@ -10,11 +10,6 @@ function Content({ page }) {
     <>
       <div className="content_section">
         <div className="content__title">
-          {/* <h1>
-            Creative Digital <span style={{ color: "tomato" }}>agency</span>
-            <br />
-            for mindful brands :)
-          </h1> */}
           {documentToReactComponents(page?.heading)}
         </div>
 
