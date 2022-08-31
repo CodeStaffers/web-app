@@ -12,12 +12,13 @@
   box-shadow: 0 0 10px rgb(0 0 0 / 10%);
 }
 .navbar-logo {
-  color: #000;
   justify-self: start;
   margin-left: 20px;
   cursor: pointer;
 }
-
+.navbar-logo img {
+  width: 7rem;
+}
 .nav-menu {
   display: grid;
   grid-template-columns: repeat(5, auto);

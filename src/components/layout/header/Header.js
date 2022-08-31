@@ -4,6 +4,7 @@ import { MenuItems } from "./MenuItems";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { AiOutlineClose } from "react-icons/ai";
 import { Button } from "../button/Button";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   const [clicked, setClicked] = useState(false);
@@ -25,7 +26,9 @@ function Header() {
   return (
     <>
       <nav className={scroll ? "NavbarItems nav-bg " : "NavbarItems "}>
-        <h1 className="navbar-logo">CodeStaffers</h1>
+        <span className="navbar-logo">
+          <img src="/image/logo.png" alt="logo" />
+        </span>
         <div className="menu-icons" onClick={handleClick}>
           {clicked ? (
             <AiOutlineClose className="mobile-icon" />
@@ -38,9 +41,9 @@ function Header() {
           {MenuItems.map((item, index) => {
             return (
               <li key={index}>
-                <a className={item.cName} href={item.url}>
+                <NavLink to={item.url} className={item.cName}>
                   {item.title}
-                </a>
+                </NavLink>
               </li>
             );
           })}
