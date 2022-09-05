@@ -1,0 +1,20 @@
+       {/* <button
+                className="hero_btn_try"
+                style={{
+                  backgroundColor: "maroon",
+                  color: "white",
+                }}
+                onClick={() => (window.location.href = btnUrl)}
+              >
+                {titleBtn && titleBtn}
+              </button> */}
+
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+
+
+  .user_loveUs h1::first-letter {
+  color: blue;
+}

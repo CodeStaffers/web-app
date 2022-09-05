@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./btnPlus.css";
-import { BsFillArrowUpCircleFill } from "react-icons/bs";
+import { BsArrowUpShort } from "react-icons/bs";
 
 function BtnPlusTop() {
   const [showBtn, setShowBtn] = useState(false);
@@ -31,7 +31,7 @@ function BtnPlusTop() {
             moveTop();
           }}
         >
-          <BsFillArrowUpCircleFill size={40} />
+          <BsArrowUpShort className="btnTopPlusIcon" size={40} />
         </div>
       ) : (
         ""

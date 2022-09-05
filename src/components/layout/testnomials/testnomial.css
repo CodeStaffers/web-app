@@ -2,7 +2,6 @@
   margin-top: 5em;
   padding: 5em;
   background-color: #f5f3f379;
-
   box-sizing: border-box;
 }
 /* 
@@ -51,12 +50,15 @@
 }
 
 .user_loveUs {
-  margin-top: -1%;
+  /* border: 2px solid red; */
 }
-.user_loveUs h1 {
-  font-size: 2.5em;
-  /* margin-left: 9.5%; */
+.user_loveUs h2 {
+  font-size: 3em;
   margin-left: 1.5%;
+}
+
+.user_loveUs h1::first-letter {
+  color: #5656ff;
 }
 
 /* responsive code */

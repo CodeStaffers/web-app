@@ -1,10 +1,11 @@
 .section__body {
   box-sizing: border-box;
-  margin-top: 6em;
+  margin-top: 5em;
   padding: 4em;
 }
 
 .card_section {
+  margin-bottom: 2em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -12,9 +13,16 @@
   padding: 30px;
 }
 .content_section__body {
+  padding: 10px;
   flex: 1;
 }
-.content_tag {
+
+.content_tag h2 {
+  color: black;
+  font-size: 2.5em;
+}
+
+.content_tag p {
   font-size: 16px;
 }
 .section_image {
@@ -23,7 +31,7 @@
 .section_image img {
   width: 100%;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
 }
 .content_btn {
   margin-top: 4em;
@@ -35,8 +43,12 @@
 }
 
 .content_see_all {
+  text-decoration: none;
   margin-left: 2em;
   font-weight: bold;
+}
+.content_see_all:hover {
+  color: blue !important;
 }
 
 @media screen and (max-width: 979px) {

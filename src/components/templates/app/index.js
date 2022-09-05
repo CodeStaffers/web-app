@@ -11,7 +11,7 @@ import HeroSection from "../../layout/heroSection/HeroSection";
 import Project from "../../layout/project/Project";
 
 function ThemeOne(props) {
-  const { page, serviceData, testnomial, heroSection } = props;
+  const { page, serviceData, testnomial, heroSection, project } = props;
   // console.log(page);
 
   const { featureIcon, titleHome } = page;
@@ -25,12 +25,11 @@ function ThemeOne(props) {
       <BtnPlusTop />
       <Header page={page} />
       <Content page={page} />
-      {/* rating part */}
       <Service serviceData={serviceData} />
       <FunFact page={page} />
       <HeroSection heroSection={heroSection} />
       <Testnomial testnomial={testnomial} />
-      <Project />
+      <Project project={project} />
       <MainFooter page={page} />
     </>
   );

@@ -1,7 +1,16 @@
 .btnTopPlus {
   cursor: pointer;
   position: fixed;
-  right: 3%;
   bottom: 5%;
-  z-index: 100;
+  right: 3%;
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.btnTopPlusIcon {
+  color: white;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
 }
