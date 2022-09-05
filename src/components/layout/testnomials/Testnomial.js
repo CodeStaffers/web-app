@@ -6,7 +6,7 @@ import Carousel from "./Carousel";
 import TestnimialCard from "./TestnimialCard";
 
 function Testnomial({ testnomial }) {
-  const MobileView = 700;
+  const MobileView = 640;
   const TabletView = 1224;
 
   const [width, setWidth] = useState(window.innerWidth);
@@ -14,7 +14,6 @@ function Testnomial({ testnomial }) {
   useEffect(() => {
     const resizeHandler = () => {
       setWidth(window.innerWidth);
-      console.log(window.innerWidth);
     };
     window.addEventListener("resize", resizeHandler);
     return () => window.removeEventListener("resize", resizeHandler);
@@ -22,8 +21,7 @@ function Testnomial({ testnomial }) {
 
   const DesktopComponent = ({ no }) => {
     return (
-      <Carousel show={no}>
-        {/* <div className="testnomialCard"> */}
+      <Carousel show={no} space={3}>
         {testnomial &&
           testnomial.map((item, index) => {
             return (
@@ -35,13 +33,13 @@ function Testnomial({ testnomial }) {
               />
             );
           })}
-        {/* </div>{" "} */}
       </Carousel>
     );
   };
+
   const TabletComponent = ({ no }) => {
     return (
-      <Carousel show={no}>
+      <Carousel show={no} space={6}>
         {testnomial &&
           testnomial.map((item, index) => {
             return (
@@ -58,7 +56,7 @@ function Testnomial({ testnomial }) {
   };
   const MobileComponent = ({ no }) => {
     return (
-      <Carousel show={no}>
+      <Carousel show={no} space={0}>
         {testnomial &&
           testnomial.map((item, index) => {
             return (
@@ -77,7 +75,7 @@ function Testnomial({ testnomial }) {
   return (
     <div className="testnomialWrapper">
       <div className="user_loveUs">
-        <h1>User Love Us</h1>
+        <h2>User loves us</h2>
       </div>
 
       {/* start */}

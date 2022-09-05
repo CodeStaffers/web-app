@@ -1,7 +1,10 @@
 import React from "react";
 import "./project.css";
+import ProjectCard from "./ProjectCard";
 
-function Project() {
+function Project({ project }) {
+  console.log(project);
+
   return (
     <div className="project__container">
       <div className="project__wrapper">
@@ -9,8 +12,9 @@ function Project() {
           <span className="our__project__subtitle">Our project</span>
         </div>
         <div className="our__project__title">
-          <h2>Some of our Recent Works</h2>
+          <h2>Some of our recent works</h2>
         </div>
+
         <div className="project__summary">
           <p>
             There are many variations of passages of Lorem Ipsum available,{" "}
@@ -19,69 +23,21 @@ function Project() {
         </div>
 
         <div className="project__card__wrapper">
-          <div className="project__card">
-            <div className="project__image">
-              <img
-                src="http://imroz.rainbowit.net/assets/images/portfolio/portfolio-5.jpg"
-                alt="project"
-              />
-            </div>
+          {project &&
+            project.map((item, index) => {
+              const { title, subTitle, summary, media } = item.fields;
 
-            <div className="project__card__title__subtitle">
-              <div className="project__card__title">
-                <p>Development</p>
-                <h1>Web Design</h1>
-              </div>
-              <div className="project__card__summary">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum,
-                  culpa.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="project__card">
-            <div className="project__image">
-              <img
-                src="http://imroz.rainbowit.net/assets/images/portfolio/portfolio-6.jpg"
-                alt="project"
-              />
-            </div>
-
-            <div className="project__card__title__subtitle">
-              <div className="project__card__title">
-                <p>Development</p>
-                <h1>Web Design</h1>
-              </div>
-              <div className="project__card__summary">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum,
-                  culpa.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="project__card">
-            <div className="project__image">
-              <img
-                src="http://imroz.rainbowit.net/assets/images/portfolio/portfolio-8.jpg"
-                alt="project"
-              />
-            </div>
-
-            <div className="project__card__title__subtitle">
-              <div className="project__card__title">
-                <p>Development</p>
-                <h1>Web Design</h1>
-              </div>
-              <div className="project__card__summary">
-                <p>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum,
-                  culpa.
-                </p>
-              </div>
-            </div>
-          </div>
+              return (
+                <ProjectCard
+                  key={index}
+                  title={title}
+                  subtitle={subTitle}
+                  summary={summary}
+                  media={media}
+                  image={media.fields.file.url}
+                />
+              );
+            })}
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ function Service({ serviceData }) {
     <>
       <div className="service">
         <div className="serviseTitle">
-          <h1>Ours Services</h1>
+          <h2>Ours services</h2>
         </div>
         <div className="serviceCardWrapper">
           {serviceData &&

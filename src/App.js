@@ -10,6 +10,8 @@ function App() {
   const [serviceData, setServiceData] = useState([]);
   const [testnomial, setTestnomial] = useState([]);
   const [heroSection, setHeroSection] = useState([]);
+  const [project, setProject] = useState([]);
+  const [serviceIndexContent, setServiceIndexContent] = useState([]);
   const [user, setUser] = useState({});
 
   function handleCallbackResponse(response) {
@@ -66,6 +68,28 @@ function App() {
       console.error(err);
     }
   };
+  const getProject = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "projects",
+      });
+      const responseData = response && response.items;
+      if (responseData) setProject(responseData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const getServiceIndexContent = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "servicesIndexPage",
+      });
+      const responseData = response && response.items[0].fields;
+      if (responseData) setServiceIndexContent(responseData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   useEffect(() => {
     /* global google */
@@ -82,6 +106,8 @@ function App() {
     getServicePage();
     getTestinomial();
     getHeroSection();
+    getProject();
+    getServiceIndexContent();
   }, []);
 
   return (
@@ -98,6 +124,8 @@ function App() {
           serviceData={serviceData}
           testnomial={testnomial}
           heroSection={heroSection}
+          project={project}
+          serviceIndexContent={serviceIndexContent}
         />
       ) : (
         <div

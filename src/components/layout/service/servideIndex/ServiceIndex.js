@@ -1,16 +1,34 @@
 import React from "react";
-import "./heroSection.css";
+import { Button } from "../../button/Button";
+import "./serviceIndex.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
-import { Button } from "../button/Button";
+function ServiceIndex({ heroSection, serviceIndexContent }) {
+  console.log(serviceIndexContent);
 
-function Section({ heroSection }) {
+  const { summary, media, btnUrl, titleBtn } = serviceIndexContent;
+
   return (
-    <>
-      <div className="section__body">
+    <div className="service__index__container">
+      <div className="service__index__wrapper">
+        <div className="serviceIndexContent">
+          <div className="service_index_titile">
+            {documentToReactComponents(summary)}
+          </div>
+          <div className="service__index__btn">
+            <Button url={btnUrl}>{titleBtn}</Button>
+          </div>
+        </div>
+
+        <div className="service__index__image">
+          <img src={media && media.fields.file.url} alt="" />
+        </div>
+      </div>
+
+      <div className="serviceIndexSection">
         <div className="toggle_section">
           {heroSection &&
-            heroSection.slice(0, 2).map((item, index) => {
+            heroSection.map((item, index) => {
               return (
                 <div
                   className="card_section"
@@ -53,8 +71,8 @@ function Section({ heroSection }) {
             })}
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
-export default Section;
+export default ServiceIndex;

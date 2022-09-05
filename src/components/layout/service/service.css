@@ -5,9 +5,11 @@
 .serviseTitle {
   text-align: center;
 }
-.serviseTitle h1 {
+.serviseTitle h2 {
   font-size: 3em;
+  color: black;
 }
+
 .serviceCardWrapper {
   display: flex;
   justify-content: center;
@@ -19,14 +21,19 @@
   width: 21%;
   padding: 2.2em;
   margin: 1.2em;
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   border-radius: 10px;
-  background-color: #f6f6f6;
+  background-color: #f6f6f6ba;
   cursor: pointer;
   transition: all 0.3s;
 }
 .serviceCardTitle h3 {
-  font-weight: bold;
+  color: black;
+  /* background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block; */
   margin-bottom: 19px;
   font-weight: 600;
 }
@@ -41,7 +48,7 @@
 .serviceSummary {
   color: #757575;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
 }
 .service_link {
   text-decoration: none;

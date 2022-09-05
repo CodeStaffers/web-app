@@ -1,9 +1,11 @@
 :root {
-  --primary: #a62349;
+  --primary: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  --btn-color: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
 }
 
 .btn {
-  padding: 8px 20px;
+  font-size: 1px;
+  padding: 10px 20px;
   border-radius: 4px;
   outline: none;
   border: none;
@@ -11,10 +13,9 @@
 }
 
 .btn:hover {
-  padding: 8px 20px;
   transition: all 0.3s ease-out;
-  background: #fff;
-  color: var(--primary);
+  background: linear-gradient(120deg, #5b47db 20.69%, #0fe3ffcc 79.69%);
+  color: #fff;
   transition: 250ms;
 }
 
@@ -26,25 +27,21 @@
   color: #fff;
   padding: 8px 20px;
   border-radius: 4px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--btn-color);
   transition: all 0.3s ease-out;
 }
 
 .btn--medium {
-  padding: 8px 20px;
+  padding: 10px 20px;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 15px;
   color: #fff;
+  font-weight: 600;
 }
 .btn--large {
-  padding: 12px 26px;
+  padding: 12px 20px;
   border-radius: 4px;
-  font-size: 20px;
-  color: #fff;
-}
-
-.hero_btn_try {
-  outline: none;
-  border: none;
-  font-size: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
 }

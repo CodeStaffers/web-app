@@ -1,17 +1,24 @@
 import React from "react";
-import Content from "../../layout/content-section/Content";
+
+import { Routes, Route } from "react-router-dom";
+
 import Header from "../../layout/header/Header";
 import Favicon from "react-favicon";
-import FunFact from "../../layout/funFact/FunFact";
 import MainFooter from "../../layout/mainFooter/MainFooter";
 import BtnPlusTop from "../../layout/btnPlus/BtnPlusTop";
-import Service from "../../layout/service/Service";
-import Testnomial from "../../layout/testnomials/Testnomial";
-import HeroSection from "../../layout/heroSection/HeroSection";
-import Project from "../../layout/project/Project";
+import HomePage from "./homePage";
+
+import ServiceIndex from "../../layout/service/servideIndex/ServiceIndex";
 
 function ThemeOne(props) {
-  const { page, serviceData, testnomial, heroSection } = props;
+  const {
+    page,
+    serviceData,
+    testnomial,
+    heroSection,
+    project,
+    serviceIndexContent,
+  } = props;
   // console.log(page);
 
   const { featureIcon, titleHome } = page;
@@ -24,13 +31,29 @@ function ThemeOne(props) {
       {featureIcon && <Favicon url={featureIcon.fields.file.url} />}
       <BtnPlusTop />
       <Header page={page} />
-      <Content page={page} />
-      {/* rating part */}
-      <Service serviceData={serviceData} />
-      <FunFact page={page} />
-      <HeroSection heroSection={heroSection} />
-      <Testnomial testnomial={testnomial} />
-      <Project />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <HomePage
+              page={page}
+              serviceData={serviceData}
+              testnomial={testnomial}
+              heroSection={heroSection}
+              project={project}
+            />
+          }
+        />
+        <Route
+          path="/service"
+          element={
+            <ServiceIndex
+              heroSection={heroSection}
+              serviceIndexContent={serviceIndexContent}
+            />
+          }
+        />
+      </Routes>
       <MainFooter page={page} />
     </>
   );

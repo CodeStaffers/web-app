@@ -16,15 +16,17 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  color: aliceblue;
+  background-color: rgb(255, 251, 251);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: linear-gradient(120deg, #9e92ed 20.69%, #0fe3ff 79.69%);
+  -webkit-text-fill-color: transparent;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
 }

@@ -4,7 +4,7 @@ import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Button } from "../button/Button";
 function Content({ page }) {
-  const { homeBtnUrl } = page;
+  const { homeBtnUrl, homeBtn } = page;
 
   return (
     <>
@@ -18,10 +18,10 @@ function Content({ page }) {
         </div>
 
         <div className="start_project_content__div">
-          <Button buttonStyle={"btn--primary"} url={homeBtnUrl}>
-            Start a project &nbsp;
+          <Button buttonSize="btn--large" url={homeBtnUrl}>
+            {homeBtn}&nbsp;
             <div className="btn_content_icon">
-              <BsFillArrowRightCircleFill size={25} />
+              <BsFillArrowRightCircleFill size={20} />
             </div>
           </Button>
 
