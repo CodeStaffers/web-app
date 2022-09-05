@@ -42,3 +42,9 @@
   font-size: 20px;
   color: #fff;
 }
+
+.hero_btn_try {
+  outline: none;
+  border: none;
+  font-size: 20px;
+}
