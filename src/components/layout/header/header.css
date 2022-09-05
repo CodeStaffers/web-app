@@ -44,13 +44,9 @@
   transition: all 0.5s ease-in-out;
 }
 li a.active {
-  color: black;
-  /* background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%); */
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
   -webkit-background-clip: text;
-  /* -webkit-text-fill-color: transparent; */
-}
-li a.inactive {
-  color: black;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-links:hover {
