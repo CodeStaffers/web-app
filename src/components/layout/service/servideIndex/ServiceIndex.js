@@ -2,12 +2,9 @@ import React from "react";
 import { Button } from "../../button/Button";
 import "./serviceIndex.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
-function ServiceIndex({ heroSection, serviceIndexContent }) {
-  console.log(serviceIndexContent);
-
+import { Link } from "react-router-dom";
+function ServiceIndex({ serviceData, serviceIndexContent }) {
   const { summary, media, btnUrl, titleBtn } = serviceIndexContent;
-
   return (
     <div className="service__index__container">
       <div className="service__index__wrapper">
@@ -27,11 +24,11 @@ function ServiceIndex({ heroSection, serviceIndexContent }) {
 
       <div className="serviceIndexSection">
         <div className="toggle_section">
-          {heroSection &&
-            heroSection.map((item, index) => {
+          {serviceData &&
+            serviceData.map((item, index) => {
               return (
                 <div
-                  className="card_section"
+                  className="service_index_card_section"
                   key={index}
                   style={{
                     flexDirection: item.fields.direction
@@ -39,29 +36,24 @@ function ServiceIndex({ heroSection, serviceIndexContent }) {
                       : "row-reverse",
                   }}
                 >
-                  <div className="content_section__body">
-                    <div className="content_tag">
-                      {documentToReactComponents(item.fields.content)}
+                  <div className="service_index_content_section__body">
+                    <div className="service_index_content_tag">
+                      <h1>{item.fields.title}</h1>
+                      {documentToReactComponents(item.fields.description)}
                     </div>
-                    <div className="content_btn">
-                      <Button cName={"btn--medium"}>
-                        {item.fields.titleBtn}
-                      </Button>
-
-                      <a
-                        href={item.fields.featureUrl}
-                        className="content_see_all"
-                        style={{ color: "black" }}
+                    <div className="service_index_content_btn">
+                      <Link
+                        to={`/service/detail/${item.sys.id}/${item.fields.title}`}
                       >
-                        {item.fields.featureTitle}
-                      </a>
+                        <Button cName={"btn--medium"}>Show more</Button>
+                      </Link>
                     </div>
                   </div>
-                  <div className="section_image">
+                  <div className="service_index_section_image">
                     <img
                       src={
-                        item.fields.contentImage &&
-                        item.fields.contentImage.fields.file.url
+                        item.fields.featureImage &&
+                        item.fields.featureImage.fields.file.url
                       }
                       alt="section_logo"
                     />

@@ -9,6 +9,7 @@ import BtnPlusTop from "../../layout/btnPlus/BtnPlusTop";
 import HomePage from "./homePage";
 
 import ServiceIndex from "../../layout/service/servideIndex/ServiceIndex";
+import ServiceDetail from "../../layout/service/serviceDetail/ServiceDetail";
 
 function ThemeOne(props) {
   const {
@@ -48,9 +49,15 @@ function ThemeOne(props) {
           path="/service"
           element={
             <ServiceIndex
-              heroSection={heroSection}
+              serviceData={serviceData}
               serviceIndexContent={serviceIndexContent}
             />
+          }
+        />
+        <Route
+          path="/service/detail/:id/:shortTitle"
+          element={
+            <ServiceDetail serviceData={serviceData} testnomial={testnomial} />
           }
         />
       </Routes>

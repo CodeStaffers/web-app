@@ -1,0 +1,137 @@
+.sDetailWrapper {
+  background-color: #f5f3f379;
+  padding: 5em;
+}
+.sDetailSummary h1 {
+  font-size: 2.5em;
+}
+.sDetailSummary p {
+  font-size: 16px;
+}
+.sDetailWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sDetailItem {
+  padding: 10px;
+  flex: 1;
+}
+.sDetailImage {
+  padding-left: 2em;
+  flex: 1;
+}
+.sDetailImage img {
+  display: block;
+  object-fit: contain;
+  width: 70%;
+}
+
+/* ----------service details her css -----------*/
+
+.sHeroContainer {
+  padding: 1em;
+  margin-top: 5em;
+}
+.sHeroCard {
+  width: 50%;
+  margin: 10px auto;
+}
+.sHeroTitle {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+.sHeroTitle h3 {
+  font-size: 2em;
+  font-weight: bold;
+}
+.sHeroTitle p {
+  margin-top: -5px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 90%;
+}
+.sHeroItem {
+  margin: 3em;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sHeroImage {
+  width: 30%;
+}
+.sHeroImage img {
+  display: block;
+  object-fit: contain;
+  width: 90%;
+}
+
+.sHeroItemList {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.sListItem {
+  margin: 5px;
+}
+.sListItem h4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: black;
+}
+.sListItem p {
+  margin-top: -5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* ----------service details feature css -----------*/
+.sFeatureContainer {
+  margin-top: 5em;
+  padding: 1em;
+}
+.sFeatuteTitle {
+  text-align: center;
+}
+.sFeatuteTitle h3 {
+  font-size: 2em;
+  font-weight: bold;
+}
+.sFeatureWrapper {
+  margin-top: 5em;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sFeatureCard {
+  margin: 20px;
+  text-align: center;
+  width: 30%;
+}
+.sFeatureImage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sFeatureImage img {
+  display: block;
+  object-fit: contain;
+  width: 3em;
+}
+.sFeatureTitleSummary h4 {
+  margin-top: 10px;
+  font-size: 1em;
+}
+.sFeatureTitleSummary p {
+  margin-top: -10px;
+  font-size: 16px;
+  font-weight: 500;
+}

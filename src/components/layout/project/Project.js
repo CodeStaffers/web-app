@@ -3,8 +3,6 @@ import "./project.css";
 import ProjectCard from "./ProjectCard";
 
 function Project({ project }) {
-  console.log(project);
-
   return (
     <div className="project__container">
       <div className="project__wrapper">

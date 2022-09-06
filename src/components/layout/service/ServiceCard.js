@@ -1,11 +1,10 @@
 import React from "react";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
-function ServiceCard({ title, summary, url, color, logo }) {
+import { Link } from "react-router-dom";
+function ServiceCard({ title, shortDesc, id, color, logo }) {
   return (
     <>
       <div className="cardItem">
-        <a href={url} className="service_link">
+        <Link to={`/service/detail/${id}/${title}`} className="service_link">
           <div className="serviceLogo">
             <img
               style={{ color: color }}
@@ -17,9 +16,9 @@ function ServiceCard({ title, summary, url, color, logo }) {
             <h3>{title}</h3>
           </div>
           <div className="serviceSummary">
-            {documentToReactComponents(summary)}
+            <p>{shortDesc}</p>
           </div>
-        </a>
+        </Link>
       </div>
     </>
   );
