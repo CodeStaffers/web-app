@@ -19,6 +19,7 @@ function ServiceDetail({ serviceData, testnomial }) {
     window.scrollTo(0, 0, {
       behavior: "smooth",
     });
+    // eslint-disable-next-line
   }, []);
 
   const { description, featureImage } = data[0] ? data[0].fields : "";
