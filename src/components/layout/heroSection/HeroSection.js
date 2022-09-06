@@ -10,7 +10,7 @@ function Section({ heroSection }) {
       <div className="section__body">
         <div className="toggle_section">
           {heroSection &&
-            heroSection.slice(0, 2).map((item, index) => {
+            heroSection.map((item, index) => {
               return (
                 <div
                   className="card_section"
