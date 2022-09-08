@@ -1,0 +1,163 @@
+.contactContainer {
+  padding: 2%;
+}
+.contactTitle {
+  text-align: center;
+  margin-top: 5%;
+}
+.contactTitle h1 {
+  font-size: 2.5em;
+}
+.contactTitle p {
+  font-weight: 500;
+}
+.slider {
+  margin: 0 auto;
+  margin-top: -20px;
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  height: 5px;
+  border-radius: 20px;
+  width: 150px;
+}
+.contactWrapper {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+.contactImage {
+  text-align: center;
+  flex: 1;
+}
+.contactImage img {
+  width: 60%;
+  object-fit: contain;
+}
+.contactForm {
+  flex: 1;
+}
+
+.formControl {
+  width: 80%;
+  padding: 2em;
+  line-height: 3em;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.twoForm {
+  display: flex;
+  justify-content: space-between;
+}
+.twoForm input {
+  width: 45%;
+}
+
+.formControl input {
+  height: 2.5em;
+  margin-bottom: 1.1em;
+  background-color: rgba(128, 128, 128, 0.112);
+  padding: 7px;
+  border: none;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 5px;
+  outline: none;
+}
+.textArea textArea {
+  width: 98%;
+  height: 10em;
+  border: none;
+  font-family: "Poppins";
+  background-color: rgba(128, 128, 128, 0.112);
+  padding: 7px;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 5px;
+  outline: none;
+  resize: vertical !important;
+}
+
+/* ----------Responsive Code  --------- */
+
+@media screen and (max-width: 1150px) {
+  .contactTitle {
+    margin-top: 10%;
+  }
+  .contactTitle h1 {
+    font-size: 2em;
+  }
+  .contactTitle p {
+    font-weight: 500;
+  }
+  .slider {
+    width: 100px;
+  }
+
+  .contactImage img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactTitle {
+    margin-top: 15%;
+  }
+
+  .slider {
+    width: 100px;
+  }
+  .contactWrapper {
+    margin-top: 5%;
+    display: block;
+    justify-content: center;
+  }
+
+  .contactImage img {
+    width: 50%;
+    object-fit: contain;
+  }
+  .contactForm {
+    text-align: center;
+  }
+  .formControl {
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em;
+    line-height: 3em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .twoForm {
+    display: flex;
+    justify-content: space-between;
+  }
+  .twoForm input {
+    width: 45%;
+  }
+
+  .formControl input {
+    height: 2.5em;
+    margin-bottom: 1.1em;
+    background-color: rgba(128, 128, 128, 0.112);
+    padding: 7px;
+    border: none;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 5px;
+    outline: none;
+  }
+  .textArea textArea {
+    width: 98%;
+    border: none;
+    font-family: "Poppins";
+    background-color: rgba(128, 128, 128, 0.112);
+    padding: 7px;
+    font-weight: bold;
+    font-size: 13px;
+    border-radius: 5px;
+    outline: none;
+    resize: vertical !important;
+  }
+}
