@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function ServiceCard({ title, shortDesc, id, color, logo }) {
+function ServiceCard({ title, shortText, id, color, logo }) {
+  title = title.replaceAll(" ", "-");
+
   return (
     <>
       <div className="cardItem">
-        <Link to={`/service/detail/${id}/${title}`} className="service_link">
+        <Link
+          to={`/services/${title}`}
+          state={{ id: id }}
+          className="service_link"
+        >
           <div className="serviceLogo">
             <img
               style={{ color: color }}
@@ -16,7 +22,7 @@ function ServiceCard({ title, shortDesc, id, color, logo }) {
             <h3>{title}</h3>
           </div>
           <div className="serviceSummary">
-            <p>{shortDesc}</p>
+            <p>{shortText}</p>
           </div>
         </Link>
       </div>

@@ -135,3 +135,125 @@
   font-size: 16px;
   font-weight: 500;
 }
+
+/* -----------Responsive code-------------- */
+@media screen and (max-width: 1150px) {
+  .sDetailWrapper {
+    padding-top: 7em;
+  }
+  .sDetailSummary {
+    display: block;
+    width: 100%;
+  }
+  .sDetailItem {
+    display: block;
+    width: 100%;
+  }
+  .sDetailSummary h1 {
+    font-size: 2em;
+  }
+
+  .sDetailWrapper {
+    flex-direction: column;
+  }
+
+  .sDetailImage {
+    width: 100%;
+  }
+  .sDetailImage img {
+    object-fit: cover;
+    width: 100%;
+  }
+  .sDetailBtn {
+    display: block;
+    width: 100%;
+    margin-bottom: 2.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sHeroCard {
+    width: 100%;
+  }
+  .sHeroTitle {
+    display: flex;
+  }
+  .sHeroTitle h3 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .sHeroTitle p {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+  }
+  .sHeroItem {
+    margin: 3em;
+    display: flex;
+    flex-direction: column;
+  }
+  .sHeroImage {
+    width: 100%;
+  }
+  .sHeroImage img {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+  }
+
+  .sHeroItemList {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .sListItem {
+    margin: 5px;
+  }
+  .sListItem h4 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: black;
+  }
+  .sListItem p {
+    margin-top: -25px;
+    font-weight: 500;
+  }
+
+  /* ----------service details feature css -----------*/
+  .sFeatureContainer {
+    margin-top: 1em;
+    padding: 1em;
+  }
+
+  .sFeatureWrapper {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .sFeatureCard {
+    margin: 5px;
+    width: 100%;
+  }
+  .sFeatureImage {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .sFeatureImage img {
+    display: block;
+    object-fit: contain;
+    width: 5em;
+  }
+  .sFeatureTitleSummary h4 {
+    margin-top: -10px;
+    font-size: 1.2em;
+  }
+  .sFeatureTitleSummary p {
+    margin-top: -20px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

@@ -55,7 +55,7 @@ function ThemeOne(props) {
           }
         />
         <Route
-          path="/service/detail/:id/:shortTitle"
+          path="/services/:shortTitle"
           element={
             <ServiceDetail serviceData={serviceData} testnomial={testnomial} />
           }
