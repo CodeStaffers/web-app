@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./serviceDetail.css";
-import { useParams } from "react-router-dom";
+import { useParams, useLocation } from "react-router-dom";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { Button } from "../../button/Button";
@@ -9,7 +9,9 @@ import ServiceDetailHero from "../serviceDetailComp/ServiceDetailHero";
 import ServiceDetailFeature from "../serviceDetailComp/ServiceDetailFeature";
 
 function ServiceDetail({ serviceData, testnomial }) {
-  const { id, shortTitle } = useParams();
+  const { shortTitle } = useParams();
+  const location = useLocation();
+  const { id } = location.state;
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -36,7 +38,9 @@ function ServiceDetail({ serviceData, testnomial }) {
             </div>
             <div className="sDetailBtn">
               <br />
-              <Button buttonSize="btn--medium">Hi i am here</Button>
+              <Button buttonSize="btn--medium" btnInline="btn-inline">
+                Hi i am here
+              </Button>
             </div>
           </div>
 

@@ -1,9 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button } from "../../button/Button";
 import "./serviceIndex.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { Link } from "react-router-dom";
+import ReactMarkdown from "react-markdown";
+
 function ServiceIndex({ serviceData, serviceIndexContent }) {
+  console.log(serviceData);
   const { summary, media, btnUrl, titleBtn } = serviceIndexContent;
   return (
     <div className="service__index__container">
@@ -38,14 +41,19 @@ function ServiceIndex({ serviceData, serviceIndexContent }) {
                 >
                   <div className="service_index_content_section__body">
                     <div className="service_index_content_tag">
-                      <h1>{item.fields.title}</h1>
-                      {documentToReactComponents(item.fields.description)}
+                      <ReactMarkdown escapeHtml={false}>
+                        {item.fields.shortDesc}
+                      </ReactMarkdown>
                     </div>
                     <div className="service_index_content_btn">
                       <Link
-                        to={`/service/detail/${item.sys.id}/${item.fields.title}`}
+                        to={`/services/${item.fields.title.replaceAll(
+                          " ",
+                          "-"
+                        )}`}
+                        state={{ id: item.sys.id }}
                       >
-                        <Button cName={"btn--medium"}>Show more</Button>
+                        <Button cName={"btn--medium"}>Read more</Button>
                       </Link>
                     </div>
                   </div>

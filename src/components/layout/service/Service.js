@@ -3,7 +3,6 @@ import "./service.css";
 import ServiceCard from "./ServiceCard";
 
 function Service({ serviceData }) {
-  console.log(serviceData);
   return (
     <>
       <div className="service">
@@ -18,7 +17,7 @@ function Service({ serviceData }) {
                   key={index}
                   logo={item.fields.logo}
                   title={item.fields.title}
-                  shortDesc={item.fields.shortDesc}
+                  shortText={item.fields.shortText}
                   url={item.fields.url}
                   color={item.fields.color}
                   id={item.sys.id}
