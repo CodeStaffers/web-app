@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./serviceDetail.css";
-import { useParams, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { Button } from "../../button/Button";
@@ -9,9 +9,8 @@ import ServiceDetailHero from "../serviceDetailComp/ServiceDetailHero";
 import ServiceDetailFeature from "../serviceDetailComp/ServiceDetailFeature";
 
 function ServiceDetail({ serviceData, testnomial }) {
-  const { shortTitle } = useParams();
   const location = useLocation();
-  const { id } = location.state;
+  const { id, titlePage } = location.state;
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -33,7 +32,7 @@ function ServiceDetail({ serviceData, testnomial }) {
         <div className="sDetailWrapper">
           <div className="sDetailItem">
             <div className="sDetailSummary">
-              <h1>{shortTitle}</h1>
+              <h1>{titlePage}</h1>
               {documentToReactComponents(description)}
             </div>
             <div className="sDetailBtn">

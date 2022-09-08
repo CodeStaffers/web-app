@@ -11,6 +11,7 @@ function App() {
   const [testnomial, setTestnomial] = useState([]);
   const [heroSection, setHeroSection] = useState([]);
   const [project, setProject] = useState([]);
+  const [topUser, setTopUser] = useState([]);
   const [serviceIndexContent, setServiceIndexContent] = useState([]);
   const [user, setUser] = useState({});
 
@@ -91,6 +92,18 @@ function App() {
     }
   };
 
+  const getBrandUser = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "brandsName",
+      });
+      const responseData = response && response.items[0].fields;
+      if (responseData) setTopUser(responseData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
@@ -108,6 +121,7 @@ function App() {
     getHeroSection();
     getProject();
     getServiceIndexContent();
+    getBrandUser();
   }, []);
 
   return (
@@ -126,6 +140,7 @@ function App() {
           heroSection={heroSection}
           project={project}
           serviceIndexContent={serviceIndexContent}
+          topUser={topUser}
         />
       ) : (
         <div

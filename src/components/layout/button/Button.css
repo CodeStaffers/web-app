@@ -51,9 +51,14 @@
 @media screen and (max-width: 1150px) {
   .btn-sm {
     font-size: 15px;
-    display: inline;
+    display: inline-block;
   }
 }
 
 @media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 960px) {
+  .header-btn-none {
+    display: none;
+  }
 }

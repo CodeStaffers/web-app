@@ -48,7 +48,9 @@ function Header() {
             );
           })}
         </ul>
-        <Button buttonSize="btn--medium">Get Started</Button>
+        <Button buttonSize="btn--medium" btnHeader="header-btn-none">
+          Get Started
+        </Button>
       </nav>
     </>
   );

@@ -1,0 +1,41 @@
+.webUserContainer {
+  margin-top: 3%;
+  padding: 2em;
+}
+.webUserTitle {
+  text-align: center;
+}
+.webUserTitle p {
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+}
+.webUserTitle h2 {
+  margin-top: -15px;
+  font-size: 3em;
+}
+
+.webUserComp {
+  margin-top: -5em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.webUserComp img {
+  margin: 3em;
+  width: 10%;
+}
+
+@media screen and (max-width: 1100px) {
+  .webUserComp img {
+    width: 15%;
+  }
+}
+@media screen and (max-width: 660px) {
+  .webUserComp img {
+    width: 15%;
+  }
+}

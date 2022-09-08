@@ -6,7 +6,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import ReactMarkdown from "react-markdown";
 
 function ServiceIndex({ serviceData, serviceIndexContent }) {
-  console.log(serviceData);
   const { summary, media, btnUrl, titleBtn } = serviceIndexContent;
   return (
     <div className="service__index__container">
@@ -29,6 +28,8 @@ function ServiceIndex({ serviceData, serviceIndexContent }) {
         <div className="toggle_section">
           {serviceData &&
             serviceData.map((item, index) => {
+              let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
+
               return (
                 <div
                   className="service_index_card_section"
@@ -47,11 +48,11 @@ function ServiceIndex({ serviceData, serviceIndexContent }) {
                     </div>
                     <div className="service_index_content_btn">
                       <Link
-                        to={`/services/${item.fields.title.replaceAll(
-                          " ",
-                          "-"
-                        )}`}
-                        state={{ id: item.sys.id }}
+                        to={`/services/${urlTitle}`}
+                        state={{
+                          id: item.sys.id,
+                          titlePage: item.fields.title,
+                        }}
                       >
                         <Button cName={"btn--medium"}>Read more</Button>
                       </Link>

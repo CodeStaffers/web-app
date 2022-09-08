@@ -10,6 +10,8 @@ import HomePage from "./homePage";
 
 import ServiceIndex from "../../layout/service/servideIndex/ServiceIndex";
 import ServiceDetail from "../../layout/service/serviceDetail/ServiceDetail";
+import Contact from "../../layout/conactPage/Contact";
+import WebUser from "../../layout/webUser/WebUser";
 
 function ThemeOne(props) {
   const {
@@ -19,6 +21,7 @@ function ThemeOne(props) {
     heroSection,
     project,
     serviceIndexContent,
+    topUser,
   } = props;
   // console.log(page);
 
@@ -60,7 +63,9 @@ function ThemeOne(props) {
             <ServiceDetail serviceData={serviceData} testnomial={testnomial} />
           }
         />
+        <Route path="/contacts" element={<Contact />} />
       </Routes>
+      <WebUser topUser={topUser} />
       <MainFooter page={page} />
     </>
   );
