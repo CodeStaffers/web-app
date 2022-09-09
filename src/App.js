@@ -12,6 +12,7 @@ function App() {
   const [heroSection, setHeroSection] = useState([]);
   const [project, setProject] = useState([]);
   const [topUser, setTopUser] = useState([]);
+  const [serviceDetailPage, setServiceDetailPage] = useState([]);
   const [serviceIndexContent, setServiceIndexContent] = useState([]);
   const [user, setUser] = useState({});
 
@@ -104,6 +105,18 @@ function App() {
     }
   };
 
+  const getServiceDetailPage = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "serviceDetailPage",
+      });
+      const responseData = response && response.items[0].fields;
+      if (responseData) setServiceDetailPage(responseData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
@@ -122,6 +135,7 @@ function App() {
     getProject();
     getServiceIndexContent();
     getBrandUser();
+    getServiceDetailPage();
   }, []);
 
   return (
@@ -141,6 +155,7 @@ function App() {
           project={project}
           serviceIndexContent={serviceIndexContent}
           topUser={topUser}
+          serviceDetailPage={serviceDetailPage}
         />
       ) : (
         <div

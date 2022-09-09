@@ -8,10 +8,14 @@ import Testnomial from "../../testnomials/Testnomial";
 import ServiceDetailHero from "../serviceDetailComp/ServiceDetailHero";
 import ServiceDetailFeature from "../serviceDetailComp/ServiceDetailFeature";
 
-function ServiceDetail({ serviceData, testnomial }) {
+function ServiceDetail({ serviceData, testnomial, serviceDetailPage }) {
   const location = useLocation();
   const { id, titlePage } = location.state;
   const [data, setData] = useState([]);
+
+  console.log(serviceDetailPage);
+
+  const { brandCard, content, image, summary, title } = serviceDetailPage;
 
   useEffect(() => {
     const findDataById =
@@ -49,9 +53,9 @@ function ServiceDetail({ serviceData, testnomial }) {
         </div>
         {/* end */}
 
-        <ServiceDetailHero />
+        <ServiceDetailHero summary={summary} image={image} content={content} />
 
-        <ServiceDetailFeature />
+        <ServiceDetailFeature brandCard={brandCard} title={title} />
 
         <Testnomial testnomial={testnomial} />
       </div>

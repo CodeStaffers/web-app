@@ -22,6 +22,7 @@ function ThemeOne(props) {
     project,
     serviceIndexContent,
     topUser,
+    serviceDetailPage,
   } = props;
   // console.log(page);
 
@@ -60,7 +61,11 @@ function ThemeOne(props) {
         <Route
           path="/services/:shortTitle"
           element={
-            <ServiceDetail serviceData={serviceData} testnomial={testnomial} />
+            <ServiceDetail
+              serviceData={serviceData}
+              testnomial={testnomial}
+              serviceDetailPage={serviceDetailPage}
+            />
           }
         />
         <Route path="/contacts" element={<Contact />} />

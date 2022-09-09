@@ -1,7 +1,3 @@
-.sDetailWrapper {
-  background-color: #f5f3f379;
-  padding: 5em;
-}
 .sDetailSummary h1 {
   font-size: 2.5em;
 }
@@ -9,8 +5,10 @@
   font-size: 16px;
 }
 .sDetailWrapper {
+  background-color: #f5f3f379;
+  padding: 5%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -87,9 +85,10 @@
   color: black;
 }
 .sListItem p {
-  margin-top: -5px;
+  margin-top: -15px;
   font-size: 16px;
   font-weight: 500;
+  margin-bottom: 3rem;
 }
 
 /* ----------service details feature css -----------*/
@@ -139,7 +138,8 @@
 /* -----------Responsive code-------------- */
 @media screen and (max-width: 1150px) {
   .sDetailWrapper {
-    padding-top: 7em;
+    flex-direction: column;
+    padding: 3em;
   }
   .sDetailSummary {
     display: block;
@@ -147,18 +147,13 @@
   }
   .sDetailItem {
     display: block;
-    width: 100%;
   }
   .sDetailSummary h1 {
     font-size: 2em;
   }
-
-  .sDetailWrapper {
-    flex-direction: column;
-  }
-
   .sDetailImage {
-    width: 100%;
+    display: block;
+    width: 90%;
   }
   .sDetailImage img {
     object-fit: cover;
@@ -166,8 +161,16 @@
   }
   .sDetailBtn {
     display: block;
-    width: 100%;
     margin-bottom: 2.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sDetailSummary h1 {
+    font-size: 2em;
+  }
+  .sDetailWrapper {
+    padding: 5% 1em;
   }
 }
 
@@ -235,7 +238,7 @@
     flex-wrap: wrap;
   }
   .sFeatureCard {
-    margin: 5px;
+    margin: 20px 5px;
     width: 100%;
   }
   .sFeatureImage {
@@ -249,11 +252,11 @@
   }
   .sFeatureTitleSummary h4 {
     margin-top: -10px;
-    font-size: 1.2em;
+    font-size: 1em;
   }
   .sFeatureTitleSummary p {
     margin-top: -20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
   }
 }
