@@ -8,6 +8,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
   font-family: "Poppins";
+
+  overflow-x: hidden;
 }
 /* width */
 ::-webkit-scrollbar {

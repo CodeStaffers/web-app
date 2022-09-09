@@ -1,5 +1,5 @@
 .contactContainer {
-  padding: 2%;
+  padding: 5%;
 }
 .contactTitle {
   text-align: center;
@@ -80,6 +80,9 @@
 /* ----------Responsive Code  --------- */
 
 @media screen and (max-width: 1150px) {
+  .textArea textArea {
+    width: 97%;
+  }
   .contactTitle {
     margin-top: 10%;
   }
@@ -92,7 +95,9 @@
   .slider {
     width: 100px;
   }
-
+  .formControl {
+    width: 100%;
+  }
   .contactImage img {
     width: 100%;
     object-fit: contain;
@@ -110,7 +115,6 @@
   .contactWrapper {
     margin-top: 5%;
     display: block;
-    justify-content: center;
   }
 
   .contactImage img {
@@ -121,12 +125,9 @@
     text-align: center;
   }
   .formControl {
-    margin: 0 auto;
-    text-align: center;
+    width: 90%;
     padding: 2em;
-    line-height: 3em;
-    display: flex;
-    justify-content: center;
+    line-height: 4em;
     flex-direction: column;
   }
   .twoForm {
@@ -149,7 +150,7 @@
     outline: none;
   }
   .textArea textArea {
-    width: 98%;
+    width: 97%;
     border: none;
     font-family: "Poppins";
     background-color: rgba(128, 128, 128, 0.112);
@@ -159,5 +160,11 @@
     border-radius: 5px;
     outline: none;
     resize: vertical !important;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contactTitle {
+    margin-top: 20%;
   }
 }

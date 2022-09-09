@@ -1,6 +1,6 @@
 .NavbarItems {
-  width: 100%;
-  position: fixed;
+  /* width: 100%; */
+  position: relative;
   z-index: 10000;
   background: #fff;
   height: 50px;
@@ -75,9 +75,10 @@ li a.active {
     display: flex;
     flex-direction: column;
     width: 100%;
+    display: block;
     position: absolute;
-    top: 80px;
-    left: -100%;
+    top: 72px;
+    left: -110%;
     opacity: 1;
     transition: all 0.5s ease;
     padding: 0px;
@@ -85,6 +86,7 @@ li a.active {
   }
   .nav-menu.active {
     background: #a62349;
+    color: white;
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -92,21 +94,33 @@ li a.active {
   }
   .nav-links {
     /* display: table; */
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
     display: flex;
+    width: 100%;
     justify-content: center;
-
     padding: 2rem;
     width: 100%;
   }
+  .nav-links a.active {
+    color: black !important;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
   .nav-links:hover {
-    background: #a60734;
+    background-color: red;
     border-radius: 0;
   }
   .navbar-logo {
     position: absolute;
-    top: 0;
+    top: -2.9em;
     left: 0;
     transform: translate(25%, 50%);
+  }
+  .navbar-logo img {
+    width: 5.5rem;
   }
   .menu-icons {
     display: block;
@@ -120,6 +134,7 @@ li a.active {
   .mobile-icon {
     color: #000;
     font-size: 30px;
+    margin-left: 30px;
   }
   .nav-links-mobile {
     display: block;
@@ -127,18 +142,25 @@ li a.active {
     padding: 1.5rem;
     margin: 2rem auto;
     border-radius: 4px;
-    width: 80%;
-    background: #6e0b27;
+    color: rgb(254, 247, 247) !important;
     text-decoration: none;
-    color: #fff;
     font-size: 1.5rem;
   }
-  .nav-links-mobile:hover {
+  .nav-links-mobile :hover {
     background: #fff;
-    color: #a60734;
+    color: #f3f3f3;
     transition: 250ms;
   }
   Button {
     display: none;
   }
+}
+
+@media screen and (max-width: 1570px) {
+  .NavbarItems {
+    position: fixed;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1150px) {
 }

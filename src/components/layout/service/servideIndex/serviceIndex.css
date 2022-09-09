@@ -1,13 +1,10 @@
 :root {
   --primary--content: black;
 }
-.service__index__container {
-  padding: 10px;
-}
+
 .service__index__wrapper {
   background-color: #f5f3f379;
   padding: 5%;
-  margin-top: 2%;
 }
 .service_index_titile h1 {
   font-size: 2.5em;
