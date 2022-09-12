@@ -13,17 +13,12 @@ function ServiceDetailFeature({ brandCard, title }) {
           {brandCard &&
             brandCard.map((item, index) => {
               return (
-                <div className="sFeatureCard">
+                <div className="sFeatureCard" key={index}>
                   <div className="sFeatureImage">
                     <img src={item.fields.image.fields.file.url} alt="icon" />
                   </div>
                   <div className="sFeatureTitleSummary">
                     {documentToReactComponents(item.fields.content)}
-                    {/* <h4>Use A/B testing to improve message</h4>
-                    <p>
-                      optimise user messages with subject line,content and
-                      revenue contribution A/B testing.
-                    </p> */}
                   </div>
                 </div>
               );

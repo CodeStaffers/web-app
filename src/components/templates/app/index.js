@@ -24,7 +24,6 @@ function ThemeOne(props) {
     topUser,
     serviceDetailPage,
   } = props;
-  // console.log(page);
 
   const { featureIcon, titleHome } = page;
 
@@ -59,7 +58,7 @@ function ThemeOne(props) {
           }
         />
         <Route
-          path="/services/:shortTitle"
+          path="/service/:shortTitle"
           element={
             <ServiceDetail
               serviceData={serviceData}

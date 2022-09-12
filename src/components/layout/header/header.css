@@ -1,12 +1,12 @@
 .NavbarItems {
-  /* width: 100%; */
-  position: relative;
+  width: 100%;
+  position: fixed;
   z-index: 10000;
   background: #fff;
   height: 50px;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   font-size: 1.1rem;
   box-shadow: rgba(59, 59, 59, 0.1) 0px 1px 2px 0px;
@@ -24,16 +24,17 @@
 .navbar-logo img {
   display: block !important;
   object-fit: contain;
-  width: 7rem;
+  width: 6rem;
 }
 .nav-menu {
+  /* border: 2px solid red; */
   display: grid;
   grid-template-columns: repeat(5, auto);
   list-style: none;
   text-align: center;
-  width: 70vw;
+  width: 75vw;
   justify-content: end;
-  margin-right: 2rem;
+  margin-right: 3rem;
 }
 .nav-links {
   align-self: center;
@@ -115,13 +116,11 @@ li a.active {
   }
   .navbar-logo {
     position: absolute;
-    top: -2.9em;
+    top: -3.5em;
     left: 0;
     transform: translate(25%, 50%);
   }
-  .navbar-logo img {
-    width: 5.5rem;
-  }
+
   .menu-icons {
     display: block;
     position: absolute;
@@ -156,11 +155,10 @@ li a.active {
   }
 }
 
-@media screen and (max-width: 1570px) {
-  .NavbarItems {
-    position: fixed;
-    width: 100%;
-  }
-}
 @media screen and (max-width: 1150px) {
+}
+@media screen and (max-width: 1250px) {
+  .NavbarItems {
+    width: 98%;
+  }
 }

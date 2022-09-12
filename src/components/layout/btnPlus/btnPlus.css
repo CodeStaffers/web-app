@@ -1,6 +1,7 @@
 .btnTopPlus {
   cursor: pointer;
   position: fixed;
+  z-index: 100;
   bottom: 5%;
   right: 3%;
   background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);

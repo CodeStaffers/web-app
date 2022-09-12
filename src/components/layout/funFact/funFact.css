@@ -41,13 +41,43 @@
 }
 .review_comments p {
   color: black;
-  font-weight: 500;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* responsive code */
+@media screen and (max-width: 960px) {
+  .funFact {
+    background-color: #f5f3f379;
+    padding: 5%;
+    margin-top: 2%;
+  }
+  .funFact_title h2 {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 780px) {
+  .funFact_title h2 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 580px) {
+  .funFact_reviews {
+    padding: 10px;
+    flex-direction: column;
+  }
+  .funFact_review_items {
+    margin: 0px 20px;
+    display: block;
+  }
+  .review_comments {
+    margin-top: -2em;
+  }
 }
 
 /* responsie code */
 
-@media screen and (max-width: 823px) {
+/* @media screen and (max-width: 823px) {
   .funFact_title h1 {
     line-height: 1em;
     font-size: 2em;
@@ -96,4 +126,4 @@
     display: block;
     line-height: 0.8em;
   }
-}
+} */

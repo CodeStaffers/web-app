@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./testnomial.css";
-
 import Carousel from "./Carousel";
 
 import TestnimialCard from "./TestnimialCard";
 
 function Testnomial({ testnomial }) {
-  const MobileView = 640;
-  const TabletView = 1224;
+  const MobileView = 600;
+  const TabletView = 960;
 
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -56,7 +55,7 @@ function Testnomial({ testnomial }) {
   };
   const MobileComponent = ({ no }) => {
     return (
-      <Carousel show={no} space={0}>
+      <Carousel show={no} space={1}>
         {testnomial &&
           testnomial.map((item, index) => {
             return (
@@ -85,7 +84,7 @@ function Testnomial({ testnomial }) {
           maxWidth: 1500,
           marginLeft: "auto",
           marginRight: "auto",
-          marginTop: 64,
+          marginTop: "-3em",
         }}
       >
         {width <= MobileView ? (

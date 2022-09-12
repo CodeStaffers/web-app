@@ -18,3 +18,70 @@
   .user_loveUs h1::first-letter {
   color: blue;
 }
+
+ {project &&
+            project.map((item, index) => {
+              const { title, subTitle, summary, media } = item.fields;
+
+              return (
+                <ProjectCard
+                  key={index}
+                  title={title}
+                  subtitle={subTitle}
+                  summary={summary}
+                  media={media}
+                  image={media.fields.file.url}
+                />
+              );
+            })}
+
+
+
+
+
+
+
+
+
+            .projectCard:hover .projectImage::after {
+  content: "";
+  position: absolute;
+  left: 0;
+
+  top: 0;
+  border-radius: 10px;
+  width: 100%;
+  height: 74vh;
+  display: inline-block;
+  background: -moz-linear-gradient(
+    top,
+    20deg,
+    rgba(241, 11, 11, 0.742) 0%,
+    transparent
+  ); /* FF3.6+ */
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(0, 0, 0, 0.65)),
+    color-stop(100%, rgba(0, 0, 0, 0))
+  );
+  background: -webkit-linear-gradient(
+    20deg,
+    rgba(241, 11, 11, 0.742) 0%,
+    transparent
+  );
+  background: -o-linear-gradient(
+    20deg,
+    rgba(241, 11, 11, 0.742) 0%,
+    transparent
+  );
+  background: -ms-linear-gradient(
+    20deg,
+    rgba(173, 25, 6, 0.742) 0%,
+    transparent
+  );
+  background: linear-gradient(20deg, rgba(164, 5, 5, 0.97) 10%, transparent);
+
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+}

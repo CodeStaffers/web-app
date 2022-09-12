@@ -1,7 +1,7 @@
 .section__body {
   box-sizing: border-box;
   margin-top: 5em;
-  padding: 4em;
+  padding: 0em 5em;
 }
 
 .card_section {
@@ -26,12 +26,16 @@
   font-size: 16px;
 }
 .section_image {
+  /* border: 2px solid black; */
   flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .section_image img {
-  width: 100%;
+  width: 80%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 .content_btn {
   margin-top: 4em;
@@ -55,11 +59,13 @@
   .section__body {
     padding: 10px;
   }
+  .content_tag h2 {
+    font-size: 1.75em;
+  }
 
   .card_section {
     display: block;
   }
-
   .hero_btn_try {
     display: block;
     margin-bottom: 40px;
@@ -67,11 +73,28 @@
   .content_see_all {
     display: inline-block;
   }
+  .section_image {
+    margin-top: 5%;
+    flex: 1;
+    flex-direction: column;
+  }
+  .section_image img {
+    width: 60%;
+    display: block;
+  }
 }
 @media screen and (max-width: 580px) {
+  .card_section {
+    display: block;
+  }
   .hero_btn_try {
     display: block;
     width: 35%;
     padding: 10px;
+  }
+  .section_image img {
+    width: 100%;
+    display: block;
+    object-fit: contain;
   }
 }
