@@ -81,7 +81,7 @@
   }
 }
 
-@media screen and (max-width: 896px) {
+@media screen and (max-width: 953px) {
   .testnomialAuthor img {
     width: 60px;
     height: 60px;
@@ -94,7 +94,7 @@
 
   .carousel-content {
     display: flex;
-    width: 85%;
+    width: 90%;
     transition: all 250ms linear;
     -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
     scrollbar-width: none; /* hide scrollbar in Firefox */
@@ -105,19 +105,20 @@
   }
 }
 
-@media screen and (max-width: 844px) {
+@media screen and (max-width: 700px) {
   .carousel-content-wrapper {
-    overflow: hidden;
-    width: 100%;
+    padding: 5px;
+    width: 95%;
     height: 100%;
   }
 
   .carousel-content {
     display: flex;
-    width: 80%;
+    width: 40%;
     transition: all 250ms linear;
-    -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
-    scrollbar-width: none; /* hide scrollbar in Firefox */
+    -ms-overflow-style: none;
+    white-space: wrap;
+    scrollbar-width: none;
   }
   .testnomialCardItems {
     display: block;
@@ -131,12 +132,9 @@
   }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 600px) {
   .carousel-content {
-    width: 180%;
-    transition: all 250ms linear;
-    -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
-    scrollbar-width: none; /* hide scrollbar in Firefox */
+    width: 100%;
   }
   .testnomialCardItems {
     display: block;

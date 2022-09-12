@@ -7,7 +7,7 @@ function ServiceCard({ title, shortText, id, color, logo }) {
     <>
       <div className="cardItem">
         <Link
-          to={`/services/${urlTitle}`}
+          to={`/service/${urlTitle}`}
           state={{ id: id, titlePage: title }}
           className="service_link"
         >

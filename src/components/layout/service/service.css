@@ -6,8 +6,9 @@
   text-align: center;
 }
 .serviseTitle h2 {
+  font-weight: 700;
   font-size: 3em;
-  color: black;
+  color: #000000;
 }
 
 .serviceCardWrapper {
@@ -46,9 +47,9 @@
   /* border: 1px solid red; */
 }
 .serviceSummary {
-  color: #757575;
+  color: black;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
 }
 .service_link {
   text-decoration: none;
@@ -58,31 +59,38 @@
 }
 
 /* responsive code */
-@media screen and (max-width: 823px) {
+@media screen and (max-width: 960px) {
   .service {
-    margin-top: -10%;
+    margin-top: 0%;
+  }
+  .cardItem {
+    width: 20%;
+    padding: 2em;
+  }
+  .serviseTitle h2 {
+    font-size: 2.5em;
+  }
+}
+@media screen and (max-width: 780px) {
+  .service {
+    margin-top: 0%;
   }
   .cardItem {
     width: 30%;
-    /* width: 25%; */
+    padding: 2em;
   }
 }
-@media screen and (max-width: 953px) {
+@media screen and (max-width: 580px) {
   .service {
-    margin-top: -10%;
+    margin-top: 20%;
   }
-  .cardItem {
-    width: 30%;
+  .serviceCardWrapper {
+    flex-direction: row;
   }
-}
-
-@media screen and (max-width: 653px) {
   .cardItem {
     width: 100%;
     display: block;
+    padding: 10px 1em;
     margin: 10px;
-  }
-  .serviseTitle h1 {
-    font-size: 2em;
   }
 }

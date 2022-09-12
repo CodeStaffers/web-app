@@ -48,7 +48,7 @@ function ServiceIndex({ serviceData, serviceIndexContent }) {
                     </div>
                     <div className="service_index_content_btn">
                       <Link
-                        to={`/services/${urlTitle}`}
+                        to={`/service/${urlTitle}`}
                         state={{
                           id: item.sys.id,
                           titlePage: item.fields.title,

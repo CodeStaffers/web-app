@@ -4,19 +4,17 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 function ProjectCard({ title, subtitle, summary, image }) {
   return (
     <>
-      <div className="project__card">
-        <div className="project__image">
+      <div className="projectCard">
+        <div className="projectImage">
           <img src={image} alt="project" />
         </div>
 
-        <div className="project__card__title__subtitle">
-          <div className="project__card__title">
-            <p>{subtitle}</p>
-            <h1>{title}</h1>
-          </div>
-          <div className="project__card__summary">
-            {documentToReactComponents(summary)}
-          </div>
+        <div className="projectSummary">
+          <p>{subtitle}</p>
+          <h3>{title}</h3>
+        </div>
+        <div className="projectContent">
+          {documentToReactComponents(summary)}
         </div>
       </div>
     </>

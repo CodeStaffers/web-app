@@ -1,8 +1,9 @@
 .sDetailSummary h1 {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 .sDetailSummary p {
   font-size: 16px;
+  font-weight: 500;
 }
 .sDetailWrapper {
   background-color: #f5f3f379;
@@ -123,11 +124,11 @@
 .sFeatureImage img {
   display: block;
   object-fit: contain;
-  width: 3em;
+  width: 2em;
 }
 .sFeatureTitleSummary h4 {
   margin-top: 10px;
-  font-size: 1em;
+  font-size: 1.25em;
 }
 .sFeatureTitleSummary p {
   margin-top: -10px;
@@ -175,6 +176,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .sHeroContainer {
+    /* border: 1px solid red; */
+  }
   .sHeroCard {
     width: 100%;
   }
@@ -182,17 +186,17 @@
     display: flex;
   }
   .sHeroTitle h3 {
-    font-size: 2em;
+    font-size: 1.75em;
     font-weight: bold;
   }
   .sHeroTitle p {
     margin-top: 20px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     width: 100%;
   }
   .sHeroItem {
-    margin: 3em;
+    margin: 0em;
     display: flex;
     flex-direction: column;
   }
@@ -207,20 +211,21 @@
 
   .sHeroItemList {
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
+    display: block;
   }
+
   .sListItem {
-    margin: 5px;
+    display: block;
+    width: 100%;
+    margin: 0px;
   }
   .sListItem h4 {
-    font-size: 1.5em;
+    font-size: 1.25em;
     font-weight: bold;
     color: black;
   }
   .sListItem p {
+    width: 100%;
     margin-top: -25px;
     font-weight: 500;
   }
@@ -230,7 +235,9 @@
     margin-top: 1em;
     padding: 1em;
   }
-
+  .sFeatuteTitle h3 {
+    font-size: 1.75em;
+  }
   .sFeatureWrapper {
     margin-top: 2em;
     display: flex;
@@ -244,19 +251,22 @@
   .sFeatureImage {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 15px;
   }
   .sFeatureImage img {
     display: block;
     object-fit: contain;
-    width: 5em;
+    width: 2.2em;
   }
   .sFeatureTitleSummary h4 {
     margin-top: -10px;
     font-size: 1em;
+    color: black;
+    font-weight: 700;
   }
   .sFeatureTitleSummary p {
     margin-top: -20px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 500;
   }
 }

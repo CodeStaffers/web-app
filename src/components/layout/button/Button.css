@@ -50,7 +50,7 @@
 /* -----------Responsive code-------------- */
 @media screen and (max-width: 1150px) {
   .btn {
-    margin-right: 20px;
+    /* margin-right: 20px; */
   }
   .btn-sm {
     font-size: 15px;

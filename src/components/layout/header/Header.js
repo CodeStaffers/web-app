@@ -27,7 +27,9 @@ function Header() {
     <>
       <nav className={scroll ? "NavbarItems nav-bg " : "NavbarItems "}>
         <span className="navbar-logo">
-          <img src="/image/logo.png" alt="logo" />
+          <NavLink to="/">
+            <img src="/image/logo.png" alt="logo" />
+          </NavLink>
         </span>
         <div className="menu-icons" onClick={handleClick}>
           {clicked ? (
