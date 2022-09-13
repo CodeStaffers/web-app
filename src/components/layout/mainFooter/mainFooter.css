@@ -11,8 +11,11 @@
   align-items: baseline;
 }
 .mainFooter_nav1 {
-  padding: 10px;
   flex: 1.5;
+}
+
+.mainFooter_image img {
+  width: 6rem;
 }
 
 .mainFooter_content p {

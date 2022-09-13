@@ -36,7 +36,7 @@ function ServiceDetail({ serviceData, testnomial, serviceDetailPage }) {
         <div className="sDetailWrapper">
           <div className="sDetailItem">
             <div className="sDetailSummary">
-              <h1>{titlePage}</h1>
+              <h2>{titlePage}</h2>
               {documentToReactComponents(description)}
             </div>
             <div className="sDetailBtn">

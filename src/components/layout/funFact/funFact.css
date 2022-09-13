@@ -30,11 +30,11 @@
 }
 .review_title {
 }
-.review_title h1 {
+.review_title h3 {
   background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
+  font-size: 2em;
 }
 .review_comments {
   margin-top: -15%;

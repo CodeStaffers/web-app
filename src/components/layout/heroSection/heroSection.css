@@ -17,9 +17,9 @@
   flex: 1;
 }
 
-.content_tag h2 {
+.content_tag h3 {
   color: black;
-  font-size: 2.5em;
+  font-size: 2em;
 }
 
 .content_tag p {
@@ -38,7 +38,7 @@
   object-fit: contain;
 }
 .content_btn {
-  margin-top: 4em;
+  margin-top: 2.5em;
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
@@ -58,9 +58,6 @@
 @media screen and (max-width: 979px) {
   .section__body {
     padding: 10px;
-  }
-  .content_tag h2 {
-    font-size: 1.75em;
   }
 
   .card_section {

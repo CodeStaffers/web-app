@@ -25,10 +25,10 @@ function FunFact({ page }) {
           <div className="funFact_reviews">
             <div className="funFact_review_items">
               <div className="review_title">
-                <h1>
+                <h3>
                   <CountUp end={download} duration={3} />
                   M+
-                </h1>
+                </h3>
               </div>
               <div className="review_comments">
                 <p>{downlaodTitle}</p>
@@ -37,10 +37,10 @@ function FunFact({ page }) {
 
             <div className="funFact_review_items">
               <div className="review_title">
-                <h1>
+                <h3>
                   <CountUp end={active} duration={3} />
                   M+
-                </h1>
+                </h3>
               </div>
               <div className="review_comments">
                 <p>{activeTitle}</p>
@@ -48,10 +48,10 @@ function FunFact({ page }) {
             </div>
             <div className="funFact_review_items">
               <div className="review_title">
-                <h1>
+                <h3>
                   <CountUp end={postiveCount} duration={3} />
                   M+
-                </h1>
+                </h3>
               </div>
               <div className="review_comments">
                 <p>{postiveReviewTitle}</p>

@@ -29,14 +29,10 @@
   cursor: pointer;
   transition: all 0.3s;
 }
-.serviceCardTitle h3 {
+.serviceCardTitle h4 {
   color: black;
-  /* background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  display: inline-block; */
+  font-size: 1.2em;
   margin-bottom: 19px;
-  font-weight: 600;
 }
 
 .serviceLogo img {
@@ -69,6 +65,11 @@
   }
   .serviseTitle h2 {
     font-size: 2.5em;
+  }
+  .serviceCardTitle h4 {
+    color: black;
+    font-size: 1em;
+    margin-bottom: 19px;
   }
 }
 @media screen and (max-width: 780px) {

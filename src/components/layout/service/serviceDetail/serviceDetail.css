@@ -1,10 +1,14 @@
-.sDetailSummary h1 {
+.sDetailSummary h2 {
   font-size: 3em;
 }
 .sDetailSummary p {
   font-size: 16px;
   font-weight: 500;
 }
+.sDetailSummary h3 {
+  font-size: 2em;
+}
+
 .sDetailWrapper {
   background-color: #f5f3f379;
   padding: 5%;
@@ -80,8 +84,9 @@
 .sListItem {
   margin: 5px;
 }
-.sListItem h4 {
-  font-size: 1.2em;
+.sListItem h5 {
+  font-size: 1.1em;
+
   font-weight: bold;
   color: black;
 }
@@ -126,9 +131,9 @@
   object-fit: contain;
   width: 2em;
 }
-.sFeatureTitleSummary h4 {
+.sFeatureTitleSummary h5 {
   margin-top: 10px;
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 .sFeatureTitleSummary p {
   margin-top: -10px;
@@ -219,11 +224,7 @@
     width: 100%;
     margin: 0px;
   }
-  .sListItem h4 {
-    font-size: 1.25em;
-    font-weight: bold;
-    color: black;
-  }
+
   .sListItem p {
     width: 100%;
     margin-top: -25px;
@@ -258,11 +259,8 @@
     object-fit: contain;
     width: 2.2em;
   }
-  .sFeatureTitleSummary h4 {
+  .sFeatureTitleSummary h5 {
     margin-top: -10px;
-    font-size: 1em;
-    color: black;
-    font-weight: 700;
   }
   .sFeatureTitleSummary p {
     margin-top: -20px;

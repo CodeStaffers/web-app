@@ -19,7 +19,7 @@ function ServiceCard({ title, shortText, id, color, logo }) {
             />
           </div>
           <div className="serviceCardTitle" style={{ color: "black" }}>
-            <h3>{title}</h3>
+            <h4>{title}</h4>
           </div>
           <div className="serviceSummary">
             <p>{shortText}</p>
