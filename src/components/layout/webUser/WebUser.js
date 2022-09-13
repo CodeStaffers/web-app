@@ -11,9 +11,8 @@ function WebUser({ topUser }) {
     <>
       <div className="webUserContainer">
         <div className="webUserTitle">
+          <span>Top Client</span>
           {documentToReactComponents(title)}
-          {/* <p>Top Client</p>
-          <h2>We Worked With Brands.</h2> */}
         </div>
 
         <div className="webUserComp">

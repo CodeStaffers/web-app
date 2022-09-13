@@ -5,13 +5,15 @@
 .webUserTitle {
   text-align: center;
 }
-.webUserTitle p {
+.webUserTitle span {
+  display: inline-block;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  margin-bottom: 1.5em;
   background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  display: inline-block;
-  font-size: 18px;
-  font-weight: bold;
 }
 .webUserTitle h2 {
   margin-top: -15px;

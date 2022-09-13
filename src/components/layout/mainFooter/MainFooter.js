@@ -3,6 +3,7 @@ import "./mainFooter.css";
 import { FcCallback, FcTreeStructure, FcMindMap } from "react-icons/fc";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BsFacebook, BsTwitter, BsPinterest, BsLinkedin } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 function MainFooter({ page }) {
   const {
@@ -26,7 +27,9 @@ function MainFooter({ page }) {
         <div className="mainFooter_nav">
           <div className="mainFooter_nav1">
             <div className="mainFooter_image">
-              <img src={logo && logo.fields.file.url} alt="" />
+              <NavLink to="/">
+                <img src={logo && logo.fields.file.url} alt="" />
+              </NavLink>
             </div>
 
             <div

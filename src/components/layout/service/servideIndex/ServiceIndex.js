@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../button/Button";
 import "./serviceIndex.css";
@@ -7,6 +7,13 @@ import ReactMarkdown from "react-markdown";
 
 function ServiceIndex({ serviceData, serviceIndexContent }) {
   const { summary, media, btnUrl, titleBtn } = serviceIndexContent;
+
+  useEffect(() => {
+    window.scrollTo(10, 0, {
+      behavior: "smooth",
+    });
+  }, []);
+
   return (
     <div className="service__index__container">
       <div className="service__index__wrapper">
