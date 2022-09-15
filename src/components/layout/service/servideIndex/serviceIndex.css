@@ -85,9 +85,6 @@
     background-color: #f5f3f379;
     padding-top: 10%;
   }
-  .service_index_titile h2 {
-    font-size: 2.5em;
-  }
 
   .service__index__image img {
     display: block;
@@ -116,14 +113,16 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
   .service__index__wrapper {
     padding-top: 10%;
   }
   .service_index_titile h2 {
     font-size: 2em;
   }
-
+  .service_index_content_tag h3 {
+    font-size: 1.5em;
+  }
   .service__index__wrapper {
     flex-direction: column;
   }

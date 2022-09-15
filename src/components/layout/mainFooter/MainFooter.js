@@ -66,7 +66,7 @@ function MainFooter({ page }) {
           <div className="mainFooterNav2">
             <div className="apps">
               <div className="appTitle">
-                <h2>Apps</h2>
+                <h4>Apps</h4>
               </div>
               <div className="appList">
                 {apps &&
@@ -95,7 +95,7 @@ function MainFooter({ page }) {
           <div className="mainFooterNav3">
             <div className="aboutUs">
               <div className="aboutTitle">
-                <h2>About Us</h2>
+                <h4>About Us</h4>
               </div>
               <div className="aboutList">
                 {aboutUs &&
@@ -124,7 +124,7 @@ function MainFooter({ page }) {
           <div className="mainFooterNav4">
             <div className="service">
               <div className="serviceTitle">
-                <h2>service</h2>
+                <h4>service</h4>
               </div>
               <div className="serviceList">
                 {service &&
@@ -153,7 +153,7 @@ function MainFooter({ page }) {
           <div className="mainFooterNav5">
             <div className="address">
               <div className="addressTitle">
-                <h2>Address</h2>
+                <h4>Address</h4>
               </div>
               <div className="addressList">
                 <div className="contactNumber">

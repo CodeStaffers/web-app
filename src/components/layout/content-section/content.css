@@ -1,12 +1,13 @@
 :root {
-  --primary--content: black;
+  --primary--content: white !important;
 }
 .content_section {
-  height: 100vh;
+  background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 .content__title {
   padding: 10px;
@@ -31,9 +32,7 @@
   text-align: center;
 }
 .content_sub_title p {
-  font-size: 16px;
   color: var(--primary--content);
-  font-weight: 500;
 }
 .start_project_content__div {
   box-sizing: border-box;
@@ -51,7 +50,6 @@
 
 @media screen and (max-width: 960px) {
   .content_section {
-    height: 70vh;
     margin-bottom: 5%;
   }
   .content__title h1 {
@@ -73,7 +71,6 @@
 
 @media screen and (max-width: 540px) {
   .content_section {
-    height: 80vh;
     margin-bottom: 5%;
   }
   .content__title h1 {

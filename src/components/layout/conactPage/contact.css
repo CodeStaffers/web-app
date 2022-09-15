@@ -8,9 +8,7 @@
 .contactTitle h1 {
   font-size: 3em;
 }
-.contactTitle p {
-  font-weight: 500;
-}
+
 .slider {
   margin: 0 auto;
   margin-top: -30px;
@@ -93,10 +91,6 @@
   }
   .contactTitle {
     margin-top: 10%;
-  }
-
-  .contactTitle p {
-    font-weight: 500;
   }
   .slider {
     margin-top: -25px;

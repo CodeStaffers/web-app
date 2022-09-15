@@ -54,25 +54,13 @@
   flex: 1;
 }
 
-.addressList p,
-.serviceList p,
-.aboutList p,
-.appList p {
-  color: black;
-  font-size: 16px;
-  font-weight: 500;
-}
-
 .addressList {
+  margin-top: -1.2em;
   cursor: pointer;
 }
 .contactNumber p {
   display: inline-block;
   margin-left: 10px;
-  color: black;
-
-  font-size: 16px;
-  font-weight: 500;
 }
 .website a {
   display: inline-block;
@@ -88,30 +76,33 @@
 .locationUrl p {
   display: inline;
   margin-left: 10px;
-  color: black;
-  font-size: 16px;
-  font-weight: 500;
 }
 .mainFooter_nav_hover:hover {
   text-decoration: none !important;
   color: rgba(0, 0, 255, 0.767) !important;
 }
 
-@media screen and (max-width: 1105px) {
+@media screen and (max-width: 1150px) {
   .mainFooter {
-    padding: 20px;
+    padding: 10px;
   }
 }
 @media screen and (max-width: 1001px) {
   .mainFooter_nav {
     padding: 10px;
-    display: flex;
     flex-direction: column;
   }
   .mainFooterNav4 {
     margin-left: -10px;
   }
+
   .mainFooterNav5 {
     margin-top: -4em;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .mainFooterNav4 {
+    margin-top: -2.5em;
   }
 }

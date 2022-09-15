@@ -13,8 +13,6 @@ function ServiceDetail({ serviceData, testnomial, serviceDetailPage }) {
   const { id, titlePage } = location.state;
   const [data, setData] = useState([]);
 
-  console.log(serviceDetailPage);
-
   const { brandCard, content, image, summary, title } = serviceDetailPage;
 
   useEffect(() => {

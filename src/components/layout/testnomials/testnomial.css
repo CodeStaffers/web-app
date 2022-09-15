@@ -1,97 +1,102 @@
-.testnomialWrapper {
+.testnomialContainer {
   margin-top: 5em;
-  padding: 5em;
-  background-color: #f5f3f379;
   box-sizing: border-box;
+  padding: 0em 7em;
+  padding-bottom: 2em;
+}
+.testnomialTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.testnomialTitle {
+  line-height: 2.5em;
 }
 
-.testnomialCardItems {
-  margin: 10px;
-  width: 20%;
-  padding: 10px;
+.testnomialTitle p {
+  margin-top: -1.5em;
+}
+.testnomialQoute {
+  color: #b9b9b9b4;
+  font-size: 5em;
+  padding-right: 0.5em;
 }
 
-.star_image img {
+.testnomialCardWrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+.tesnomialCard {
+  flex: 1 1 15em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 1em;
+  margin-top: 1em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  transition: all 0.5s ease;
+}
+
+.tesnomialContent {
+  box-sizing: border-box;
+  padding: 2em 1em;
+}
+.testnomialQoute2 {
+  color: #b9b9b9b4;
+  font-size: 2em;
+}
+.tesnomialContent h3 {
+  margin-top: 0.5em;
+}
+.tesnomialContent p {
+  margin-top: -1.5em;
+}
+.testnomialuserDetail {
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 1em;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  background-color: #f5f3f379;
+}
+
+.testnomialImage img {
+  text-align: center;
   display: block;
   object-fit: contain;
-  height: 100px;
-  width: 100px;
-}
-.testnomialSummary {
-  margin-top: -10%;
-}
-.testnomialSummary p {
-  color: black;
-  font-size: 16px;
-  font-weight: 500;
-}
-.testnomialAuthor {
-  margin-top: 5%;
-}
-.testnomialAuthor img {
-  display: block;
-  object-fit: cover;
-  width: 60px;
-  height: 60px;
   border-radius: 50%;
+  width: 4em;
+  height: 4em;
 }
-.autherName {
-  height: 50px;
+.testnomialUser {
   box-sizing: border-box;
-}
-.autherName p {
-  box-sizing: border-box;
+  margin-left: 2em;
 }
 
-.user_loveUs {
-  /* border: 2px solid red; */
-}
-.user_loveUs h2 {
-  font-size: 3em;
-  margin-left: 3%;
+.testnomialUser p {
+  margin-top: -2em;
 }
 
-/* responsive code */
-@media screen and (max-width: 823px) {
-  .testnomialAuthor img {
-    width: 60px;
-    height: 60px;
-  }
-}
-@media screen and (max-width: 953px) {
-  .testnomialWrapper {
-    padding: 10px;
-  }
-  .user_loveUs h2 {
-    font-size: 2.5em;
-    margin-left: 4%;
-  }
-
-  .testnomialAuthor img {
-    width: 60px;
-    height: 60px;
-  }
+.tesnomialCard:hover {
+  transform: scale(1.05);
 }
 
-@media screen and (max-width: 653px) {
-  .user_loveUs h2 {
-    font-size: 2em;
-    margin-left: 5%;
+/* Responsive code */
+@media only screen and (max-width: 1150px) {
+  .testnomialContainer {
+    padding: 0em 10px;
+    padding-bottom: 2em;
   }
-  .testnomialCard {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+}
+@media screen and (max-width: 780px) {
+  .testnomialQoute {
+    font-size: 3em;
   }
-  .testnomialCardItems {
-    width: 90%;
-  }
-  .star_image {
-    margin-bottom: 2em;
-  }
-
-  .testnomialAuthor img {
-    width: 60px;
-    height: 60px;
+  .testnomialQoute2 {
+    font-size: 1.75em;
   }
 }

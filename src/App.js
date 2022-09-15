@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
 import { client } from "./client";
-import "./App.css";
 import ThemeOne from "./components/templates/app/index";
 
 const clientId = process.env.REACT_APP_ACCESS_ID;

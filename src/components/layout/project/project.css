@@ -1,12 +1,10 @@
 .projectContainer {
   margin-top: 5em;
-  padding: 1em 5em;
   box-sizing: border-box;
-  margin-bottom: 7%;
+  padding: 0em 7em;
+  padding-bottom: 2em;
 }
-.projectWrapper {
-  padding-left: 5%;
-}
+
 .projectTitle span {
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -30,25 +28,45 @@
 .projectCardWrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   justify-content: flex-start;
+  flex-wrap: wrap;
   margin-top: 3em;
 }
 
 .projectCard {
   position: relative;
-  /* flex: 1 0.5 30%; */
+  z-index: 10;
+  width: auto;
+  height: auto;
   transition: all 0.5s ease-in-out;
   margin-right: 2em;
   cursor: pointer;
 }
 
+.projectImage {
+  position: relative;
+  display: inline-block;
+}
 .projectImage img {
   border-radius: 10px;
   transition: 0.5s ease all;
   display: block;
+  object-fit: cover;
+  width: 100%;
   width: 390px;
-  height: 532px;
+}
+
+.projectSummary {
+  content: "";
+  position: absolute;
+  top: 26em;
+  bottom: 7em;
+  width: auto;
+  transition: all 0.4s ease-in-out;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 0 2em;
+  color: white;
 }
 
 .projectSummary p {
@@ -58,47 +76,21 @@
   font-size: 2em;
   margin-top: -0.2em;
 }
-.projectContent {
-  z-index: 0;
-  transition: all 0.4s ease-in-out;
-  position: absolute;
-  z-index: -1;
-  bottom: -3em;
-  padding: 0 2.5em;
-  margin-top: -1em;
-  width: 390px;
-  box-sizing: border-box;
-}
-.projectContent p {
+
+.proContent p {
   font-size: 16px;
   line-height: 20px;
   color: white;
 }
 
-.projectSummary {
-  content: "";
-  position: absolute;
-  top: 25.6em;
-  width: 390px;
-  transition: all 0.4s ease-in-out;
-  box-sizing: border-box;
-  text-align: left;
-  padding: 0 2.5em;
-  color: white;
-}
-
-.projectImage {
-  position: relative;
-  display: inline-block;
-}
 .projectCard:hover .projectImage::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
+  /* content: ""; */
+  /* position: absolute; */
+  /* left: 0; */
+  /* top: 0; */
   border-radius: 10px;
-  width: 100%;
-  height: 74vh;
+  /* width: 100%; */
+  /* height: 100vh; */
   display: inline-block;
   background: -moz-linear-gradient(
     top,
@@ -128,17 +120,15 @@
     rgba(173, 25, 6, 0.742) 0%,
     transparent
   );
-  background: linear-gradient(360deg, rgba(164, 5, 5, 0.97) 10%, transparent);
-
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 );
+  background: linear-gradient(360deg, rgba(142, 2, 2, 0.97) 30%, transparent);
 }
 
 .projectCard:hover .projectSummary {
-  top: 22em;
+  z-index: 5;
+  top: 20em;
 }
-.projectCard:hover .projectContent {
-  bottom: 1em;
-  z-index: 2;
+.projectCard:hover .proContent {
+  margin-top: -1.5em;
 }
 
 .projectImage {
@@ -166,75 +156,32 @@
 
 @media screen and (max-width: 1150px) {
   .projectContainer {
-    margin-top: 3em;
-    padding: 1em;
-    margin-bottom: 2%;
+    padding: 0em 10px;
   }
-  .projectWrapper {
-    margin-left: 0%;
-  }
+
   .projectCardWrapper {
-    justify-content: center;
+    justify-content: flex-start;
   }
   .projectCard:hover .projectImage::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
     width: 100%;
-    height: 84vh;
   }
-  .projectTitle h2 {
-    font-size: 2.5em;
-  }
+
   .projectImage img {
     width: 328px;
   }
+  .projectSummary {
+    top: 22em;
+  }
   .projectSummary h3 {
     font-size: 1.5em;
+  }
+  .projectCard:hover .projectSummary {
+    top: 15em;
   }
 }
 
 @media screen and (max-width: 770px) {
-  .projectContainer {
-    margin-top: 3em;
-    padding: 1em;
-    margin-bottom: 2%;
-  }
   .projectCardWrapper {
-    justify-content: center;
-  }
-  .projectWrapper {
-    margin-left: 10%;
-  }
-  .projectTitle h2 {
-    font-size: 2em;
-  }
-  .projectSummary h3 {
-    font-size: 1.5em;
-  }
-  .projectImage img {
-    width: 350px;
-  }
-
-  .projectCard:hover .projectSummary {
-    top: 21em;
-  }
-  .projectCard:hover .projectContent {
-    bottom: 0.3em;
-  }
-}
-
-@media screen and (max-width: 445px) {
-  .projectWrapper {
-    /* margin-left: 15%; */
-  }
-
-  .projectCard:hover .projectSummary {
-    top: 21em;
-  }
-  .projectCard:hover .projectContent {
-    bottom: 0.3em;
+    justify-content: flex-start;
   }
 }

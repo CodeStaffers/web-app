@@ -1,5 +1,6 @@
 import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import "./serviceHero.css";
 function ServiceHeroHero({ summary, image, content }) {
   return (
     <>
