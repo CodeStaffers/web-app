@@ -1,9 +1,5 @@
-.sHeroContainer {
-  padding: 0em 1em;
-  margin-top: 5em;
-}
 .sHeroCard {
-  width: 50%;
+  width: 80%;
   margin: 10px auto;
 }
 .sHeroTitle {
@@ -15,24 +11,24 @@
 }
 
 .sHeroTitle p {
-  margin-top: -5px;
-  width: 90%;
+  margin-top: -1em;
 }
 .sHeroItem {
-  margin: 3em;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
 }
 .sHeroImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
-  text-align: center;
 }
 .sHeroImage img {
-  display: inline-block;
-  object-fit: contain;
-  width: 50%;
+  display: block;
+  object-fit: cover;
+  width: 65%;
 }
 
 .sHeroItemList {

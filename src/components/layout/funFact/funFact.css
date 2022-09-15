@@ -1,8 +1,7 @@
-.funFact {
+/* .funFact {
   background-color: #f5f3f379;
-  padding: 0em 5em;
-  margin-top: 5em;
-}
+  margin-top: 2em;
+} */
 .funFact_card {
   display: flex;
   text-align: center;
@@ -41,21 +40,7 @@
 }
 
 /* responsive code */
-@media screen and (max-width: 960px) {
-  .funFact {
-    background-color: #f5f3f379;
-    padding: 5%;
-    margin-top: 2%;
-  }
-}
-@media screen and (max-width: 780px) {
-  .funFact_title h2 {
-    font-size: 2em;
-  }
-  .review_title h3 {
-    font-size: 1.5em;
-  }
-}
+
 @media screen and (max-width: 580px) {
   .funFact_reviews {
     padding: 10px;

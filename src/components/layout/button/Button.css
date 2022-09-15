@@ -49,9 +49,6 @@
 
 /* -----------Responsive code-------------- */
 @media screen and (max-width: 1150px) {
-  .btn {
-    /* margin-right: 20px; */
-  }
   .btn-sm {
     font-size: 15px;
     display: inline-block;
@@ -60,7 +57,7 @@
 
 @media screen and (max-width: 768px) {
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1073px) {
   .header-btn-none {
     display: none;
   }

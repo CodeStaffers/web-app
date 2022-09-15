@@ -8,35 +8,28 @@ function Content({ page }) {
 
   return (
     <>
-      <div className="content_section">
-        <div className="content__title">
-          {documentToReactComponents(page?.heading)}
-        </div>
-
-        <div className="content_sub_title">
-          <p>{page?.name}</p>
-        </div>
-
-        <div className="start_project_content__div">
-          <Button buttonSize="btn--large" url={homeBtnUrl}>
-            {homeBtn}&nbsp;
-            <div className="btn_content_icon">
-              <BsFillArrowRightCircleFill size={20} />
+      <section className="content_section">
+        <div className="wrapper">
+          <div className="content_section_title">
+            <div className="content__title">
+              {documentToReactComponents(page?.heading)}
             </div>
-          </Button>
 
-          {/* <button
-            className="start__project__btn"
-            style={{
-              backgroundColor: homeBtnBgColor,
-              color: page.homeBtn && page.homeBtn.btnColor,
-            }}
-            onClick={() => (window.location.href = homeBtnUrl)}
-          >
-            {homeBtn}
-          </button> */}
+            <div className="content_sub_title">
+              <p>{page?.name}</p>
+            </div>
+
+            <div className="start_project_content__div">
+              <Button buttonSize="btn--large" url={homeBtnUrl}>
+                {homeBtn} &nbsp;
+                <div className="btn_content_icon">
+                  <BsFillArrowRightCircleFill size={20} />
+                </div>
+              </Button>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

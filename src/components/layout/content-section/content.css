@@ -1,8 +1,10 @@
 :root {
-  --primary--content: white !important;
+  --primary--content: black;
 }
 .content_section {
-  background-color: black;
+  margin-top: 0em;
+}
+.content_section_title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,26 +30,30 @@
   display: inline-block;
 }
 .content_sub_title {
-  margin-top: -1%;
+  margin-bottom: 3%;
   text-align: center;
 }
 .content_sub_title p {
   color: var(--primary--content);
 }
-.start_project_content__div {
-  box-sizing: border-box;
-  margin-top: 2%;
-  border-radius: 30px;
-  padding: 3px;
+.start_project_content__div button {
+  display: flex;
+  align-items: center;
 }
-
 .btn_content_icon {
   margin-left: 5px;
-  display: inline-block;
+  display: inline;
+}
+.btn_content_icon svg {
+  margin-top: 0px;
 }
 
 /* responsie code */
-
+@media screen and (max-width: 1110px) {
+  .content__title :nth-child(1) {
+    font-size: 3.5em;
+  }
+}
 @media screen and (max-width: 960px) {
   .content_section {
     margin-bottom: 5%;

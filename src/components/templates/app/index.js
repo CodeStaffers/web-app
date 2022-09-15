@@ -9,9 +9,10 @@ import BtnPlusTop from "../../layout/btnPlus/BtnPlusTop";
 import HomePage from "./homePage";
 
 import ServiceIndex from "../../layout/service/servideIndex/ServiceIndex";
-import ServiceDetail from "../../layout/service/serviceDetail/ServiceDetail";
+// import ServiceDetail from "../../layout/service/serviceDetail/ServiceDetail";
 import Contact from "../../layout/conactPage/Contact";
 import WebUser from "../../layout/webUser/WebUser";
+import ServiceDetailPage from "./serviceDetailPage";
 
 function ThemeOne(props) {
   const {
@@ -60,7 +61,7 @@ function ThemeOne(props) {
         <Route
           path="/service/:shortTitle"
           element={
-            <ServiceDetail
+            <ServiceDetailPage
               serviceData={serviceData}
               testnomial={testnomial}
               serviceDetailPage={serviceDetailPage}
