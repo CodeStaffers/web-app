@@ -1,0 +1,76 @@
+.sFeatureContainer {
+  margin-top: 5em;
+  padding: 1em;
+  padding-bottom: 2em;
+}
+.sFeatuteTitle {
+  text-align: center;
+}
+
+.sFeatureWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.sFeatureCard {
+  margin: 10px;
+  text-align: center;
+  width: 30%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.sFeatureImage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.sFeatureImage img {
+  display: block;
+  object-fit: contain;
+  width: 2em;
+}
+
+.sFeatureTitleSummary h6 {
+  margin-top: 10px;
+}
+
+.sFeatureTitleSummary p {
+  margin-top: -15px;
+}
+
+/* -----------Responsive code-------------- */
+
+@media screen and (max-width: 780px) {
+  .sFeatureContainer {
+    padding: 1em 10px;
+  }
+
+  .sFeatureWrapper {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .sFeatureCard {
+    margin: 20px 5px;
+    width: 100%;
+  }
+  .sFeatureImage {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+  .sFeatureImage img {
+    display: block;
+    object-fit: contain;
+    width: 2.2em;
+  }
+  .sFeatureTitleSummary h5 {
+    margin-top: -10px;
+  }
+  .sFeatureTitleSummary p {
+    margin-top: -20px;
+  }
+}

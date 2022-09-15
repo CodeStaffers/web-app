@@ -12,9 +12,7 @@ function ProjectCard({ title, subtitle, summary, image }) {
         <div className="projectSummary">
           <p>{subtitle}</p>
           <h3>{title}</h3>
-        </div>
-        <div className="projectContent">
-          {documentToReactComponents(summary)}
+          <div className="proContent">{documentToReactComponents(summary)}</div>
         </div>
       </div>
     </>

@@ -1,6 +1,6 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
-
+import "./serviceFeature.css";
 function ServiceDetailFeature({ brandCard, title }) {
   return (
     <>

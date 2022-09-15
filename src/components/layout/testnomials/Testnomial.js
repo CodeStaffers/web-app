@@ -1,103 +1,96 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./testnomial.css";
-import Carousel from "./Carousel";
+import { FaQuoteRight } from "react-icons/fa";
 
-import TestnimialCard from "./TestnimialCard";
+// import TestnimialCard from "./TestnimialCard";
 
 function Testnomial({ testnomial }) {
-  const MobileView = 600;
-  const TabletView = 960;
-
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const resizeHandler = () => {
-      setWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", resizeHandler);
-    return () => window.removeEventListener("resize", resizeHandler);
-  });
-
-  const DesktopComponent = ({ no }) => {
-    return (
-      <Carousel show={no} space={3}>
-        {testnomial &&
-          testnomial.map((item, index) => {
-            return (
-              <TestnimialCard
-                key={index}
-                logo={item.fields.rating}
-                summary={item.fields.content}
-                author={item.fields.author}
-              />
-            );
-          })}
-      </Carousel>
-    );
-  };
-
-  const TabletComponent = ({ no }) => {
-    return (
-      <Carousel show={no} space={6}>
-        {testnomial &&
-          testnomial.map((item, index) => {
-            return (
-              <TestnimialCard
-                key={index}
-                logo={item.fields.rating}
-                summary={item.fields.content}
-                author={item.fields.author}
-              />
-            );
-          })}
-      </Carousel>
-    );
-  };
-  const MobileComponent = ({ no }) => {
-    return (
-      <Carousel show={no} space={1}>
-        {testnomial &&
-          testnomial.map((item, index) => {
-            return (
-              <TestnimialCard
-                key={index}
-                logo={item.fields.rating}
-                summary={item.fields.content}
-                author={item.fields.author}
-              />
-            );
-          })}
-      </Carousel>
-    );
-  };
-
   return (
-    <div className="testnomialWrapper">
-      <div className="user_loveUs">
-        <h2>User loves us</h2>
+    <>
+      <div className="testnomialContainer">
+        <div className="testnomialTitleContainer">
+          <div className="testnomialTitle">
+            <h2>What they say about us</h2>
+            <p>Our beloved customer testnomial about our service</p>
+          </div>
+          <div className="">
+            <FaQuoteRight className="testnomialQoute" />
+          </div>
+        </div>
+
+        <div className="testnomialCardWrapper">
+          <div className="tesnomialCard">
+            <div className="tesnomialContent">
+              <FaQuoteRight className="testnomialQoute2" />
+              <h4>Amazing</h4>
+              <p>
+                Thanks you very much for your random number generator i use it
+                all the time. I have a monthly drawing on my site,so I use it to
+                pick the two winners
+                <br />
+                <br />
+                so,thank you i see you are visiting Georgia.Have a great time!
+              </p>
+            </div>
+            <div className="testnomialuserDetail">
+              <div className="testnomialImage">
+                <img src="/image/user.jpeg" alt="logo" />
+              </div>
+              <div className="testnomialUser">
+                <h6>skylar Dokdis</h6>
+                <p>CEO of Unicharm</p>
+              </div>
+            </div>
+          </div>
+          <div className="tesnomialCard">
+            <div className="tesnomialContent">
+              <FaQuoteRight className="testnomialQoute2" />
+              <h4>Amazing</h4>
+              <p>
+                Thanks you very much for your random number generator i use it
+                all the time. I have a monthly drawing on my site,so I use it to
+                pick the two winners
+                <br />
+                <br />
+                so,thank you i see you are visiting Georgia.Have a great time!
+              </p>
+            </div>
+            <div className="testnomialuserDetail">
+              <div className="testnomialImage">
+                <img src="/image/user.jpeg" alt="logo" />
+              </div>
+              <div className="testnomialUser">
+                <h6>skylar Dokdis</h6>
+                <p>CEO of Unicharm</p>
+              </div>
+            </div>
+          </div>
+          <div className="tesnomialCard">
+            <div className="tesnomialContent">
+              <FaQuoteRight className="testnomialQoute2" />
+              <h4>Amazing</h4>
+              <p>
+                Thanks you very much for your random number generator i use it
+                all the time. I have a monthly drawing on my site,so I use it to
+                pick the two winners
+                <br />
+                <br />
+                so,thank you i see you are visiting Georgia.Have a great time!
+              </p>
+            </div>
+            <div className="testnomialuserDetail">
+              <div className="testnomialImage">
+                <img src="/image/user.jpeg" alt="logo" />
+              </div>
+              <div className="testnomialUser">
+                <h6>skylar Dokdis</h6>
+                <p>CEO of Unicharm</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* start */}
-
-      <div
-        style={{
-          maxWidth: 1500,
-          marginLeft: "auto",
-          marginRight: "auto",
-          marginTop: "-3em",
-        }}
-      >
-        {width <= MobileView ? (
-          <MobileComponent no={1} />
-        ) : width >= MobileView && width <= TabletView ? (
-          <TabletComponent no={2} />
-        ) : (
-          <DesktopComponent no={3} />
-        )}
-      </div>
-
-      {/* end */}
-    </div>
+    </>
   );
 }
 

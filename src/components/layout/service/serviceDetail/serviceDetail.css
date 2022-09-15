@@ -1,17 +1,6 @@
-.sDetailSummary h2 {
-  font-size: 3em;
-}
-.sDetailSummary p {
-  font-size: 16px;
-  font-weight: 500;
-}
-.sDetailSummary h3 {
-  font-size: 2em;
-}
-
 .sDetailWrapper {
   background-color: #f5f3f379;
-  padding: 5%;
+  padding: 5em 2em;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -28,124 +17,14 @@
 .sDetailImage img {
   display: block;
   object-fit: contain;
-  width: 70%;
-}
-
-/* ----------service details her css -----------*/
-
-.sHeroContainer {
-  padding: 1em;
-  margin-top: 5em;
-}
-.sHeroCard {
-  width: 50%;
-  margin: 10px auto;
-}
-.sHeroTitle {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  text-align: center;
-}
-.sHeroTitle h3 {
-  font-size: 2em;
-  font-weight: bold;
-}
-.sHeroTitle p {
-  margin-top: -5px;
-  font-size: 16px;
-  font-weight: 500;
-  width: 90%;
-}
-.sHeroItem {
-  margin: 3em;
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.sHeroImage {
-  width: 30%;
-}
-.sHeroImage img {
-  display: block;
-  object-fit: contain;
-  width: 90%;
-}
-
-.sHeroItemList {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.sListItem {
-  margin: 5px;
-}
-.sListItem h5 {
-  font-size: 1.1em;
-
-  font-weight: bold;
-  color: black;
-}
-.sListItem p {
-  margin-top: -15px;
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 3rem;
-}
-
-/* ----------service details feature css -----------*/
-.sFeatureContainer {
-  margin-top: 5em;
-  padding: 1em;
-}
-.sFeatuteTitle {
-  text-align: center;
-}
-.sFeatuteTitle h3 {
-  font-size: 2em;
-  font-weight: bold;
-}
-.sFeatureWrapper {
-  margin-top: 5em;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.sFeatureCard {
-  margin: 20px;
-  text-align: center;
-  width: 30%;
-}
-.sFeatureImage {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.sFeatureImage img {
-  display: block;
-  object-fit: contain;
-  width: 2em;
-}
-.sFeatureTitleSummary h5 {
-  margin-top: 10px;
-  font-size: 1.1em;
-}
-.sFeatureTitleSummary p {
-  margin-top: -10px;
-  font-size: 16px;
-  font-weight: 500;
+  width: 60%;
 }
 
 /* -----------Responsive code-------------- */
 @media screen and (max-width: 1150px) {
   .sDetailWrapper {
     flex-direction: column;
-    padding: 3em;
+    padding: 5em 10px;
   }
   .sDetailSummary {
     display: block;
@@ -154,117 +33,17 @@
   .sDetailItem {
     display: block;
   }
-  .sDetailSummary h1 {
-    font-size: 2em;
-  }
+
   .sDetailImage {
     display: block;
     width: 90%;
   }
   .sDetailImage img {
     object-fit: cover;
-    width: 100%;
+    width: 80%;
   }
   .sDetailBtn {
     display: block;
     margin-bottom: 2.5em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .sDetailSummary h1 {
-    font-size: 2em;
-  }
-  .sDetailWrapper {
-    padding: 5% 1em;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .sHeroContainer {
-    /* border: 1px solid red; */
-  }
-  .sHeroCard {
-    width: 100%;
-  }
-  .sHeroTitle {
-    display: flex;
-  }
-  .sHeroTitle h3 {
-    font-size: 1.75em;
-    font-weight: bold;
-  }
-  .sHeroTitle p {
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: 500;
-    width: 100%;
-  }
-  .sHeroItem {
-    margin: 0em;
-    display: flex;
-    flex-direction: column;
-  }
-  .sHeroImage {
-    width: 100%;
-  }
-  .sHeroImage img {
-    display: block;
-    object-fit: contain;
-    width: 100%;
-  }
-
-  .sHeroItemList {
-    width: 100%;
-    display: block;
-  }
-
-  .sListItem {
-    display: block;
-    width: 100%;
-    margin: 0px;
-  }
-
-  .sListItem p {
-    width: 100%;
-    margin-top: -25px;
-    font-weight: 500;
-  }
-
-  /* ----------service details feature css -----------*/
-  .sFeatureContainer {
-    margin-top: 1em;
-    padding: 1em;
-  }
-  .sFeatuteTitle h3 {
-    font-size: 1.75em;
-  }
-  .sFeatureWrapper {
-    margin-top: 2em;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  .sFeatureCard {
-    margin: 20px 5px;
-    width: 100%;
-  }
-  .sFeatureImage {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 15px;
-  }
-  .sFeatureImage img {
-    display: block;
-    object-fit: contain;
-    width: 2.2em;
-  }
-  .sFeatureTitleSummary h5 {
-    margin-top: -10px;
-  }
-  .sFeatureTitleSummary p {
-    margin-top: -20px;
-    font-size: 15px;
-    font-weight: 500;
   }
 }
