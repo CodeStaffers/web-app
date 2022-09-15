@@ -9,19 +9,23 @@ function WebUser({ topUser }) {
 
   return (
     <>
-      <div className="webUserContainer">
-        <div className="webUserTitle">
-          <span>Top Client</span>
-          {documentToReactComponents(title)}
-        </div>
+      <section>
+        <div className="wrapper">
+          <div className="webUserTitle">
+            <span>Top Client</span>
+            {documentToReactComponents(title)}
+          </div>
 
-        <div className="webUserComp">
-          {media &&
-            media.map((item, index) => {
-              return <img src={item.fields.file.url} alt="comp" key={index} />;
-            })}
+          <div className="webUserComp">
+            {media &&
+              media.map((item, index) => {
+                return (
+                  <img src={item.fields.file.url} alt="comp" key={index} />
+                );
+              })}
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

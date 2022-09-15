@@ -4,8 +4,8 @@ import ServiceCard from "./ServiceCard";
 
 function Service({ serviceData }) {
   return (
-    <>
-      <div className="service">
+    <section className="service">
+      <div className="wrapper">
         <div className="serviseTitle">
           <h2>Ours services</h2>
         </div>
@@ -26,7 +26,7 @@ function Service({ serviceData }) {
             })}
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

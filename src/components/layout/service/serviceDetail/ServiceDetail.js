@@ -4,16 +4,11 @@ import { useLocation } from "react-router-dom";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { Button } from "../../button/Button";
-import Testnomial from "../../testnomials/Testnomial";
-import ServiceDetailHero from "../serviceDetailComp/ServiceDetailHero";
-import ServiceDetailFeature from "../serviceDetailComp/ServiceDetailFeature";
 
-function ServiceDetail({ serviceData, testnomial, serviceDetailPage }) {
+function ServiceDetail({ serviceData }) {
   const location = useLocation();
   const { id, titlePage } = location.state;
   const [data, setData] = useState([]);
-
-  const { brandCard, content, image, summary, title } = serviceDetailPage;
 
   useEffect(() => {
     const findDataById =
@@ -29,34 +24,31 @@ function ServiceDetail({ serviceData, testnomial, serviceDetailPage }) {
 
   return (
     <>
-      <div className="sDetailContainer">
-        {/* Description */}
-        <div className="sDetailWrapper">
-          <div className="sDetailItem">
-            <div className="sDetailSummary">
-              <h2>{titlePage}</h2>
-              {documentToReactComponents(description)}
+      <section className="sDetailContainer">
+        <div className="wrapper">
+          <div className="sDetailWrapper">
+            <div className="sDetailItem">
+              <div className="sDetailSummary">
+                <h2>{titlePage}</h2>
+                {documentToReactComponents(description)}
+              </div>
+              <div className="sDetailBtn">
+                <br />
+                <Button buttonSize="btn--medium" btnInline="btn-inline">
+                  go to details
+                </Button>
+              </div>
             </div>
-            <div className="sDetailBtn">
-              <br />
-              <Button buttonSize="btn--medium" btnInline="btn-inline">
-                Hi i am here
-              </Button>
-            </div>
-          </div>
 
-          <div className="sDetailImage">
-            <img src={featureImage && featureImage.fields.file.url} alt="img" />
+            <div className="sDetailImage">
+              <img
+                src={featureImage && featureImage.fields.file.url}
+                alt="img"
+              />
+            </div>
           </div>
         </div>
-        {/* end */}
-
-        <ServiceDetailHero summary={summary} image={image} content={content} />
-
-        <ServiceDetailFeature brandCard={brandCard} title={title} />
-
-        <Testnomial testnomial={testnomial} />
-      </div>
+      </section>
     </>
   );
 }

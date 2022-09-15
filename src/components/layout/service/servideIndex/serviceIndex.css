@@ -1,17 +1,18 @@
 :root {
   --primary--content: black;
 }
-
-.service__index__wrapper {
+.service__index__container {
   background-color: #f5f3f379;
-  padding: 5%;
+  margin-top: 0;
+}
+.service__index__wrapper {
+  margin-top: 5%;
+  padding: 1em;
 }
 .service_index_titile h2 {
   font-size: 3em;
 }
-.service_index_titile p {
-  font-size: 16px;
-}
+
 .service__index__wrapper {
   display: flex;
   justify-content: space-between;
@@ -19,38 +20,32 @@
   flex-wrap: wrap;
 }
 .serviceIndexContent {
-  padding: 10px;
   flex: 1;
 }
 .service__index__btn {
   margin-top: 2.5em;
 }
-.service__index__btn button {
-  background-color: red;
-}
 
 .service__index__image {
-  padding: 10px;
   flex: 1;
 }
 .service__index__image img {
+  width: 65%;
   display: block;
   object-fit: contain;
-  width: 50%;
 }
 
 /* new css */
 .serviceIndexSection {
-  padding: 5em;
+  margin-top: 2em;
 }
 
 .service_index_card_section {
-  margin-bottom: 2em;
+  margin: 4em 0em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 30px;
 }
 .service_index_content_section__body {
   padding: 10px;
@@ -69,23 +64,15 @@
   flex: 1;
 }
 .service_index_section_image img {
-  width: 80%;
+  width: 65%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 .service_index_content_btn {
   margin-top: 2em;
 }
 
 @media screen and (max-width: 1150px) {
-  .service__index__container {
-    padding: 0px;
-  }
-  .service__index__wrapper {
-    background-color: #f5f3f379;
-    padding-top: 10%;
-  }
-
   .service__index__image img {
     display: block;
     object-fit: contain;
@@ -94,19 +81,14 @@
 
   .serviceIndexSection {
     margin-top: 5%;
-    padding: 1em;
   }
 
   .service_index_content_section__body {
-    padding: 10px;
     flex: 1;
-  }
-  .service_index_content_tag {
-    padding: 10px;
   }
 
   .service_index_section_image img {
-    width: 80%;
+    width: 100%;
   }
   .service_index_content_btn {
     margin-top: 2em;

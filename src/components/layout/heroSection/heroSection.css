@@ -1,16 +1,9 @@
-.section__body {
-  box-sizing: border-box;
-  margin-top: 5em;
-  padding: 0em 5em;
-}
-
 .card_section {
-  margin-bottom: 2em;
+  margin: 4em 0em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 30px;
 }
 .content_section__body {
   padding: 10px;

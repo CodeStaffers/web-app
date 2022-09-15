@@ -1,9 +1,9 @@
 .contactContainer {
-  padding: 5%;
+  margin-top: 0;
 }
 .contactTitle {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 12%;
 }
 .contactTitle h1 {
   font-size: 3em;
@@ -25,12 +25,15 @@
   flex-direction: row;
 }
 .contactImage {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex: 1;
 }
 .contactImage img {
-  width: 60%;
-  object-fit: contain;
+  display: block;
+  width: 65%;
+  object-fit: cover;
 }
 .contactForm {
   flex: 1;

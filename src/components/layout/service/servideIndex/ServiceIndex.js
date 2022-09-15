@@ -15,71 +15,73 @@ function ServiceIndex({ serviceData, serviceIndexContent }) {
   }, []);
 
   return (
-    <div className="service__index__container">
-      <div className="service__index__wrapper">
-        <div className="serviceIndexContent">
-          <div className="service_index_titile">
-            {documentToReactComponents(summary)}
+    <section className="service__index__container">
+      <div className="wrapper">
+        <div className="service__index__wrapper">
+          <div className="serviceIndexContent">
+            <div className="service_index_titile">
+              {documentToReactComponents(summary)}
+            </div>
+            <div className="service__index__btn">
+              <Button url={btnUrl}>{titleBtn}</Button>
+            </div>
           </div>
-          <div className="service__index__btn">
-            <Button url={btnUrl}>{titleBtn}</Button>
+
+          <div className="service__index__image">
+            <img src={media && media.fields.file.url} alt="" />
           </div>
         </div>
 
-        <div className="service__index__image">
-          <img src={media && media.fields.file.url} alt="" />
-        </div>
-      </div>
+        <div className="serviceIndexSection">
+          <div className="toggle_section">
+            {serviceData &&
+              serviceData.map((item, index) => {
+                let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
 
-      <div className="serviceIndexSection">
-        <div className="toggle_section">
-          {serviceData &&
-            serviceData.map((item, index) => {
-              let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
-
-              return (
-                <div
-                  className="service_index_card_section"
-                  key={index}
-                  style={{
-                    flexDirection: item.fields.direction
-                      ? "row"
-                      : "row-reverse",
-                  }}
-                >
-                  <div className="service_index_content_section__body">
-                    <div className="service_index_content_tag">
-                      <ReactMarkdown escapeHtml={false}>
-                        {item.fields.shortDesc}
-                      </ReactMarkdown>
+                return (
+                  <div
+                    className="service_index_card_section"
+                    key={index}
+                    style={{
+                      flexDirection: item.fields.direction
+                        ? "row"
+                        : "row-reverse",
+                    }}
+                  >
+                    <div className="service_index_content_section__body">
+                      <div className="service_index_content_tag">
+                        <ReactMarkdown escapeHtml={false}>
+                          {item.fields.shortDesc}
+                        </ReactMarkdown>
+                      </div>
+                      <div className="service_index_content_btn">
+                        <Link
+                          to={`/service/${urlTitle}`}
+                          state={{
+                            id: item.sys.id,
+                            titlePage: item.fields.title,
+                          }}
+                        >
+                          <Button cName={"btn--medium"}>Read more</Button>
+                        </Link>
+                      </div>
                     </div>
-                    <div className="service_index_content_btn">
-                      <Link
-                        to={`/service/${urlTitle}`}
-                        state={{
-                          id: item.sys.id,
-                          titlePage: item.fields.title,
-                        }}
-                      >
-                        <Button cName={"btn--medium"}>Read more</Button>
-                      </Link>
+                    <div className="service_index_section_image">
+                      <img
+                        src={
+                          item.fields.featureImage &&
+                          item.fields.featureImage.fields.file.url
+                        }
+                        alt="section_logo"
+                      />
                     </div>
                   </div>
-                  <div className="service_index_section_image">
-                    <img
-                      src={
-                        item.fields.featureImage &&
-                        item.fields.featureImage.fields.file.url
-                      }
-                      alt="section_logo"
-                    />
-                  </div>
-                </div>
-              );
-            })}
+                );
+              })}
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

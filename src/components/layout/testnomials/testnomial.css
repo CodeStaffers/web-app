@@ -1,16 +1,7 @@
-.testnomialContainer {
-  margin-top: 5em;
-  box-sizing: border-box;
-  padding: 0em 7em;
-  padding-bottom: 2em;
-}
 .testnomialTitleContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.testnomialTitle {
-  line-height: 2.5em;
 }
 
 .testnomialTitle p {
@@ -19,7 +10,6 @@
 .testnomialQoute {
   color: #b9b9b9b4;
   font-size: 5em;
-  padding-right: 0.5em;
 }
 
 .testnomialCardWrapper {
@@ -33,7 +23,7 @@
   flex: 1 1 15em;
   cursor: pointer;
   border-radius: 5px;
-  margin-right: 1em;
+  margin-right: 2.5em;
   margin-top: 1em;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
     rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
@@ -85,12 +75,27 @@
   transform: scale(1.05);
 }
 
+.testnomialArrowBtn {
+  margin-top: 2em;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2.3em;
+}
+.testnomialArrowBtn svg {
+  font-size: 1.8em;
+  margin-left: 1.5em;
+  cursor: pointer;
+}
+.testnomialArrowBtn .leftArrow {
+  color: white;
+  border-radius: 50%;
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+
+  /* display: inline-block; */
+}
+
 /* Responsive code */
 @media only screen and (max-width: 1150px) {
-  .testnomialContainer {
-    padding: 0em 10px;
-    padding-bottom: 2em;
-  }
 }
 @media screen and (max-width: 780px) {
   .testnomialQoute {

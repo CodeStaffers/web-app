@@ -1,8 +1,3 @@
-.sFeatureContainer {
-  margin-top: 5em;
-  padding: 1em;
-  padding-bottom: 2em;
-}
 .sFeatuteTitle {
   text-align: center;
 }
@@ -14,7 +9,7 @@
   flex-wrap: wrap;
 }
 .sFeatureCard {
-  margin: 10px;
+  margin: 2em 1em;
   text-align: center;
   width: 30%;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
@@ -37,7 +32,7 @@
 }
 
 .sFeatureTitleSummary p {
-  margin-top: -15px;
+  margin-top: -1.8em;
 }
 
 /* -----------Responsive code-------------- */

@@ -25,34 +25,44 @@ function Header() {
 
   return (
     <>
-      <nav className={scroll ? "NavbarItems nav-bg " : "NavbarItems "}>
-        <span className="navbar-logo">
-          <NavLink to="/">
-            <img src="/image/logo.png" alt="logo" />
-          </NavLink>
-        </span>
-        <div className="menu-icons" onClick={handleClick}>
-          {clicked ? (
-            <AiOutlineClose className="mobile-icon" />
-          ) : (
-            <HiOutlineMenuAlt1 className="mobile-icon" />
-          )}
-        </div>
+      <nav className="NavbarContainer">
+        <div className="wrapper ">
+          <div className={scroll ? "NavbarItems nav-bg " : "NavbarItems "}>
+            <div className="navbar-logo">
+              <NavLink to="/">
+                <img src="/image/logo.png" alt="logo" />
+              </NavLink>
+            </div>
 
-        <ul className={clicked ? "nav-menu active" : "nav-menu"}>
-          {MenuItems.map((item, index) => {
-            return (
-              <li key={index}>
-                <NavLink to={item.url} className={item.cName}>
-                  {item.title}
-                </NavLink>
-              </li>
-            );
-          })}
-        </ul>
-        <Button buttonSize="btn--medium" btnHeader="header-btn-none">
-          Get Started
-        </Button>
+            <div className="right-header">
+              <div className="menu-icons" onClick={handleClick}>
+                {clicked ? (
+                  <AiOutlineClose className="mobile-icon" />
+                ) : (
+                  <HiOutlineMenuAlt1 className="mobile-icon" />
+                )}
+              </div>
+
+              <ul className={clicked ? "nav-menu active" : "nav-menu"}>
+                {MenuItems.map((item, index) => {
+                  return (
+                    <li key={index}>
+                      <NavLink to={item.url} className={item.cName}>
+                        {item.title}
+                      </NavLink>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <div className="header-btn">
+                <Button buttonSize="btn--medium" btnHeader="header-btn-none">
+                  Get Started
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
       </nav>
     </>
   );

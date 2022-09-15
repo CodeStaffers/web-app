@@ -4,23 +4,26 @@ import "./serviceHero.css";
 function ServiceHeroHero({ summary, image, content }) {
   return (
     <>
-      <div className="sHeroContainer">
-        <div className="sHeroCard">
-          <div className="sHeroTitle">{documentToReactComponents(summary)}</div>
-        </div>
-
-        <div className="sHeroItem">
-          <div className="sHeroImage">
-            <img src={image && image.fields.file.url} alt="img" />
+      <section className="sHeroContainer">
+        <div className="wrapper">
+          <div className="sHeroCard">
+            <div className="sHeroTitle">
+              {documentToReactComponents(summary)}
+            </div>
           </div>
 
-          <div className="sHeroItemList">
-            <div className="sListItem">
-              {documentToReactComponents(content)}
+          <div className="sHeroItem">
+            <div className="sHeroImage">
+              <img src={image && image.fields.file.url} alt="img" />
+            </div>
+            <div className="sHeroItemList">
+              <div className="sListItem">
+                {documentToReactComponents(content)}
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

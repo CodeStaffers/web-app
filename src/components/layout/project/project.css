@@ -1,10 +1,3 @@
-.projectContainer {
-  margin-top: 5em;
-  box-sizing: border-box;
-  padding: 0em 7em;
-  padding-bottom: 2em;
-}
-
 .projectTitle span {
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -15,31 +8,29 @@
 }
 
 .projectTitle h2 {
-  font-size: 3em;
-  font-weight: 700;
-  margin-top: 0.1em;
+  margin-top: 0em;
 }
 
 .projectTitle p {
   font-size: 16px;
   color: black;
-  margin-top: -1.5em;
+  margin-top: -2em;
 }
 .projectCardWrapper {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-top: 3em;
+  margin-top: 2.2em;
 }
 
 .projectCard {
+  width: 30%;
   position: relative;
   z-index: 10;
-  width: auto;
-  height: auto;
-  transition: all 0.5s ease-in-out;
-  margin-right: 2em;
+  transition: all 0.4s ease-in-out;
+  margin-right: 2.5em;
+  border-radius: 10px;
   cursor: pointer;
 }
 
@@ -49,55 +40,44 @@
 }
 .projectImage img {
   border-radius: 10px;
-  transition: 0.5s ease all;
+  transition: 0.4s ease all;
   display: block;
   object-fit: cover;
   width: 100%;
-  width: 390px;
 }
 
 .projectSummary {
   content: "";
   position: absolute;
-  top: 26em;
+  top: 24em;
   bottom: 7em;
   width: auto;
   transition: all 0.4s ease-in-out;
   box-sizing: border-box;
-  text-align: left;
-  padding: 0 2em;
+  padding: 0 1em;
   color: white;
 }
 
-.projectSummary p {
-  font-size: 16px;
-}
 .projectSummary h3 {
-  font-size: 2em;
   margin-top: -0.2em;
 }
-
+.proContent {
+  position: relative;
+  z-index: 0;
+}
 .proContent p {
-  font-size: 16px;
-  line-height: 20px;
   color: white;
 }
 
 .projectCard:hover .projectImage::after {
-  /* content: ""; */
-  /* position: absolute; */
-  /* left: 0; */
-  /* top: 0; */
   border-radius: 10px;
-  /* width: 100%; */
-  /* height: 100vh; */
   display: inline-block;
   background: -moz-linear-gradient(
     top,
     20deg,
     rgba(241, 11, 11, 0.742) 0%,
     transparent
-  ); /* FF3.6+ */
+  );
   background: -webkit-gradient(
     linear,
     left top,
@@ -125,7 +105,7 @@
 
 .projectCard:hover .projectSummary {
   z-index: 5;
-  top: 20em;
+  top: 19em;
 }
 .projectCard:hover .proContent {
   margin-top: -1.5em;
@@ -148,17 +128,13 @@
   transition: 0.5s ease all;
 }
 .projectCard:hover img {
-  transform: scale(1.2);
+  transform: scale(1.1);
   border-radius: 10px;
 }
 
 /* Responsive code */
 
 @media screen and (max-width: 1150px) {
-  .projectContainer {
-    padding: 0em 10px;
-  }
-
   .projectCardWrapper {
     justify-content: flex-start;
   }
