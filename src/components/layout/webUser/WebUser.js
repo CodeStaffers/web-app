@@ -3,8 +3,6 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 import "./webUser.css";
 function WebUser({ topUser }) {
-  console.log(topUser);
-
   const { title, media } = topUser;
 
   return (
