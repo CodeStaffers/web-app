@@ -10,10 +10,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        process.env.EMAIL_SERVICE_ID,
-        process.env.EMAIL_TEMPLATE_ID,
+        "service_b5mx6bt",
+        "template_s7yf2ep",
         form.current,
-        process.env.EMAIL_PUBLIC_KEY
+        "Ue8jZziXKgOW9FHhQ"
       )
       .then(
         (result) => {
