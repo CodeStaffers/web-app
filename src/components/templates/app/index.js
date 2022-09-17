@@ -7,14 +7,11 @@ import Favicon from "react-favicon";
 import MainFooter from "../../layout/mainFooter/MainFooter";
 import BtnPlusTop from "../../layout/btnPlus/BtnPlusTop";
 import HomePage from "./homePage";
-import OurWork from "../../layout/our-work/";
-
-// import ServiceIndex from "../../layout/service/servideIndex/ServiceIndex";
-// import ServiceDetail from "../../layout/service/serviceDetail/ServiceDetail";
 import Contact from "../../layout/conactPage/Contact";
 import WebUser from "../../layout/webUser/WebUser";
 import ServiceDetailPage from "./serviceDetailPage";
 import ServiceIndexPage from "./serviceIndexPage";
+import OurWorkPage from "./ourWorkPage";
 
 function ThemeOne(props) {
   const {
@@ -52,7 +49,10 @@ function ThemeOne(props) {
             />
           }
         />
-        <Route path="/our-works" element={<OurWork page={ourWorkPage} />} />
+        <Route
+          path="/our-works"
+          element={<OurWorkPage ourWorkPage={ourWorkPage} />}
+        />
         <Route
           path="/service"
           element={

@@ -3,12 +3,10 @@ import { Button } from "../button/Button";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import "./ourWork.styles.css";
 import { Link } from "react-router-dom";
-
 function OurWork({ page }) {
-  console.log(page);
   return (
     <>
-      <div
+      <section
         className="ourwork"
         style={{
           backgroundColor: page.background ? page.background : "white",
@@ -23,7 +21,7 @@ function OurWork({ page }) {
         <div className="ourwork-imagebox">
           <img src={page.bannerImage.fields.file.url} alt="banner" />
         </div>
-      </div>
+      </section>
     </>
   );
 }

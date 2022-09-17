@@ -1,0 +1,66 @@
+.workSection {
+  padding-top: 10%;
+}
+.ourWorkSectionTitle {
+  border: 2px solid white;
+}
+.ourWorkSectionTitle span {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ourWorkSectionTitle h2 {
+  margin-top: 0.1em;
+}
+
+.ourWorkSectionWrapper {
+  margin-top: -2em;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.ourWorkSectionCard {
+  /* width: 28%; */
+  flex: 1 1 28%;
+  margin-right: 3em;
+  margin-top: 3em;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 2.5em;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.ourWorkSectionCard a {
+  color: black;
+}
+.ourWorkSectionSubtitle :first-child {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ourWorkSectionImage img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 2.5em;
+  height: 12em;
+}
+.ourWorkSectionSubtitle {
+  box-sizing: border-box;
+  padding: 2em 15px 1em 20px;
+  line-height: 0.1em;
+}
+.ourWorkSectionSubtitle p {
+  font-size: 15px;
+}
+
+.ourWorkSectionCard:hover {
+  transform: translateY(-10px);
+}
