@@ -8,11 +8,12 @@ import MainFooter from "../../layout/mainFooter/MainFooter";
 import BtnPlusTop from "../../layout/btnPlus/BtnPlusTop";
 import HomePage from "./homePage";
 
-import ServiceIndex from "../../layout/service/servideIndex/ServiceIndex";
+// import ServiceIndex from "../../layout/service/servideIndex/ServiceIndex";
 // import ServiceDetail from "../../layout/service/serviceDetail/ServiceDetail";
 import Contact from "../../layout/conactPage/Contact";
 import WebUser from "../../layout/webUser/WebUser";
 import ServiceDetailPage from "./serviceDetailPage";
+import ServiceIndexPage from "./serviceIndexPage";
 
 function ThemeOne(props) {
   const {
@@ -52,7 +53,7 @@ function ThemeOne(props) {
         <Route
           path="/service"
           element={
-            <ServiceIndex
+            <ServiceIndexPage
               serviceData={serviceData}
               serviceIndexContent={serviceIndexContent}
             />

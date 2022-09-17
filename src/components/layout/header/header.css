@@ -1,8 +1,6 @@
 .NavbarContainer {
   position: fixed;
   width: 100%;
-  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   z-index: 10000;
   background: #fff;
 }
@@ -17,8 +15,7 @@
 }
 
 .nav-bg {
-  /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
-    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .navbar-logo {
   width: 10%;
@@ -49,10 +46,9 @@
   margin: 5px;
   color: black;
   text-decoration: none;
+  font-weight: 500;
   padding: 0.5rem 1rem;
   transition: all 0.5s ease-in-out;
-}
-.header-btn {
 }
 li a.active {
   background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);

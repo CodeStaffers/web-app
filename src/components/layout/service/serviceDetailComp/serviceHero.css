@@ -1,6 +1,6 @@
 .sHeroCard {
-  width: 80%;
-  margin: 10px auto;
+  width: 70%;
+  margin: 0px auto;
 }
 .sHeroTitle {
   display: flex;
@@ -11,9 +11,11 @@
 }
 
 .sHeroTitle p {
+  font-size: 18px;
   margin-top: -1em;
 }
 .sHeroItem {
+  margin-top: 2em;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -27,8 +29,8 @@
 }
 .sHeroImage img {
   display: block;
-  object-fit: cover;
-  width: 65%;
+  object-fit: fill;
+  width: 80%;
 }
 
 .sHeroItemList {
@@ -43,8 +45,9 @@
 }
 
 .sListItem p {
-  margin-top: -15px;
-  margin-bottom: 3rem;
+  margin-top: -1.4em;
+  font-size: 15px;
+  font-weight: 300 !important;
 }
 
 /* -----------Responsive code-------------- */
