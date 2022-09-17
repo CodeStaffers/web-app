@@ -11,7 +11,7 @@ function Header() {
   const [scroll, setScroll] = useState(false);
 
   const onScrollChange = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 100) {
       setScroll(true);
     } else {
       setScroll(false);
@@ -25,9 +25,9 @@ function Header() {
 
   return (
     <>
-      <nav className="NavbarContainer">
+      <nav className={scroll ? "NavbarContainer nav-bg" : "NavbarContainer"}>
         <div className="wrapper ">
-          <div className={scroll ? "NavbarItems nav-bg " : "NavbarItems "}>
+          <div className="NavbarItems">
             <div className="navbar-logo">
               <NavLink to="/">
                 <img src="/image/logo.png" alt="logo" />

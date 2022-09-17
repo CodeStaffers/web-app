@@ -23,12 +23,13 @@
   margin-top: -2.5em;
 }
 .webUserComp img {
+  object-fit: fill;
   margin: 2em;
-  width: 5rem;
+  width: 8em;
 }
 
 @media screen and (max-width: 768px) {
   .webUserComp img {
-    width: 4rem;
+    width: 6rem;
   }
 }

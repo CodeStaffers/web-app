@@ -2,11 +2,12 @@
   --primary--content: black;
 }
 .service__index__container {
-  background-color: #f5f3f379;
   margin-top: 0;
+  height: auto;
 }
 .service__index__wrapper {
-  margin-top: 5%;
+  background-color: #f5f3f379;
+  margin-top: 10%;
   padding: 1em;
 }
 .service_index_titile h2 {
@@ -28,48 +29,14 @@
 
 .service__index__image {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .service__index__image img {
-  width: 65%;
   display: block;
   object-fit: contain;
-}
-
-/* new css */
-.serviceIndexSection {
-  margin-top: 2em;
-}
-
-.service_index_card_section {
-  margin: 4em 0em;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.service_index_content_section__body {
-  padding: 10px;
-  flex: 1;
-}
-
-.service_index_content_tag h3 {
-  color: black;
-  font-size: 2em;
-}
-
-.service_index_content_tag p {
-  font-size: 16px;
-}
-.service_index_section_image {
-  flex: 1;
-}
-.service_index_section_image img {
   width: 65%;
-  display: block;
-  object-fit: contain;
-}
-.service_index_content_btn {
-  margin-top: 2em;
 }
 
 @media screen and (max-width: 1150px) {
@@ -78,26 +45,12 @@
     object-fit: contain;
     width: 100%;
   }
-
-  .serviceIndexSection {
-    margin-top: 5%;
-  }
-
-  .service_index_content_section__body {
-    flex: 1;
-  }
-
-  .service_index_section_image img {
-    width: 100%;
-  }
-  .service_index_content_btn {
-    margin-top: 2em;
-  }
 }
 
 @media screen and (max-width: 780px) {
   .service__index__wrapper {
     padding-top: 10%;
+    flex-direction: column;
   }
   .service_index_titile h2 {
     font-size: 2em;
@@ -105,47 +58,17 @@
   .service_index_content_tag h3 {
     font-size: 1.5em;
   }
-  .service__index__wrapper {
-    flex-direction: column;
-  }
 
   .service__index__btn {
     margin-top: 2em;
   }
 
+  .service__index__image {
+    margin-top: 2em;
+  }
   .service__index__image img {
     display: block;
     object-fit: contain;
-    width: 100%;
-  }
-
-  /* next serviceIndexSection */
-  .serviceIndexSection {
-    padding: 1em;
-  }
-  .toggle_section {
-    flex-direction: column;
-  }
-  .service_index_card_section {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
-      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    display: block;
-  }
-  .service_index_content_section__body {
-    padding: 0px;
-    flex: 1;
-    margin-bottom: 5%;
-  }
-
-  .service_index_section_image {
-    flex: 1;
-  }
-  .service_index_section_image img {
-    width: 100%;
-    display: block;
-    object-fit: contain;
-  }
-  .service_index_content_btn {
-    margin-top: 0em;
+    width: 80%;
   }
 }
