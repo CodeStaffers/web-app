@@ -7,6 +7,7 @@ import Favicon from "react-favicon";
 import MainFooter from "../../layout/mainFooter/MainFooter";
 import BtnPlusTop from "../../layout/btnPlus/BtnPlusTop";
 import HomePage from "./homePage";
+import OurWork from "../../layout/our-work/";
 
 import ServiceIndex from "../../layout/service/servideIndex/ServiceIndex";
 // import ServiceDetail from "../../layout/service/serviceDetail/ServiceDetail";
@@ -24,6 +25,7 @@ function ThemeOne(props) {
     serviceIndexContent,
     topUser,
     serviceDetailPage,
+    ourWorkPage,
   } = props;
 
   const { featureIcon, titleHome } = page;
@@ -49,6 +51,7 @@ function ThemeOne(props) {
             />
           }
         />
+        <Route path="/our-works" element={<OurWork page={ourWorkPage} />} />
         <Route
           path="/service"
           element={

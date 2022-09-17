@@ -1,0 +1,23 @@
+.ourwork {
+  padding-top: 150px;
+  margin-bottom: 200px;
+  text-align: center;
+}
+.ourwork-heading p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+.ourwork-heading h1 {
+  font-size: 4rem;
+}
+
+.ourwork-imagebox {
+  width: 100%;
+  position: relative;
+  top: 250px;
+}
+.ourwork-imagebox img {
+  border: 2px solid #000;
+  border-radius: 200px;
+}

@@ -13,6 +13,7 @@ function App() {
   const [topUser, setTopUser] = useState([]);
   const [serviceDetailPage, setServiceDetailPage] = useState([]);
   const [serviceIndexContent, setServiceIndexContent] = useState([]);
+  const [ourWorkPage, setOurWorkPage] = useState([]);
   const [user, setUser] = useState({});
 
   function handleCallbackResponse(response) {
@@ -116,6 +117,18 @@ function App() {
     }
   };
 
+  const getOurWorkPage = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "ourWork",
+      });
+      const responseData = response && response.items[0].fields;
+      if (responseData) setOurWorkPage(responseData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   useEffect(() => {
     /* global google */
     google.accounts.id.initialize({
@@ -135,6 +148,7 @@ function App() {
     getServiceIndexContent();
     getBrandUser();
     getServiceDetailPage();
+    getOurWorkPage();
   }, []);
 
   return (
@@ -155,6 +169,7 @@ function App() {
           serviceIndexContent={serviceIndexContent}
           topUser={topUser}
           serviceDetailPage={serviceDetailPage}
+          ourWorkPage={ourWorkPage}
         />
       ) : (
         <div
