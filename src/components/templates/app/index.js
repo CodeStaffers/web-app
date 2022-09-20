@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Routes, Route } from "react-router-dom";
-
 import Header from "../../layout/header/Header";
 import Favicon from "react-favicon";
 import MainFooter from "../../layout/mainFooter/MainFooter";
@@ -12,6 +11,7 @@ import WebUser from "../../layout/webUser/WebUser";
 import ServiceDetailPage from "./serviceDetailPage";
 import ServiceIndexPage from "./serviceIndexPage";
 import OurWorkPage from "./ourWorkPage";
+import WorkDetailPage from "./workDetailPage";
 
 function ThemeOne(props) {
   const {
@@ -53,6 +53,8 @@ function ThemeOne(props) {
           path="/our-works"
           element={<OurWorkPage ourWorkPage={ourWorkPage} />}
         />
+        <Route path="/our-works/:title" element={<WorkDetailPage />} />
+
         <Route
           path="/service"
           element={

@@ -1,0 +1,117 @@
+.workDetailContainer {
+  margin-top: 0;
+  height: auto;
+}
+.workDetailBetaWrapper {
+  margin-top: 10%;
+}
+.workDetailWrapper {
+  margin-top: 5em;
+}
+.breadcombTitle p span {
+  color: rgba(53, 63, 60, 0.884);
+}
+.breadcombTitle p span {
+  color: rgba(7, 7, 7, 0.71);
+}
+.breadcombTitle p a {
+  color: black;
+  font-weight: 600;
+}
+.workDetailTitle {
+  text-align: center;
+  line-height: 1.2em;
+}
+
+.workDetailClientInfo {
+  margin-top: 5em;
+  background-color: #f5f3f379;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.clientInfo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -2em;
+}
+
+.clientLogo img {
+  object-fit: contain;
+  display: block;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+}
+.clientDetails {
+  padding-left: 1em;
+}
+.clientDetails h5 {
+  margin-top: 5px;
+}
+.clientDetails a {
+  display: block;
+  margin-top: -2em;
+}
+
+.clientSummary {
+  margin-top: 2.5em;
+}
+
+.clientFeedbackCard {
+  margin-top: 2em;
+}
+
+.clientCardUser {
+  flex: 1 1 15em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 2.5em;
+  margin-top: 1em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  transition: all 0.5s ease;
+}
+
+.clientCardContent {
+  box-sizing: border-box;
+  padding: 1em 1em;
+  line-height: 1em;
+}
+.clientCardQoute {
+  color: #b9b9b9b4;
+  font-size: 1.5em;
+}
+.tesnomialContent h3 {
+  margin-top: 0.5em;
+}
+.tesnomialContent p {
+  margin-top: -1.5em;
+}
+.clientCardUserDetails {
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 1em;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  background-color: #f5f3f379;
+}
+
+.testnomialImage img {
+  text-align: center;
+  display: block;
+  object-fit: contain;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+}
+.testnomialUser {
+  box-sizing: border-box;
+  margin-left: 2em;
+}
+
+.testnomialUser p {
+  margin-top: -2em;
+}
