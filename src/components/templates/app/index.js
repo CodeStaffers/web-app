@@ -11,7 +11,7 @@ import WebUser from "../../layout/webUser/WebUser";
 import ServiceDetailPage from "./serviceDetailPage";
 import ServiceIndexPage from "./serviceIndexPage";
 import OurWorkPage from "./ourWorkPage";
-import OurWorkPage from "./workDetailPage";
+import WorkDetailPage from "./workDetailPage";
 
 function ThemeOne(props) {
   const {
