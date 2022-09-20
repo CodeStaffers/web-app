@@ -1,0 +1,58 @@
+/* .about_container {
+  background: linear-gradient(120deg, #5b47db 20.69%, #0fe3ffcc 79.69%);
+  padding-top: 100px;
+  height: 600px;
+} */
+canvas {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg {
+  position: absolute;
+}
+
+.effects_title {
+  position: absolute;
+  top: 120px;
+  left: 60px;
+  font-weight: 900;
+  font-size: 12em;
+  margin: 0;
+  color: linear-gradient(120deg, #5b47db 20.69%, #0fe3ffcc 79.69%);
+  line-height: 0.6em;
+  letter-spacing: -2px;
+  text-align: left;
+}
+
+.effects_title > .name-two {
+  white-space: pre;
+}
+
+.name-two.header {
+  font-weight: 700;
+  position: absolute;
+  display: inline-block;
+  width: 500px;
+  transform: translate3d(0, -50%, 0);
+  font-size: 9em;
+  line-height: 0.9em;
+  pointer-events: none;
+  top: 350px;
+  left: 50px;
+}
+
+.name-two.header-left {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  position: absolute;
+  display: inline-block;
+  transform: translate3d(0, -50%, 0);
+  line-height: 1em;
+  top: 200px;
+  left: 60px;
+  font-size: 4em;
+  width: 200px;
+}
