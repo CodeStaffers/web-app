@@ -11,7 +11,7 @@ import WebUser from "../../layout/webUser/WebUser";
 import ServiceDetailPage from "./serviceDetailPage";
 import ServiceIndexPage from "./serviceIndexPage";
 import OurWorkPage from "./ourWorkPage";
-import WorkDetailPage from "./workDetailPage";
+
 
 function ThemeOne(props) {
   const {
@@ -75,6 +75,7 @@ function ThemeOne(props) {
           }
         />
         <Route path="/contacts" element={<Contact />} />
+        <Route path="/about-us" element={<AboutPage />} />
       </Routes>
       <WebUser topUser={topUser} />
       <MainFooter page={page} />
