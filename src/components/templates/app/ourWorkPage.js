@@ -1,11 +1,11 @@
 import OurWork from "../../layout/our-work/OurWork";
-import Work from "../../layout/our-work/ourWorkSection/Work";
+import WorkSection from "../../layout/our-work/ourWorkSection/WorkSection";
 
 function OurWorkPage({ ourWorkPage }) {
   return (
     <>
       <OurWork page={ourWorkPage} />
-      <Work page={ourWorkPage} />
+      <WorkSection page={ourWorkPage} />
     </>
   );
 }

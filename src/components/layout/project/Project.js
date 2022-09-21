@@ -18,18 +18,10 @@ function Project({ project }) {
 
           <div className="projectCardWrapper">
             {project &&
-              project.map((item, index) => {
-                const { title, subTitle, summary, media } = item.fields;
-
+              project.slice(3).map((item, index) => {
+                let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
                 return (
-                  <ProjectCard
-                    key={index}
-                    title={title}
-                    subtitle={subTitle}
-                    summary={summary}
-                    media={media}
-                    image={media.fields.file.url}
-                  />
+                  <ProjectCard item={item} urlTitle={urlTitle} key={index} />
                 );
               })}
           </div>

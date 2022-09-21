@@ -2,11 +2,12 @@ import React, { useEffect } from "react";
 import "./workDetail.css";
 import { Link, useLocation } from "react-router-dom";
 import { FaQuoteRight } from "react-icons/fa";
-function WorkDetail() {
+function WorkDetail({ ourWorkDetail }) {
+  console.log(ourWorkDetail);
+
   const location = useLocation();
-
-  const { titlePage } = location.state;
-
+  const { titlePage, id } = location.state;
+  console.log("id of ", id);
   useEffect(() => {
     window.scrollTo(0, 0, {
       behavior: "smooth",

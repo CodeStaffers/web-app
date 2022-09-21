@@ -19,7 +19,7 @@ function ThemeOne(props) {
     serviceData,
     testnomial,
     heroSection,
-    project,
+    // project,
     serviceIndexContent,
     topUser,
     serviceDetailPage,
@@ -45,7 +45,7 @@ function ThemeOne(props) {
               serviceData={serviceData}
               testnomial={testnomial}
               heroSection={heroSection}
-              project={project}
+              project={ourWorkPage.ourWorkSection}
             />
           }
         />
@@ -53,7 +53,10 @@ function ThemeOne(props) {
           path="/our-works"
           element={<OurWorkPage ourWorkPage={ourWorkPage} />}
         />
-        <Route path="/our-works/:title" element={<WorkDetailPage />} />
+        <Route
+          path="/our-works/:title"
+          element={<WorkDetailPage ourWorkDetail={ourWorkPage} />}
+        />
 
         <Route
           path="/service"

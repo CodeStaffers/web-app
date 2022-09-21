@@ -1,7 +1,7 @@
 function getData(ind) {
   const tabs = [
     {
-      title: "all",
+      title: "All",
       query: "all",
       activeAll: ind,
       matchUrl: "all",

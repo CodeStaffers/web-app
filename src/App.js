@@ -123,6 +123,7 @@ function App() {
         content_type: "ourWork",
       });
       const responseData = response && response.items[0].fields;
+
       if (responseData) setOurWorkPage(responseData);
     } catch (err) {
       console.error(err);
