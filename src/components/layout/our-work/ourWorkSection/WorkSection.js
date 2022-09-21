@@ -1,7 +1,7 @@
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import "./ourWork.style.css";
+import "./ourWorkSection.style.css";
 import { Button } from "../../button/Button";
 import { getData } from "./tabs";
 

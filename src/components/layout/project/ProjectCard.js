@@ -1,18 +1,23 @@
 import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Link } from "react-router-dom";
 
-function ProjectCard({ title, subtitle, summary, image }) {
+function ProjectCard({ item, urlTitle }) {
   return (
     <>
-      <div className="projectCard">
-        <div className="projectImage">
-          <img src={image} alt="project" />
-        </div>
-
-        <div className="projectSummary">
-          <p>{subtitle}</p>
-          <h3>{title}</h3>
-          <div className="proContent">{documentToReactComponents(summary)}</div>
+      <div className="ourProjectCard">
+        <div>
+          <Link
+            to={`/our-works/${urlTitle}`}
+            state={{ id: item.sys.id, titlePage: urlTitle }}
+          >
+            <div className="ourProjectImage">
+              <img src={item.fields.featureImage.fields.file.url} alt="" />
+            </div>
+            <div className="ourProjectSubtitle">
+              {documentToReactComponents(item.fields.summary)}
+            </div>
+          </Link>
         </div>
       </div>
     </>

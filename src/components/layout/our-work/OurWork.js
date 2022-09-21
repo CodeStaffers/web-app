@@ -13,17 +13,21 @@ function OurWork({ page }) {
           backgroundColor: page.background ? page.background : "white",
         }}
       >
-        <div className="ourwork-heading">
-          {documentToReactComponents(page.heading)}
-          <Link to={page.buttonLink}>
-            <Button buttonSize="btn--large">{page.buttonText}</Button>
-          </Link>
-        </div>
-        <div className="rectangle_ring">
-          <img src="/image/ring.png" alt="ring" />
-        </div>
-        <div className="ourwork-imagebox">
-          <img src={page.bannerImage.fields.file.url} alt="banner" />
+        <div className="wrapper">
+          <div className="ourwork-heading">
+            {documentToReactComponents(page.heading)}
+            <Link to={page.buttonLink}>
+              <Button buttonSize="btn--large">{page.buttonText}</Button>
+            </Link>
+          </div>
+          <div className="rectangleWrapper">
+            <div className="rectangle_ring">
+              <img src="/image/ring.png" alt="ring" />
+            </div>
+            <div className="ourwork-imagebox">
+              <img src={page.bannerImage.fields.file.url} alt="banner" />
+            </div>
+          </div>
         </div>
       </section>
     </>

@@ -8,8 +8,8 @@ import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 function Testnomial({ testnomial }) {
   return (
     <>
-      <section className="testnomialContainer">
-        <div className="wrapper">
+      <section>
+        <div className="wrapper testnomialContainer">
           <div className="testnomialTitleContainer">
             <div className="testnomialTitle">
               <h2>What they say about us</h2>

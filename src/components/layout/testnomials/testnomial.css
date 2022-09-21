@@ -1,7 +1,12 @@
+.testnomialContainer {
+  padding: 10px;
+}
+
 .testnomialTitleContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-sizing: border-box;
 }
 
 .testnomialTitle p {
@@ -14,25 +19,24 @@
 
 .testnomialCardWrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   margin-top: 1em;
 }
 .tesnomialCard {
-  flex: 1 1 15em;
+  width: 31%;
   cursor: pointer;
   border-radius: 5px;
-  margin-right: 2.5em;
   margin-top: 1em;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
-    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   transition: all 0.5s ease;
 }
 
 .tesnomialContent {
   box-sizing: border-box;
-  padding: 2em 1em;
+  padding: 1em 1em;
 }
 .testnomialQoute2 {
   color: #b9b9b9b4;
@@ -54,7 +58,12 @@
   background-color: #f5f3f379;
 }
 
+.testnomialImage {
+  overflow: hidden;
+}
+
 .testnomialImage img {
+  overflow: hidden;
   text-align: center;
   display: block;
   object-fit: contain;
@@ -95,13 +104,15 @@
 }
 
 /* Responsive code */
-@media only screen and (max-width: 1150px) {
-}
+
 @media screen and (max-width: 780px) {
   .testnomialQoute {
     font-size: 3em;
   }
   .testnomialQoute2 {
     font-size: 1.75em;
+  }
+  .tesnomialCard {
+    margin-right: 0px;
   }
 }

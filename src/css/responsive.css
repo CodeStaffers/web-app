@@ -2,13 +2,13 @@
   max-width: 1560px;
   margin: auto;
   width: 80%;
-  /* background-color: #f15000; */
+  /* background-color: #01ff40; */
   box-sizing: border-box;
   padding: 1em 0px;
 }
 
 section {
-  margin-top: 3em;
+  margin-top: 4em;
 }
 /* second title */
 h2 {
@@ -73,8 +73,14 @@ a:hover {
   }
 }
 
-@media screen and (max-width: 1073px) {
+@media screen and (max-width: 1250px) {
   .wrapper {
     width: 95%;
+  }
+}
+
+@media screen and (max-width: 1073px) {
+  .wrapper {
+    width: 100%;
   }
 }

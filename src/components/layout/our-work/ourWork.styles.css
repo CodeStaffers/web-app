@@ -1,7 +1,6 @@
 .ourwork {
   margin-top: 0;
-  padding-top: 150px;
-  margin-bottom: 200px;
+  padding-top: 7em;
   text-align: center;
 }
 .ourwork-heading p {
@@ -9,7 +8,7 @@
   margin-bottom: 38px;
   font-style: normal;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 28px;
 }
 .ourwork-heading h1 {
@@ -20,13 +19,21 @@
   line-height: 64px;
 }
 
+.rectangleWrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
 .rectangle_ring {
-  position: absolute;
-  transform: translateX(50%);
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 .ourwork-imagebox {
+  position: absolute;
+  top: -2em;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 76px auto;
   width: 895px;
   height: 425px;
