@@ -1,7 +1,9 @@
 .workSection {
   margin-top: 10em;
 }
-
+.workSectionWrapper {
+  padding: 10px;
+}
 .ourWorkSectionTitle span {
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -42,13 +44,15 @@
 .ourWorkSectionWrapper {
   margin-top: 5em;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 }
 .ourWorkSectionCard {
   box-sizing: border-box;
   width: 30%;
-  margin-bottom: 3em;
+  /* flex: 1 1 30%; */
+  margin-bottom: 2.5em;
+  margin-right: 2.5em;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 2.5em;
   cursor: pointer;

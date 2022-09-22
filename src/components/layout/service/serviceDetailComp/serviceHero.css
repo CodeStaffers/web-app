@@ -47,7 +47,7 @@
 .sListItem p {
   margin-top: -1.4em;
   font-size: 15px;
-  font-weight: 300 !important;
+  font-weight: 400;
 }
 
 /* -----------Responsive code-------------- */
@@ -79,13 +79,12 @@
   }
 
   .sHeroItemList {
-    width: 100%;
     display: block;
+    padding: 10px;
   }
 
   .sListItem {
     display: block;
-    width: 100%;
     margin: 0px;
   }
 

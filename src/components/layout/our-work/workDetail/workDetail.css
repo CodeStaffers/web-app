@@ -3,11 +3,11 @@
   height: auto;
 }
 .workDetailBetaWrapper {
-  margin-top: 10%;
+  margin-top: 6%;
   padding: 10px;
 }
 .workDetailWrapper {
-  margin-top: 5em;
+  margin-top: 4em;
 }
 .breadcombTitle p span {
   color: rgba(53, 63, 60, 0.884);
@@ -103,16 +103,75 @@
 .testnomialImage img {
   text-align: center;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 50%;
   width: 4em;
   height: 4em;
 }
 .testnomialUser {
   box-sizing: border-box;
-  margin-left: 2em;
+  margin-left: 1.5em;
 }
 
 .testnomialUser p {
   margin-top: -2em;
+}
+
+/* swiper slide */
+
+.workDetailImage {
+  padding-top: 2em;
+}
+
+.swiper {
+  background-color: rgb(245 245 245);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+  width: 1200px;
+  height: 450px;
+}
+
+.swiper-button-prev {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0px 0.5em;
+}
+.swiper-button-next {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0px 0.5em;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: black !important;
+  text-transform: none !important;
 }

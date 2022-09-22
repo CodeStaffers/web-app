@@ -4,11 +4,11 @@
 .service__index__container {
   margin-top: 0;
   height: auto;
+  padding-top: 8em;
+  background-color: #f5f3f379;
 }
 .service__index__wrapper {
-  background-color: #f5f3f379;
-  margin-top: 10%;
-  padding: 1em;
+  padding: 10px;
 }
 .service_index_titile h2 {
   font-size: 3em;

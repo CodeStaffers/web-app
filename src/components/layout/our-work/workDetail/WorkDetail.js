@@ -1,19 +1,37 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./workDetail.css";
 import { Link, useLocation } from "react-router-dom";
 import { FaQuoteRight } from "react-icons/fa";
-function WorkDetail({ ourWorkDetail }) {
-  console.log(ourWorkDetail);
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+function WorkDetail({ ourWorkDetailPage }) {
+  const [workDetail, setWorkDetail] = useState([]);
 
   const location = useLocation();
   const { titlePage, id } = location.state;
-  console.log("id of ", id);
+
+  console.log(id);
+
+  const filterData = () => {
+    const filterWork = ourWorkDetailPage.filter((item) => id === item.sys.id);
+    setWorkDetail(filterWork[0].fields);
+  };
+
   useEffect(() => {
+    filterData();
     window.scrollTo(0, 0, {
       behavior: "smooth",
     });
+    // eslint-disable-next-line
   }, []);
 
+  console.log(workDetail.clientInfo);
   return (
     <>
       <section className="workDetailContainer">
@@ -28,11 +46,32 @@ function WorkDetail({ ourWorkDetail }) {
 
             <div className="workDetailWrapper">
               <div className="workDetailTitle">
-                <h2>CreativeQ Finance App</h2>
+                <h2>{workDetail.title}</h2>
                 <p>Mobile app - design, code, Testing</p>
               </div>
 
-              <div className="workDetailImage"></div>
+              <div className="workDetailImage">
+                <Swiper
+                  cssMode={true}
+                  navigation={true}
+                  pagination={true}
+                  mousewheel={true}
+                  keyboard={true}
+                  modules={[Navigation, Pagination, Mousewheel, Keyboard]}
+                  className="mySwiper"
+                >
+                  {workDetail.clientInfo &&
+                    workDetail.clientInfo.fields.media.map((img, index) => {
+                      return (
+                        <>
+                          <SwiperSlide key={index}>
+                            <img src={img.fields.file.url} alt="" />
+                          </SwiperSlide>
+                        </>
+                      );
+                    })}
+                </Swiper>
+              </div>
             </div>
 
             <div className="workDetailClientInfo">
@@ -40,34 +79,44 @@ function WorkDetail({ ourWorkDetail }) {
 
               <div className="clientInfo">
                 <div className="clientLogo">
-                  <img src="/image/logo.png" alt="logo" />
+                  <img
+                    src={
+                      workDetail.clientInfo &&
+                      workDetail.clientInfo.fields.clientLogo.fields.file.url
+                    }
+                    alt="logo"
+                  />
                 </div>
                 <div className="clientDetails">
-                  <h5>CreativeQ</h5>
-                  <a href="###">creativeq.com</a>
+                  <h5>
+                    {workDetail.clientInfo &&
+                      workDetail.clientInfo.fields.clientName}
+                  </h5>
+                  <a
+                    href={
+                      workDetail.clientInfo &&
+                      workDetail.clientInfo.fields.clientUrl
+                    }
+                  >
+                    {workDetail.clientInfo &&
+                      workDetail.clientInfo.fields.clientName}
+                  </a>
                 </div>
               </div>
 
               <div className="clientContent">
                 <p>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                  Reiciendis distinctio ad voluptatem fugit libero consequuntur
-                  temporibus provident veritatis architecto suscipit!
+                  {workDetail.clientInfo &&
+                    workDetail.clientInfo.fields.clientContent}
                 </p>
               </div>
             </div>
 
             <div className="clientSummary">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-              temporibus eligendi in fuga aspernatur ea accusamus exercitationem
-              praesentium soluta blanditiis.
-              <br />
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad,
-              soluta? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Architecto quo omnis, sapiente laudantium recusandae nihil sit.
-              <br />
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
-              vitae debitis deserunt obcaecati consectetur, et labore cum illo!
+              {documentToReactComponents(
+                workDetail.clientInfo &&
+                  workDetail.clientInfo.fields.clientSummary
+              )}
             </div>
 
             <div className="clientFeedback">
@@ -78,23 +127,31 @@ function WorkDetail({ ourWorkDetail }) {
                   <div className="clientCardContent">
                     <FaQuoteRight className="clientCardQoute" />
                     <h4>Amazing</h4>
-                    <p>
-                      Thanks you very much for your random number generator i
-                      use it all the time. I have a monthly drawing on my
-                      site,so I use it to pick the two winners
-                      <br />
-                      <br />
-                      so,thank you i see you are visiting Georgia.Have a great
-                      time!
-                    </p>
+                    {documentToReactComponents(
+                      workDetail.clientInfo &&
+                        workDetail.clientInfo.fields.clientFeedback
+                    )}
                   </div>
                   <div className="clientCardUserDetails">
                     <div className="testnomialImage">
-                      <img src="/image/user.jpeg" alt="logo" />
+                      <img
+                        src={
+                          workDetail.clientInfo &&
+                          workDetail.clientInfo.fields.clientFeedbackLogo.fields
+                            .file.url
+                        }
+                        alt="logo"
+                      />
                     </div>
                     <div className="testnomialUser">
-                      <h6>skylar Dokdis</h6>
-                      <p>CEO of Unicharm</p>
+                      <h6>
+                        {workDetail.clientInfo &&
+                          workDetail.clientInfo.fields.clientFeedbackName}
+                      </h6>
+                      <p>
+                        {workDetail.clientInfo &&
+                          workDetail.clientInfo.fields.clientFeedbackStatus}
+                      </p>
                     </div>
                   </div>
                 </div>
