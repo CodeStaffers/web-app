@@ -14,6 +14,8 @@ function App() {
   const [serviceDetailPage, setServiceDetailPage] = useState([]);
   const [serviceIndexContent, setServiceIndexContent] = useState([]);
   const [ourWorkPage, setOurWorkPage] = useState([]);
+  const [ourWorkDetailPage, setOurWorkDetailPage] = useState([]);
+  const [ourWorkTab, setOurWorkTab] = useState([]);
   const [user, setUser] = useState({});
 
   function handleCallbackResponse(response) {
@@ -129,6 +131,30 @@ function App() {
       console.error(err);
     }
   };
+  const getOurWorkDetailPage = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "ourWorkSection",
+      });
+      const responseData = response && response.items;
+
+      if (responseData) setOurWorkDetailPage(responseData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const getOurWorkTab = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "ourWorkTab",
+      });
+      const responseData = response && response.items;
+
+      if (responseData) setOurWorkTab(responseData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   useEffect(() => {
     /* global google */
@@ -150,6 +176,8 @@ function App() {
     getBrandUser();
     getServiceDetailPage();
     getOurWorkPage();
+    getOurWorkDetailPage();
+    getOurWorkTab();
   }, []);
 
   return (
@@ -171,6 +199,8 @@ function App() {
           topUser={topUser}
           serviceDetailPage={serviceDetailPage}
           ourWorkPage={ourWorkPage}
+          ourWorkDetailPage={ourWorkDetailPage}
+          ourWorkTab={ourWorkTab}
         />
       ) : (
         <div

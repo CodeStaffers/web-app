@@ -1,17 +1,17 @@
 .sDetailContainer {
   margin-top: 0;
   height: auto;
+  padding-top: 8em;
+  background-color: #f5f3f379;
 }
 
 .sDetailWrapper {
-  margin-top: 10%;
-  background-color: #f5f3f379;
-  padding: 1em;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
   flex-wrap: wrap;
+  padding: 10px;
 }
 .sDetailItem {
   flex: 1;

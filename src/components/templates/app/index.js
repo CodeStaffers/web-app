@@ -24,6 +24,8 @@ function ThemeOne(props) {
     topUser,
     serviceDetailPage,
     ourWorkPage,
+    ourWorkDetailPage,
+    ourWorkTab,
   } = props;
 
   const { featureIcon, titleHome } = page;
@@ -51,11 +53,13 @@ function ThemeOne(props) {
         />
         <Route
           path="/our-works"
-          element={<OurWorkPage ourWorkPage={ourWorkPage} />}
+          element={
+            <OurWorkPage ourWorkPage={ourWorkPage} ourWorkTab={ourWorkTab} />
+          }
         />
         <Route
           path="/our-works/:title"
-          element={<WorkDetailPage ourWorkDetail={ourWorkPage} />}
+          element={<WorkDetailPage ourWorkDetailPage={ourWorkDetailPage} />}
         />
 
         <Route

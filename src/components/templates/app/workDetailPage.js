@@ -1,9 +1,9 @@
 import WorkDetail from "../../layout/our-work/workDetail/WorkDetail";
 
-function WorkDetailPage({ ourWorkDetail }) {
+function WorkDetailPage({ ourWorkDetailPage }) {
   return (
     <>
-      <WorkDetail ourWorkDetail={ourWorkDetail} />
+      <WorkDetail ourWorkDetailPage={ourWorkDetailPage} />
     </>
   );
 }

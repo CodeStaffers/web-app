@@ -6,10 +6,10 @@
 }
 
 .NavbarItems {
-  padding: 10px 0;
+  padding: 5px 0;
   display: flex;
   align-items: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   height: 20px;
   z-index: 10000;
 }
@@ -26,7 +26,7 @@
 .navbar-logo img {
   display: block !important;
   object-fit: contain;
-  width: 8rem;
+  width: 7rem;
 }
 .right-header {
   flex: 3;
@@ -126,7 +126,7 @@ li a.active {
   }
   .navbar-logo {
     position: absolute;
-    top: -5.2em;
+    top: -4.96em;
     left: 0;
     transform: translate(25%, 50%);
   }
@@ -137,7 +137,8 @@ li a.active {
     top: 0;
     right: 0;
     cursor: pointer;
-    transform: translate(-100%, 60%);
+    transform: translate(-100%, 38%);
+
     font-size: 1.8rem;
   }
   .mobile-icon {
@@ -168,6 +169,6 @@ li a.active {
 }
 @media screen and (max-width: 1250px) {
   .NavbarItems {
-    width: 98%;
+    /* width: 98%; */
   }
 }
