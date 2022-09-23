@@ -5,10 +5,10 @@ import "./ourWorkSection.style.css";
 import { Button } from "../../button/Button";
 // import { getData } from "./tabs";
 
-function Work({ page, ourWorkTab }) {
+function OurWorkSection({ page, ourWorkTab }) {
   // reverse the ourWorkTab
-  // ourWorkTab.reverse();
 
+  // const [tabs, setTabs] = useState(true);
   let { ourWorkSectionTitle, ourWorkSection } = page;
 
   const location = useLocation();
@@ -16,6 +16,8 @@ function Work({ page, ourWorkTab }) {
   // let tabs = getData(true);
   if (location.search !== "") {
     // tabs = getData(false);
+    // setTabs(false);
+
     if (matchUrl !== "all") {
       ourWorkSection = ourWorkSection.filter(
         (item) => matchUrl === item.fields.uniqueTitle
@@ -23,6 +25,7 @@ function Work({ page, ourWorkTab }) {
     }
   } else {
     // tabs = getData(true);
+    // setTabs(true);
   }
 
   return (
@@ -103,4 +106,4 @@ function Work({ page, ourWorkTab }) {
   );
 }
 
-export default Work;
+export default OurWorkSection;
