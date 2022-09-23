@@ -27,13 +27,13 @@
 }
 .webUserComp img {
   display: block;
-  object-fit: fill;
+  object-fit: contain;
   margin: 2em;
-  width: 7em;
+  width: 10em;
 }
 
 @media screen and (max-width: 768px) {
   .webUserComp img {
-    width: 5rem;
+    width: 8rem;
   }
 }
