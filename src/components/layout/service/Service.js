@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./service.css";
 import ServiceCard from "./ServiceCard";
+import { useSelector } from "react-redux";
 
 function Service({ serviceData }) {
+  const [data, setData] = useState([]);
+  const pageData = useSelector((state) => {
+    return state.servicePage.servicePage;
+  });
+
+  const getPageData = async () => {
+    const d = await pageData;
+    setData(d);
+  };
+
+  useEffect(() => {
+    getPageData();
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <section className="service">
       <div className="wrapper">
@@ -10,8 +26,8 @@ function Service({ serviceData }) {
           <h2>Ours services</h2>
         </div>
         <div className="serviceCardWrapper">
-          {serviceData &&
-            serviceData.map((item, index) => {
+          {data &&
+            data.map((item, index) => {
               return (
                 <ServiceCard
                   key={index}

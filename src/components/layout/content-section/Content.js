@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./content.css";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Button } from "../button/Button";
+import { useSelector } from "react-redux";
+
 function Content({ page }) {
-  const { homeBtnUrl, homeBtn } = page;
+  const [data, setData] = useState([]);
+  const pageData = useSelector((state) => {
+    return state.page.page;
+  });
+
+  const getPageData = async () => {
+    const d = await pageData;
+    console.log(d);
+    setData(d);
+  };
+
+  useEffect(() => {
+    getPageData();
+    // eslint-disable-next-line
+  }, []);
+
+  const { homeBtnUrl, homeBtn, heading } = data;
 
   return (
     <>
@@ -12,7 +30,7 @@ function Content({ page }) {
         <div className="wrapper">
           <div className="content_section_title">
             <div className="content__title">
-              {documentToReactComponents(page?.heading)}
+              {documentToReactComponents(heading)}
             </div>
 
             <div className="content_sub_title">

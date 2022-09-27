@@ -1,17 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./heroSection.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { Button } from "../button/Button";
+import { useSelector } from "react-redux";
 
 function Section({ heroSection }) {
+  const [data, setData] = useState([]);
+  const pageData = useSelector((state) => {
+    return state.heroSection.heroSection;
+  });
+
+  const getPageData = async () => {
+    const d = await pageData;
+    setData(d);
+  };
+
+  useEffect(() => {
+    getPageData();
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <>
       <section className="section__body">
         <div className="wrapper">
           <div className="toggle_section">
-            {heroSection &&
-              heroSection.map((item, index) => {
+            {data &&
+              data.map((item, index) => {
                 return (
                   <div
                     className="card_section"
