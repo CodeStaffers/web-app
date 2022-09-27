@@ -1,10 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../../button/Button";
 import "./serviceIndex.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { useSelector } from "react-redux";
 
 function ServiceIndex({ serviceIndexContent }) {
-  const { summary, media, btnUrl, titleBtn } = serviceIndexContent;
+  const [data, setData] = useState([]);
+  const pageData = useSelector((state) => {
+    return state.serviceIndex.serviceIndex;
+  });
+
+  const getPageData = async () => {
+    const d = await pageData;
+    setData(d);
+  };
+
+  useEffect(() => {
+    getPageData();
+    // eslint-disable-next-line
+  }, []);
+
+  const { summary, media, btnUrl, titleBtn } = data;
 
   useEffect(() => {
     window.scrollTo(10, 0, {

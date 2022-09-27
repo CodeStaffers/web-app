@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./testnomial.css";
 import { FaQuoteRight } from "react-icons/fa";
 
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import TestnimialCard from "./TestnimialCard";
+import { useSelector } from "react-redux";
 
 function Testnomial({ testnomial }) {
-  console.log(testnomial);
+  const [data, setData] = useState([]);
+  const pageData = useSelector((state) => {
+    return state.testinomial.testinomial;
+  });
+
+  const getPageData = async () => {
+    const d = await pageData;
+    setData(d);
+  };
+
+  useEffect(() => {
+    getPageData();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>
@@ -23,8 +37,8 @@ function Testnomial({ testnomial }) {
           </div>
 
           <div className="testnomialCardWrapper">
-            {testnomial &&
-              testnomial.map((item, index) => {
+            {data &&
+              data.map((item, index) => {
                 return (
                   <TestnimialCard
                     key={index}

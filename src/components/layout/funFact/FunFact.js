@@ -1,9 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./funFact.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import CountUp from "react-countup";
+import { useSelector } from "react-redux";
 
 function FunFact({ page }) {
+  const [data, setData] = useState([]);
+  const pageData = useSelector((state) => {
+    return state.page.page;
+  });
+
+  const getPageData = async () => {
+    const d = await pageData;
+    setData(d);
+  };
+
+  useEffect(() => {
+    getPageData();
+    // eslint-disable-next-line
+  }, []);
+
   const {
     downlaodTitle,
     download,
@@ -12,7 +28,7 @@ function FunFact({ page }) {
     activeTitle,
     active,
     funFactTitle,
-  } = page;
+  } = data;
 
   return (
     <>

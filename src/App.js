@@ -4,6 +4,7 @@ import { client } from "./client";
 import ThemeOne from "./components/templates/app/index";
 
 const clientId = process.env.REACT_APP_ACCESS_ID;
+
 function App() {
   const [page, setPage] = useState([]);
   const [serviceData, setServiceData] = useState([]);
@@ -83,18 +84,6 @@ function App() {
       console.error(err);
     }
   };
-  const getServiceIndexContent = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "servicesIndexPage",
-      });
-      const responseData = response && response.items[0].fields;
-      if (responseData) setServiceIndexContent(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
   const getBrandUser = async () => {
     try {
       const response = await client.getEntries({
@@ -102,6 +91,18 @@ function App() {
       });
       const responseData = response && response.items[0].fields;
       if (responseData) setTopUser(responseData);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const getServiceIndexContent = async () => {
+    try {
+      const response = await client.getEntries({
+        content_type: "servicesIndexPage",
+      });
+      const responseData = response && response.items[0].fields;
+      if (responseData) setServiceIndexContent(responseData);
     } catch (err) {
       console.error(err);
     }

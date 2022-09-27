@@ -1,16 +1,33 @@
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../button/Button";
 import "./serviceIndexSection.css";
 import ReactMarkdown from "react-markdown";
+import { useSelector } from "react-redux";
 
 function ServiceIndex({ serviceData }) {
+  const [data, setData] = useState([]);
+  const pageData = useSelector((state) => {
+    return state.servicePage.servicePage;
+  });
+
+  const getPageData = async () => {
+    const d = await pageData;
+    setData(d);
+  };
+
+  useEffect(() => {
+    getPageData();
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <section className="service__index__section__container">
       <div className="wrapper">
         <div className="serviceIndexSection">
           <div className="toggle_section">
-            {serviceData &&
-              serviceData.map((item, index) => {
+            {data &&
+              data.map((item, index) => {
                 let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
 
                 return (
