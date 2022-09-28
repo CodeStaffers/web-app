@@ -6,18 +6,13 @@ import ServiceDetailFeature from "../../layout/service/serviceDetailComp/Service
 
 import ServiceDetail from "../../layout/service/serviceDetail/ServiceDetail";
 
-function ServiceDetailPage(props) {
-  const { serviceData, testnomial, serviceDetailPage } = props;
-
-  const { brandCard, content, image, summary, title } = serviceDetailPage;
-
+function ServiceDetailPage() {
   return (
     <>
-      <ServiceDetail serviceData={serviceData} />
-      <ServiceDetailHero content={content} image={image} summary={summary} />
-
-      <ServiceDetailFeature brandCard={brandCard} title={title} />
-      <Testnomial testnomial={testnomial} />
+      <ServiceDetail />
+      <ServiceDetailHero />
+      <ServiceDetailFeature />
+      <Testnomial />
     </>
   );
 }
