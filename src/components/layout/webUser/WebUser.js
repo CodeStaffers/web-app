@@ -12,7 +12,6 @@ function WebUser({ topUser }) {
 
   const getPageData = async () => {
     const d = await pageData;
-    console.log(d);
     setData(d);
   };
 

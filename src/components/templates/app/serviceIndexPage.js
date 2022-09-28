@@ -1,10 +1,10 @@
 import ServiceIndex from "../../layout/service/servideIndex/ServiceIndex";
 import ServiceIndexSection from "../../layout/service/servideIndex/ServiceIndexSection";
-function ServiceIndexPage({ serviceData, serviceIndexContent }) {
+function ServiceIndexPage() {
   return (
     <>
-      <ServiceIndex serviceIndexContent={serviceIndexContent} />
-      <ServiceIndexSection serviceData={serviceData} />
+      <ServiceIndex />
+      <ServiceIndexSection />
     </>
   );
 }

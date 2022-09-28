@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./mainFooter.css";
 import { FcCallback, FcTreeStructure, FcMindMap } from "react-icons/fc";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BsFacebook, BsTwitter, BsPinterest, BsLinkedin } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function MainFooter({ page }) {
+  const [data, setData] = useState([]);
+  const pageData = useSelector((state) => {
+    return state.footer.footer;
+  });
+
+  const getPageData = async () => {
+    const d = await pageData;
+    setData(d);
+  };
+
+  useEffect(() => {
+    getPageData();
+    // eslint-disable-next-line
+  }, []);
+
   const {
     logo,
     summary,
@@ -19,7 +35,7 @@ function MainFooter({ page }) {
     phone,
     address,
     website,
-  } = page.mainFooter ? page.mainFooter.fields : "";
+  } = data;
 
   return (
     <>

@@ -16,7 +16,7 @@ function WorkDetail({ ourWorkDetailPage }) {
   const location = useLocation();
   const { titlePage, id } = location.state;
 
-  console.log(id);
+  // console.log(id);
 
   const filterData = () => {
     const filterWork = ourWorkDetailPage.filter((item) => id === item.sys.id);
@@ -31,7 +31,7 @@ function WorkDetail({ ourWorkDetailPage }) {
     // eslint-disable-next-line
   }, []);
 
-  console.log(workDetail.clientInfo);
+  // console.log(workDetail.clientInfo);
   return (
     <>
       <section className="workDetailContainer">

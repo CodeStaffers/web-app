@@ -1,31 +1,24 @@
-import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "./ourWorkSection.style.css";
 import { Button } from "../../button/Button";
+
 // import { getData } from "./tabs";
 
 function OurWorkSection({ page, ourWorkTab }) {
   // reverse the ourWorkTab
 
-  // const [tabs, setTabs] = useState(true);
   let { ourWorkSectionTitle, ourWorkSection } = page;
 
   const location = useLocation();
   const matchUrl = location.search.slice(3);
-  // let tabs = getData(true);
-  if (location.search !== "") {
-    // tabs = getData(false);
-    // setTabs(false);
 
+  if (location.search !== "") {
     if (matchUrl !== "all") {
       ourWorkSection = ourWorkSection.filter(
         (item) => matchUrl === item.fields.uniqueTitle
       );
     }
-  } else {
-    // tabs = getData(true);
-    // setTabs(true);
   }
 
   return (

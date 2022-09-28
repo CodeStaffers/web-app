@@ -6,15 +6,15 @@ import Testnomial from "../../layout/testnomials/Testnomial";
 import HeroSection from "../../layout/heroSection/HeroSection";
 
 function HomePage(props) {
-  const { page, serviceData, heroSection, testnomial, project } = props;
+  const { project } = props;
 
   return (
     <>
-      <Content page={page} />
-      <Service serviceData={serviceData} />
-      <FunFact page={page} />
-      <HeroSection heroSection={heroSection} />
-      <Testnomial testnomial={testnomial} />
+      <Content />
+      <Service />
+      <FunFact />
+      <HeroSection />
+      <Testnomial />
       <Project project={project} />
     </>
   );

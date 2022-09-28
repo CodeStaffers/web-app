@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./project.css";
 import ProjectCard from "./ProjectCard";
+import { useSelector } from "react-redux";
 
-function Project({ project }) {
+function Project() {
+  const [project, setProject] = useState([]);
+  const pageData = useSelector((state) => {
+    return state.ourWorkSection.ourWorkSection;
+  });
+
+  const getPageData = async () => {
+    const d = await pageData;
+    setProject(d.ourWorkSection);
+  };
+
+  useEffect(() => {
+    getPageData();
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <section className="projectContainer">
       <div className="wrapper">
@@ -17,13 +33,15 @@ function Project({ project }) {
           </div>
 
           <div className="projectCardWrapper">
-            {project &&
-              project.slice(3).map((item, index) => {
-                let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
-                return (
-                  <ProjectCard item={item} urlTitle={urlTitle} key={index} />
-                );
-              })}
+            {project
+              ? project &&
+                project.slice(3).map((item, index) => {
+                  let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
+                  return (
+                    <ProjectCard item={item} urlTitle={urlTitle} key={index} />
+                  );
+                })
+              : ""}
           </div>
         </div>
       </div>

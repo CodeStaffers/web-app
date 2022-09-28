@@ -7,18 +7,8 @@ const clientId = process.env.REACT_APP_ACCESS_ID;
 
 function App() {
   const [page, setPage] = useState([]);
-  const [serviceData, setServiceData] = useState([]);
-  const [testnomial, setTestnomial] = useState([]);
-  const [heroSection, setHeroSection] = useState([]);
-  const [project, setProject] = useState([]);
-  const [topUser, setTopUser] = useState([]);
-  const [serviceDetailPage, setServiceDetailPage] = useState([]);
-  const [serviceIndexContent, setServiceIndexContent] = useState([]);
-  const [ourWorkPage, setOurWorkPage] = useState([]);
-  const [ourWorkDetailPage, setOurWorkDetailPage] = useState([]);
-  const [ourWorkTab, setOurWorkTab] = useState([]);
-  const [user, setUser] = useState({});
 
+  const [user, setUser] = useState({});
   function handleCallbackResponse(response) {
     var obj = jwt_decode(response.credential);
     console.log(obj.exp);
@@ -32,126 +22,7 @@ function App() {
         content_type: "landingPage",
       });
       const responseData = response && response.items[0].fields;
-
       if (responseData) setPage(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  const getServicePage = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "serviceCard",
-      });
-      const responseData = response && response.items;
-      if (responseData) setServiceData(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  const getTestinomial = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "testinomials",
-      });
-      const responseData = response && response.items;
-      if (responseData) setTestnomial(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const getHeroSection = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "heroSection",
-      });
-      const responseData = response && response.items;
-      if (responseData) setHeroSection(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const getProject = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "projects",
-      });
-      const responseData = response && response.items;
-      if (responseData) setProject(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const getBrandUser = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "brandsName",
-      });
-      const responseData = response && response.items[0].fields;
-      if (responseData) setTopUser(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  const getServiceIndexContent = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "servicesIndexPage",
-      });
-      const responseData = response && response.items[0].fields;
-      if (responseData) setServiceIndexContent(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  const getServiceDetailPage = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "serviceDetailPage",
-      });
-      const responseData = response && response.items[0].fields;
-      if (responseData) setServiceDetailPage(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  const getOurWorkPage = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "ourWork",
-      });
-      const responseData = response && response.items[0].fields;
-
-      if (responseData) setOurWorkPage(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const getOurWorkDetailPage = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "ourWorkSection",
-      });
-      const responseData = response && response.items;
-
-      if (responseData) setOurWorkDetailPage(responseData);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-  const getOurWorkTab = async () => {
-    try {
-      const response = await client.getEntries({
-        content_type: "ourWorkTab",
-      });
-      const responseData = response && response.items;
-
-      if (responseData) setOurWorkTab(responseData);
     } catch (err) {
       console.error(err);
     }
@@ -169,16 +40,6 @@ function App() {
       size: "large",
     });
     getPage();
-    getServicePage();
-    getTestinomial();
-    getHeroSection();
-    getProject();
-    getServiceIndexContent();
-    getBrandUser();
-    getServiceDetailPage();
-    getOurWorkPage();
-    getOurWorkDetailPage();
-    getOurWorkTab();
   }, []);
 
   return (
@@ -190,19 +51,7 @@ function App() {
       )} */}
 
       {Object.keys(user).length !== 0 ? (
-        <ThemeOne
-          page={page}
-          serviceData={serviceData}
-          testnomial={testnomial}
-          heroSection={heroSection}
-          project={project}
-          serviceIndexContent={serviceIndexContent}
-          topUser={topUser}
-          serviceDetailPage={serviceDetailPage}
-          ourWorkPage={ourWorkPage}
-          ourWorkDetailPage={ourWorkDetailPage}
-          ourWorkTab={ourWorkTab}
-        />
+        <ThemeOne page={page} />
       ) : (
         <div
           style={{
