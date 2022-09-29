@@ -16,17 +16,20 @@ function ServiceIndex({ serviceIndexContent }) {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0, {
+      behavior: "smooth",
+    });
+
     getPageData();
     // eslint-disable-next-line
   }, []);
-
   const { summary, media, btnUrl, titleBtn } = data;
 
-  useEffect(() => {
-    window.scrollTo(10, 0, {
-      behavior: "smooth",
-    });
-  }, []);
+  // click method
+
+  const onClick = () => {
+    window.open(btnUrl, "_blank");
+  };
 
   return (
     <section className="service__index__container">
@@ -37,7 +40,9 @@ function ServiceIndex({ serviceIndexContent }) {
               {documentToReactComponents(summary)}
             </div>
             <div className="service__index__btn">
-              <Button url={btnUrl}>{titleBtn}</Button>
+              <Button url={btnUrl} onClick={onClick}>
+                {titleBtn}
+              </Button>
             </div>
           </div>
 

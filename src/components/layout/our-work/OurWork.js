@@ -18,6 +18,9 @@ function OurWork({ page }) {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0, {
+      behavior: "smooth",
+    });
     getPageData();
     // eslint-disable-next-line
   }, []);

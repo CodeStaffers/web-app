@@ -1,12 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./testnomial.css";
 import { FaQuoteRight } from "react-icons/fa";
-
-import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import TestnimialCard from "./TestnimialCard";
 import { useSelector } from "react-redux";
 
-function Testnomial({ testnomial }) {
+// swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y, Controller } from "swiper";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/scrollbar";
+import "./styles.css";
+
+function Testnomial() {
+  const [swiper, setSwiper] = useState();
   const [data, setData] = useState([]);
   const pageData = useSelector((state) => {
     return state.testinomial.testinomial;
@@ -21,6 +30,19 @@ function Testnomial({ testnomial }) {
     getPageData();
     // eslint-disable-next-line
   }, []);
+
+  const prevRef = useRef();
+  const nextRef = useRef();
+
+  React.useEffect(() => {
+    if (swiper) {
+      console.log("Swiper instance:", swiper);
+      swiper.params.navigation.prevEl = prevRef.current;
+      swiper.params.navigation.nextEl = nextRef.current;
+      swiper.navigation.init();
+      swiper.navigation.update();
+    }
+  }, [swiper]);
 
   return (
     <>
@@ -37,23 +59,42 @@ function Testnomial({ testnomial }) {
           </div>
 
           <div className="testnomialCardWrapper">
-            {data &&
-              data.map((item, index) => {
-                return (
-                  <TestnimialCard
-                    key={index}
-                    content={item.fields.content}
-                    authorName={item.fields.authorName}
-                    authorStatus={item.fields.authorStatus}
-                    author={item.fields.author}
-                  />
-                );
-              })}
-          </div>
-
-          <div className="testnomialArrowBtn">
-            <BsArrowLeftShort className="leftArrow" />
-            <BsArrowRightShort className="leftArrow" />
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              slidesPerGroup={3}
+              loop={true}
+              loopFillGroupWithBlank={true}
+              pagination={{
+                clickable: true,
+              }}
+              navigation={{
+                prevEl: prevRef?.current,
+                nextEl: nextRef?.current,
+              }}
+              updateOnWindowResize
+              observer
+              observeParents
+              initialSlide={2}
+              onSwiper={setSwiper}
+              modules={[Pagination, Navigation, Scrollbar, A11y, Controller]}
+              className="mySwiper"
+            >
+              {data &&
+                data.map((item, index) => {
+                  return (
+                    <SwiperSlide>
+                      <TestnimialCard
+                        key={index}
+                        content={item.fields.content}
+                        authorName={item.fields.authorName}
+                        authorStatus={item.fields.authorStatus}
+                        author={item.fields.author}
+                      />
+                    </SwiperSlide>
+                  );
+                })}
+            </Swiper>
           </div>
         </div>
       </section>

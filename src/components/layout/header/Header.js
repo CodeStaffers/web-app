@@ -7,6 +7,7 @@ import { Button } from "../button/Button";
 import { NavLink } from "react-router-dom";
 
 function Header() {
+  const url = "https://www.digitelle.no/";
   const [clicked, setClicked] = useState(false);
   const [scroll, setScroll] = useState(false);
 
@@ -21,6 +22,11 @@ function Header() {
   window.addEventListener("scroll", onScrollChange);
   const handleClick = () => {
     setClicked(!clicked);
+  };
+
+  // define btn click
+  const onClick = () => {
+    window.open(url, "_blank");
   };
 
   return (
@@ -56,8 +62,12 @@ function Header() {
               </ul>
 
               <div className="header-btn">
-                <Button buttonSize="btn--medium" btnHeader="header-btn-none">
-                  Get Started
+                <Button
+                  buttonSize="btn--medium"
+                  btnHeader="header-btn-none"
+                  onClick={onClick}
+                >
+                  Get Your Website Audit For Free
                 </Button>
               </div>
             </div>

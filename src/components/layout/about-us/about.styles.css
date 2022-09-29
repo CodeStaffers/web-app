@@ -3,6 +3,12 @@
   padding-top: 100px;
   height: 600px;
 } */
+
+.aboutSection {
+  margin-top: 0;
+  padding-top: 7em;
+  text-align: center;
+}
 canvas {
   margin: 0;
   padding: 0;
@@ -13,15 +19,17 @@ canvas {
 .bg {
   position: absolute;
 }
-
+.wrapper > .effects_title {
+  text-align: center;
+}
 .effects_title {
-  position: absolute;
-  top: 120px;
-  left: 60px;
   font-weight: 900;
-  font-size: 12em;
+  font-size: 8em;
   margin: 0;
-  color: linear-gradient(120deg, #5b47db 20.69%, #0fe3ffcc 79.69%);
+  padding: 0.2em 0px;
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   line-height: 0.6em;
   letter-spacing: -2px;
   text-align: left;

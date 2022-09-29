@@ -107,3 +107,10 @@
 //     width: 100%;
 //     z-index: 10000;
 // }
+
+
+
+    // <div className="testnomialArrowBtn">
+          //   <BsArrowLeftShort className=" leftArrow" ref={nextRef} />
+          //   <BsArrowRightShort className=" leftArrow" ref={prevRef} />
+          // </div>
