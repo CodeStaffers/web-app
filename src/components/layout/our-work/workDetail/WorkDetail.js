@@ -82,11 +82,9 @@ function WorkDetail({ ourWorkDetailPage }) {
                   {workDetail.clientInfo &&
                     workDetail.clientInfo.fields.media.map((img, index) => {
                       return (
-                        <>
-                          <SwiperSlide key={index}>
-                            <img src={img.fields.file.url} alt="" />
-                          </SwiperSlide>
-                        </>
+                        <SwiperSlide key={index}>
+                          <img src={img.fields.file.url} alt="img" />
+                        </SwiperSlide>
                       );
                     })}
                 </Swiper>
