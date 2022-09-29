@@ -36,7 +36,6 @@ function Testnomial() {
 
   React.useEffect(() => {
     if (swiper) {
-      console.log("Swiper instance:", swiper);
       swiper.params.navigation.prevEl = prevRef.current;
       swiper.params.navigation.nextEl = nextRef.current;
       swiper.navigation.init();
@@ -83,7 +82,7 @@ function Testnomial() {
               {data &&
                 data.map((item, index) => {
                   return (
-                    <SwiperSlide>
+                    <SwiperSlide key={index}>
                       <TestnimialCard
                         key={index}
                         content={item.fields.content}
