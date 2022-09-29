@@ -11,7 +11,7 @@ import ServiceDetailPage from "./serviceDetailPage";
 import ServiceIndexPage from "./serviceIndexPage";
 import OurWorkPage from "./ourWorkPage";
 import WorkDetailPage from "./workDetailPage";
-
+import { AboutPage } from "./aboutPage";
 function ThemeOne(props) {
   const { page } = props;
 
@@ -27,9 +27,9 @@ function ThemeOne(props) {
       <Header page={page} />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about-us" element={<AboutPage />} />
         <Route path="/our-works" element={<OurWorkPage />} />
         <Route path="/our-works/:title" element={<WorkDetailPage />} />
-
         <Route path="/service" element={<ServiceIndexPage />} />
         <Route path="/service/:shortTitle" element={<ServiceDetailPage />} />
         <Route path="/contacts" element={<Contact />} />

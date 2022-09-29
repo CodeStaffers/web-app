@@ -3,13 +3,21 @@ import "./workDetail.css";
 import { Link, useLocation } from "react-router-dom";
 import { FaQuoteRight } from "react-icons/fa";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+
+// swiper
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel, Keyboard } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
+
+import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper/core";
+
+// install Swiper modules
+SwiperCore.use([Pagination, Navigation]);
+
 function WorkDetail({ ourWorkDetailPage }) {
   const [workDetail, setWorkDetail] = useState([]);
 
@@ -57,8 +65,19 @@ function WorkDetail({ ourWorkDetailPage }) {
                   pagination={true}
                   mousewheel={true}
                   keyboard={true}
-                  modules={[Navigation, Pagination, Mousewheel, Keyboard]}
-                  className="mySwiper"
+                  loop={true}
+                  autoplay={{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }}
+                  modules={[
+                    Navigation,
+                    Pagination,
+                    Mousewheel,
+                    Keyboard,
+                    Autoplay,
+                  ]}
+                  className="mySwiperWork"
                 >
                   {workDetail.clientInfo &&
                     workDetail.clientInfo.fields.media.map((img, index) => {

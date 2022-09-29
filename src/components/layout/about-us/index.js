@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   useGLTF,
@@ -28,41 +28,48 @@ function Model({ url }) {
   );
 }
 function AboutUs() {
+  useEffect(() => {
+    window.scrollTo(0, 0, {
+      behavior: "smooth",
+    });
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <>
-      <div className="bg" />
-      <h1 className="effects_title">
-        Perfecto <span style={{ fontSize: "0.4em" }}>our</span>
-        <br />
-        <span className="name-two">Motto</span>
-      </h1>
-      <Canvas dpr={[1.5, 2]} linear shadows>
-        <fog attach="fog" args={["#272730", 16, 30]} />
-        <ambientLight intensity={0.75} />
-        <PerspectiveCamera makeDefault position={[0, 0, 16]} fov={75}>
-          <pointLight intensity={1} position={[-10, -25, -10]} />
-          <spotLight
-            castShadow
-            intensity={2.25}
-            angle={0.2}
-            penumbra={1}
-            position={[-25, 20, -15]}
-            shadow-mapSize={[1024, 1024]}
-            shadow-bias={-0.0001}
-          />
-        </PerspectiveCamera>
-        <Suspense fallback={null}>
-          <Model url="/scene.glb" />
-        </Suspense>
-        <OrbitControls
-          autoRotate
-          enablePan={false}
-          enableZoom={false}
-          maxPolarAngle={Math.PI / 2}
-          minPolarAngle={Math.PI / 2}
-        />
-        <Stars radius={500} depth={50} count={1000} factor={10} />
-      </Canvas>
+      <section className="aboutSection">
+        <div className="wrapper">
+          <div className="bg" />
+          <h1 className="effects_title">Perfecto Our Motto</h1>
+          <Canvas dpr={[1.5, 2]} linear shadows>
+            <fog attach="fog" args={["#272730", 16, 30]} />
+            <ambientLight intensity={0.75} />
+            <PerspectiveCamera makeDefault position={[0, 0, 16]} fov={75}>
+              <pointLight intensity={1} position={[-10, -25, -10]} />
+              <spotLight
+                castShadow
+                intensity={2.25}
+                angle={0.2}
+                penumbra={1}
+                position={[-25, 20, -15]}
+                shadow-mapSize={[1024, 1024]}
+                shadow-bias={-0.0001}
+              />
+            </PerspectiveCamera>
+            <Suspense fallback={null}>
+              <Model url="/scene.glb" />
+            </Suspense>
+            <OrbitControls
+              autoRotate
+              enablePan={false}
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+            />
+            <Stars radius={500} depth={50} count={1000} factor={10} />
+          </Canvas>
+        </div>
+      </section>
     </>
   );
 }
