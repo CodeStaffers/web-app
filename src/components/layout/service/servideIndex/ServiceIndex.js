@@ -4,7 +4,7 @@ import "./serviceIndex.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { useSelector } from "react-redux";
 
-function ServiceIndex({ serviceIndexContent }) {
+function ServiceIndex() {
   const [data, setData] = useState([]);
   const pageData = useSelector((state) => {
     return state.serviceIndex.serviceIndex;

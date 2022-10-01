@@ -18,6 +18,21 @@ function ProjectCard({ item, urlTitle }) {
               {documentToReactComponents(item.fields.summary)}
             </div>
           </Link>
+          <div className="ourWorkTags">
+            {item.fields &&
+              item.fields.tagSlug.map((tag, index) => {
+                const { slug, title } = tag ? tag.fields : "";
+                return (
+                  <Link
+                    to={`/${slug}`}
+                    state={{ item: item.fields }}
+                    key={index}
+                  >
+                    <p>{title}</p>
+                  </Link>
+                );
+              })}
+          </div>
         </div>
       </div>
     </>

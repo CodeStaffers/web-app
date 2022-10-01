@@ -75,3 +75,61 @@ function AboutUs() {
 }
 
 export default AboutUs;
+/* 
+canvas {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .bg {
+    position: absolute;
+  }
+  .wrapper > .effects_title {
+    text-align: center;
+  }
+  .effects_title {
+    font-weight: 900;
+    font-size: 8em;
+    margin: 0;
+    padding: 0.2em 0px;
+    background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 0.6em;
+    letter-spacing: -2px;
+    text-align: left;
+  }
+  
+  .effects_title > .name-two {
+    white-space: pre;
+  }
+  
+  .name-two.header {
+    font-weight: 700;
+    position: absolute;
+    display: inline-block;
+    width: 500px;
+    transform: translate3d(0, -50%, 0);
+    font-size: 9em;
+    line-height: 0.9em;
+    pointer-events: none;
+    top: 350px;
+    left: 50px;
+  }
+  
+  .name-two.header-left {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 700;
+    position: absolute;
+    display: inline-block;
+    transform: translate3d(0, -50%, 0);
+    line-height: 1em;
+    top: 200px;
+    left: 60px;
+    font-size: 4em;
+    width: 200px;
+  }
+  
+*/

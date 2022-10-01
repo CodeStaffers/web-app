@@ -19,8 +19,6 @@
 }
 
 .testnomialCardWrapper {
-  background-color: yellow;
-
   /* display: flex; */
   justify-content: space-between;
   flex-direction: row;

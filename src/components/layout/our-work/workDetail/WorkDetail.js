@@ -39,7 +39,11 @@ function WorkDetail({ ourWorkDetailPage }) {
     // eslint-disable-next-line
   }, []);
 
-  // console.log(workDetail.clientInfo);
+  const item = {
+    tagSlug: workDetail.tagSlug,
+    clientInfo: workDetail.clientInfo,
+  };
+
   return (
     <>
       <section className="workDetailContainer">
@@ -55,7 +59,23 @@ function WorkDetail({ ourWorkDetailPage }) {
             <div className="workDetailWrapper">
               <div className="workDetailTitle">
                 <h2>{workDetail.title}</h2>
-                <p>Mobile app - design, code, Testing</p>
+                <div className="ourWorkTagsDetails">
+                  {workDetail.tagSlug &&
+                    workDetail.tagSlug.map((tag, index) => {
+                      const { slug, title } = tag ? tag.fields : "";
+                      return (
+                        <Link
+                          to={`/${slug}`}
+                          key={index}
+                          state={{
+                            item: item,
+                          }}
+                        >
+                          <p>{title}</p>
+                        </Link>
+                      );
+                    })}
+                </div>
               </div>
 
               <div className="workDetailImage">

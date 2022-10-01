@@ -47,6 +47,10 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.ourProjectImage {
+  display: block;
+  overflow: hidden;
+}
 
 .ourProjectImage img {
   object-fit: cover;
@@ -56,7 +60,8 @@
 }
 .ourProjectSubtitle {
   box-sizing: border-box;
-  padding: 2em 15px 1em 20px;
+  padding: 1em 15px 0em 15px;
+  box-sizing: border-box;
   line-height: 0.1em;
 }
 .ourProjectSubtitle p {

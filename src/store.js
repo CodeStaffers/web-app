@@ -11,6 +11,7 @@ import getOurWorkReducer from "./features/ourWork/ourWorkSlice";
 import getOurWorkSectionReducer from "./features/ourWork/ourWorkSectionSlice";
 import getOurWorkTabReducer from "./features/ourWork/ourWorkTabSlice";
 import getOurWorkDetailReducer from "./features/ourWork/ourWorkDetailSlice";
+import getOurGlobalWorkReducer from "./features/ourWork/ourWorkSlugSlice";
 
 export const store = configureStore({
   reducer: {
@@ -26,6 +27,7 @@ export const store = configureStore({
     ourWorkSection: getOurWorkSectionReducer,
     ourWorkTab: getOurWorkTabReducer,
     ourWorkDetail: getOurWorkDetailReducer,
+    ourGlobalWork: getOurGlobalWorkReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

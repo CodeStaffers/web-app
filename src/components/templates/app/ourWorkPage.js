@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 function OurWorkPage() {
   const [ourWorkPage, SetOurWorkPage] = useState([]);
   const [ourWorkTab, setOurTabPage] = useState([]);
+  const [ourWorkDetailPage, setOurWorkDetailPage] = useState([]);
 
   const pageData = useSelector((state) => {
     return state.ourWorkSection.ourWorkSection;
@@ -15,10 +16,15 @@ function OurWorkPage() {
     return state.ourWorkTab.ourWorkTab;
   });
 
+  const pageDetail = useSelector((state) => {
+    return state.ourWorkDetail.ourWorkDetail;
+  });
+
   const getPageData = async () => {
     const d = await pageData;
     const e = await pageTab;
-
+    const f = await pageDetail;
+    setOurWorkDetailPage(f);
     SetOurWorkPage(d);
     setOurTabPage(e);
   };
@@ -32,7 +38,11 @@ function OurWorkPage() {
     <>
       <OurWork />
       {ourWorkPage.length !== 0 || ourWorkPage.length === undefined ? (
-        <WorkSection page={ourWorkPage} ourWorkTab={ourWorkTab} />
+        <WorkSection
+          page={ourWorkPage}
+          ourWorkTab={ourWorkTab}
+          ourWorkDetailPage={ourWorkDetailPage}
+        />
       ) : (
         ""
       )}
