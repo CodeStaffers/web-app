@@ -83,13 +83,26 @@
 }
 .ourWorkSectionSubtitle {
   box-sizing: border-box;
-  padding: 2em 15px 1em 20px;
+  padding: 1em 15px 0em 15px;
+  box-sizing: border-box;
   line-height: 0.1em;
 }
-.ourWorkSectionSubtitle p {
-  font-size: 15px;
+.ourWorkTags {
+  margin-top: -1em;
+  padding-left: 20px;
+  line-height: 0.5em;
+  height: 3em;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
-
+.ourWorkTags p {
+  padding: 6px 5px;
+  border: 0.5px solid #5f45ff;
+  color: #5f45ff;
+  border-radius: 5px;
+  margin-right: 10px;
+}
 .ourWorkSectionCard:hover {
   transform: translateY(-10px);
 }
@@ -98,3 +111,5 @@
   margin-top: 3em;
   text-align: center;
 }
+
+/* Design, code, Test */

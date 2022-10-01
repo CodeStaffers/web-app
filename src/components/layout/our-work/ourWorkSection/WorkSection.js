@@ -5,17 +5,19 @@ import { Button } from "../../button/Button";
 
 // import { getData } from "./tabs";
 
-function OurWorkSection({ page, ourWorkTab }) {
+function OurWorkSection({ page, ourWorkTab, ourWorkDetailPage }) {
   // reverse the ourWorkTab
 
-  let { ourWorkSectionTitle, ourWorkSection } = page;
+  let { ourWorkSectionTitle } = page;
+
+  // console.log(ourWorkDetailPage);
 
   const location = useLocation();
   const matchUrl = location.search.slice(3);
 
   if (location.search !== "") {
     if (matchUrl !== "all") {
-      ourWorkSection = ourWorkSection.filter(
+      ourWorkDetailPage = ourWorkDetailPage.filter(
         (item) => matchUrl === item.fields.uniqueTitle
       );
     }
@@ -57,8 +59,8 @@ function OurWorkSection({ page, ourWorkTab }) {
             </div>
 
             <div className="ourWorkSectionWrapper">
-              {ourWorkSection &&
-                ourWorkSection.map((item, index) => {
+              {ourWorkDetailPage &&
+                ourWorkDetailPage.map((item, index) => {
                   let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
 
                   return (
@@ -78,6 +80,22 @@ function OurWorkSection({ page, ourWorkTab }) {
                             {documentToReactComponents(item.fields.summary)}
                           </div>
                         </Link>
+
+                        <div className="ourWorkTags">
+                          {item.fields &&
+                            item.fields.tagSlug.map((tag, index) => {
+                              const { slug, title } = tag ? tag.fields : "";
+                              return (
+                                <Link
+                                  to={`/${slug}`}
+                                  state={{ item: item.fields }}
+                                  key={index}
+                                >
+                                  <p>{title}</p>
+                                </Link>
+                              );
+                            })}
+                        </div>
                       </div>
                     </div>
                   );

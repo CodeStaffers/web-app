@@ -6,12 +6,13 @@ import { useSelector } from "react-redux";
 function Project() {
   const [project, setProject] = useState([]);
   const pageData = useSelector((state) => {
-    return state.ourWorkSection.ourWorkSection;
+    return state.ourWorkDetail.ourWorkDetail;
   });
 
   const getPageData = async () => {
     const d = await pageData;
-    setProject(d.ourWorkSection);
+    console.log(d);
+    setProject(d);
   };
 
   useEffect(() => {
