@@ -26,7 +26,7 @@ function About({ about }) {
     <>
       <section className="aboutSection about_container ">
         <div className="wrapper aboutWrapperDoc">
-          <div className="aboutTitle aboutWrapper">
+          <div className="aboutTitlePage aboutWrapper">
             <div className="aboutTitle1">
               {documentToReactComponents(title)}
             </div>
@@ -64,10 +64,7 @@ function About({ about }) {
             </div>
           </div>
 
-          <div
-            className="aboutAssit "
-            style={{ backgroundColor: { happybgColor } }}
-          >
+          <div className="aboutAssit" style={{ backgroundColor: happybgColor }}>
             <div className="assist1 aboutWrapper">
               <h2>{teamHappyTitle}</h2>
               <p>{teamHappyDesc}</p>
