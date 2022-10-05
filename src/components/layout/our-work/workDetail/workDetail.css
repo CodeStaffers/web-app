@@ -189,3 +189,12 @@
   color: black !important;
   text-transform: none !important;
 }
+
+@media screen and (max-width: 768px) {
+  .workDetailBetaWrapper {
+    margin-top: 15%;
+  }
+  .workDetailTitle {
+    line-height: 1.9em;
+  }
+}

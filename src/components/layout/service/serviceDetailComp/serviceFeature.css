@@ -40,10 +40,6 @@
 /* -----------Responsive code-------------- */
 
 @media screen and (max-width: 780px) {
-  .sFeatureContainer {
-    padding: 1em 10px;
-  }
-
   .sFeatureWrapper {
     margin-top: 2em;
     display: flex;

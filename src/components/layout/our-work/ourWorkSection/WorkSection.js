@@ -1,18 +1,14 @@
+import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "./ourWorkSection.style.css";
 import { Button } from "../../button/Button";
 
-// import { getData } from "./tabs";
-
 function OurWorkSection({ page, ourWorkTab, ourWorkDetailPage }) {
   // reverse the ourWorkTab
-
+  const location = useLocation();
   let { ourWorkSectionTitle } = page;
 
-  // console.log(ourWorkDetailPage);
-
-  const location = useLocation();
   const matchUrl = location.search.slice(3);
 
   if (location.search !== "") {
@@ -43,9 +39,7 @@ function OurWorkSection({ page, ourWorkTab, ourWorkDetailPage }) {
                           <li
                             className={
                               item.fields.matchUrl === matchUrl
-                                ? //  ||
-                                  // (item.fields.activeUrl ? true : false)
-                                  "activeTabs ourWorkTabsItem"
+                                ? "activeTabs  ourWorkTabsItem"
                                 : "ourWorkTabsItem"
                             }
                           >

@@ -97,6 +97,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  /* background-color: red; */
 }
 .AboutBtn button {
   cursor: pointer;
@@ -113,12 +114,69 @@
 }
 
 .assist2 {
+  padding: 0 10px;
   flex: 1;
 }
 .assist2 img {
   display: inline-block;
   object-fit: cover;
   width: 70%;
-  height: 50vh;
   border-radius: 1em;
+}
+
+/* responsice code */
+@media screen and (max-width: 824px) {
+  .aboutWrapper,
+  .aboutBg {
+    padding: 0 10px;
+  }
+  .aboutTitlePage {
+    display: block;
+  }
+  .aboutTitle1 h1 {
+    font-size: 2.5em;
+  }
+  .aboutTitle2 {
+    padding-top: 0em;
+  }
+
+  .aboutSummary {
+    display: block;
+  }
+  .summaryPara {
+    padding-top: 0em;
+  }
+  .summaryPara p {
+    margin-top: -10px;
+  }
+  .aboutTeam {
+    padding: 1em;
+    display: block;
+  }
+  .aboutAssit {
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+    display: block;
+  }
+
+  .AboutBtn {
+    display: block;
+  }
+  .AboutBtn button {
+    width: 40%;
+    display: inline;
+  }
+  .AboutBtn div {
+    display: inline;
+    padding-left: 1em;
+  }
+
+  .assist2 {
+    margin-top: 3em;
+  }
+  .assist2 img {
+    object-fit: contain;
+    width: 100%;
+    border-radius: 1em;
+  }
 }

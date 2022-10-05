@@ -15,6 +15,7 @@ import "swiper/css/scrollbar";
 import "./styles.css";
 
 function Testnomial() {
+  const [slide, setSlide] = useState(3);
   const [swiper, setSwiper] = useState();
   const [data, setData] = useState([]);
   const pageData = useSelector((state) => {
@@ -43,6 +44,24 @@ function Testnomial() {
     }
   }, [swiper]);
 
+  useEffect(() => {
+    function resizeWindow() {
+      const width = window.innerWidth;
+      if (width <= 768 && width >= 555) {
+        setSlide(2);
+      } else if (width < 555) {
+        setSlide(1);
+      } else {
+        setSlide(3);
+      }
+    }
+
+    window.addEventListener("resize", resizeWindow);
+
+    // remove listner
+    return () => window.removeEventListener("resize", resizeWindow);
+  }, []);
+
   return (
     <>
       <section>
@@ -59,7 +78,7 @@ function Testnomial() {
 
           <div className="testnomialCardWrapper">
             <Swiper
-              slidesPerView={3}
+              slidesPerView={slide}
               spaceBetween={30}
               slidesPerGroup={3}
               loop={true}
@@ -84,7 +103,6 @@ function Testnomial() {
                   return (
                     <SwiperSlide key={index}>
                       <TestnimialCard
-                        key={index}
                         content={item.fields.content}
                         authorName={item.fields.authorName}
                         authorStatus={item.fields.authorStatus}

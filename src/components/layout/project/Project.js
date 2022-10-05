@@ -11,7 +11,6 @@ function Project() {
 
   const getPageData = async () => {
     const d = await pageData;
-    console.log(d);
     setProject(d);
   };
 
@@ -22,7 +21,7 @@ function Project() {
 
   return (
     <section className="projectContainer">
-      <div className="wrapper">
+      <div className="wrapper projectManage">
         <div className="projectWrapper">
           <div className="projectTitle">
             <span>Our project</span>

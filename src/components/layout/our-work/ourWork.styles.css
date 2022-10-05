@@ -20,30 +20,44 @@
 }
 
 .rectangleWrapper {
-  position: relative;
-  top: 0;
-  left: 0;
+  margin-top: 3em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .rectangle_ring {
   margin-top: 50px;
 }
+.rectangle_ring img {
+  display: inline-block;
+  object-fit: contain;
+  width: 60%;
+}
 
 .ourwork-imagebox {
-  position: absolute;
-  top: -2em;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 76px auto;
-  width: 895px;
-  height: 425px;
+  margin-top: -21em;
 }
 .ourwork-imagebox img {
-  display: block;
+  display: inline-block;
   object-fit: cover;
+  width: 70%;
+  height: 60vh;
   object-position: center center;
-  width: 100%;
-  height: 100%;
   border: 2px solid #000;
-  border-radius: 2000px;
+  border-radius: 50em !important;
+}
+
+/* responsive code */
+
+@media screen and (min-width: 950px) {
+}
+@media screen and (max-width: 883px) {
+  .ourwork-imagebox img {
+    width: 100%;
+    height: 50vh;
+  }
+  .ourwork-imagebox {
+    margin-top: -9em;
+  }
 }

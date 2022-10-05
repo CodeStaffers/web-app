@@ -48,8 +48,12 @@
 }
 
 @media screen and (max-width: 780px) {
+  .service__index__container {
+    padding-top: 5em;
+  }
+
   .service__index__wrapper {
-    padding-top: 10%;
+    padding-top: 0%;
     flex-direction: column;
   }
   .service_index_titile h2 {
