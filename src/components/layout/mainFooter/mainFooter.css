@@ -95,10 +95,3 @@
     flex-direction: column;
   }
 }
-
-@media screen and (max-width: 568px) {
-  .mainFooterNav4 {
-    margin-top: -4.5em;
-    margin-bottom: 4.5em;
-  }
-}

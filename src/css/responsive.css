@@ -1,8 +1,7 @@
 .wrapper {
   max-width: 1560px;
-  margin: auto;
+  margin: 0px auto;
   width: 80%;
-  /* background-color: #01ff40; */
   box-sizing: border-box;
   padding: 1em 0px;
 }
@@ -83,6 +82,6 @@ a:hover {
 
 @media screen and (max-width: 1073px) {
   .wrapper {
-    width: 100%;
+    /* width: 100%; */
   }
 }

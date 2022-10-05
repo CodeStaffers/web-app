@@ -19,14 +19,13 @@
 }
 
 .testnomialCardWrapper {
-  /* display: flex; */
+  /* display: flex;
   justify-content: space-between;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   margin-top: 2em;
 }
 .tesnomialCard {
-  /* width: 31%; */
   cursor: pointer;
   text-align: left;
   border-radius: 5px;
@@ -91,24 +90,7 @@
 }
 
 .tesnomialCard:hover {
-  transform: scale(1.05);
-}
-
-.testnomialArrowBtn {
-  margin-top: 2em;
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 2.3em;
-}
-.testnomialArrowBtn svg {
-  font-size: 1.8em;
-  margin-left: 1.5em;
-  cursor: pointer;
-}
-.testnomialArrowBtn .leftArrow {
-  color: white;
-  border-radius: 50%;
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  transform: scale(1.02);
 }
 
 /* Responsive code */
@@ -123,3 +105,5 @@
     margin-right: 0px;
   }
 }
+
+/* mobile size = 550px */

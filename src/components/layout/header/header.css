@@ -84,35 +84,42 @@ li a.active {
     display: flex;
     flex-direction: column;
     width: 100%;
-    display: block;
     position: absolute;
     top: 4em;
     left: -110%;
     opacity: 1;
     transition: all 0.4s ease;
     padding: 0px;
-    margin: 0;
+    margin: -1px;
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
       rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   }
   .nav-menu.active {
-    background: #a62349;
+    background: #000;
     color: white;
     left: 0;
+    padding-top: 1em;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 1;
   }
+
+  .menu-menu:nth-child(6) {
+    color: black !important;
+  }
+  .nav-menu :nth-child(6) a {
+    color: black !important;
+    background-color: red !important;
+  }
+
   .nav-links {
-    /* display: table; */
+    border-radius: 10px;
     font-size: 17px;
-    font-weight: bold;
-    color: white;
+    background-color: rgb(138 43 226);
+    color: rgb(255 255 255);
     display: flex;
-    width: 100%;
-    justify-content: center;
-    padding: 1.5rem;
-    width: 100%;
+    padding: 1rem;
+    width: 90%;
   }
   .nav-links a.active {
     color: black !important;
@@ -120,10 +127,6 @@ li a.active {
     font-weight: bold;
   }
 
-  .nav-links:hover {
-    background-color: red;
-    border-radius: 0;
-  }
   .navbar-logo {
     position: absolute;
     top: -4.96em;
@@ -138,7 +141,6 @@ li a.active {
     right: 0;
     cursor: pointer;
     transform: translate(-100%, 38%);
-
     font-size: 1.8rem;
   }
   .mobile-icon {
@@ -146,14 +148,21 @@ li a.active {
     font-size: 30px;
   }
   .nav-links-mobile {
+    background: linear-gradient(
+      120deg,
+      rgb(95 69 255) 20.69%,
+      rgb(15 227 255) 79.69%
+    );
+    width: 30%;
     display: block;
     text-align: center;
-    padding: 1.5rem;
+    padding: 10px;
     margin: 2rem auto;
-    border-radius: 4px;
-    color: rgb(254, 247, 247) !important;
+    color: rgb(5, 5, 5) !important;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 20px;
+    border-radius: 10px;
+    width: 50%;
   }
   .nav-links-mobile :hover {
     background: #fff;

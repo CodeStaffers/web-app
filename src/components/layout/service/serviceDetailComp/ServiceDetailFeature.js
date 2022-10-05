@@ -3,7 +3,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import "./serviceFeature.css";
 import { useSelector } from "react-redux";
 
-function ServiceDetailFeature({ brandCard2, title2 }) {
+function ServiceDetailFeature() {
   const [data, setData] = useState([]);
   const pageData = useSelector((state) => {
     return state.serviceDetail.serviceDetail;

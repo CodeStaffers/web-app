@@ -5,7 +5,7 @@ import "./ourWork.styles.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-function OurWork({ page }) {
+function OurWork() {
   const [data, setData] = useState([]);
 
   const pageData = useSelector((state) => {

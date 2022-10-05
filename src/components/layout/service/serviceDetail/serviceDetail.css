@@ -1,7 +1,7 @@
 .sDetailContainer {
   margin-top: 0;
   height: auto;
-  padding-top: 8em;
+  padding-top: 5em;
   background-color: #f5f3f379;
 }
 
@@ -44,7 +44,7 @@
   }
 
   .sDetailWrapper {
-    margin-top: 5%;
+    margin-top: -5%;
   }
 }
 
