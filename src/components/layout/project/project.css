@@ -21,17 +21,18 @@
 }
 .projectCardWrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-top: 2.5em;
 }
 
 .ourProjectCard {
-  /* width: 30%; */
-  flex: 1 1 30%;
-  margin: 1em;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border-radius: 2.5em;
+  box-sizing: border-box;
+  width: 30%;
+  margin-bottom: 2em;
+  margin-right: 2em;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -54,10 +55,11 @@
 }
 
 .ourProjectImage img {
+  display: block;
   object-fit: cover;
   width: 100%;
-  border-radius: 2.5em;
-  height: 12em;
+  border-radius: 20px;
+  height: 13em;
 }
 .ourProjectSubtitle {
   box-sizing: border-box;
@@ -74,31 +76,46 @@
 }
 
 /* responsive code */
-
-@media screen and (max-width: 768px) {
-  .projectContainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+@media screen and (max-width: 1035px) {
+  .ourProjectCard {
+    box-sizing: border-box;
+    width: 31%;
+    margin-bottom: 1em;
+    margin-right: 1em;
   }
-}
 
-@media screen and (max-width: 666px) {
   .ourProjectSubtitle {
-    padding: 0em 0px 0 10px;
-    line-height: 0em;
-  }
-  .ourProjectSubtitle h4 {
-    line-height: 1em;
+    box-sizing: border-box;
+    padding: 10px 0px 0em 10px;
+    box-sizing: border-box;
   }
 }
-@media screen and (max-width: 666px) {
+@media screen and (max-width: 835px) {
+  .ourProjectCard {
+    flex: 1 2 40%;
+  }
+}
+
+@media screen and (max-width: 635px) {
   .projectCardWrapper {
     display: block;
     flex-direction: column;
   }
   .ourProjectCard {
-    flex: 1;
-    /* width: 70%; */
+    margin-top: 2em;
+    width: 100%;
+    height: 62vh;
+  }
+  .ourProjectImage img {
+    height: 17em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .projectTitle h2 {
+    line-height: 1.2;
+    margin-top: 0em;
+    margin-bottom: -89ppx;
+    margin-bottom: 43px;
   }
 }

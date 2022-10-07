@@ -3,7 +3,7 @@ import "./service.css";
 import ServiceCard from "./ServiceCard";
 import { useSelector } from "react-redux";
 
-function Service({ serviceData }) {
+function Service() {
   const [data, setData] = useState([]);
   const pageData = useSelector((state) => {
     return state.servicePage.servicePage;
