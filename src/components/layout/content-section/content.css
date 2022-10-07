@@ -5,6 +5,7 @@
   /* background-color: #b1b2ff; */
   margin-top: 0em;
 }
+
 .content__div {
   position: relative;
   top: 5em;
@@ -13,32 +14,38 @@
 
 #content_img1 {
   position: absolute;
-  left: 190.21px;
+  left: 1em;
+  z-index: -1;
   top: 58.31px;
   transform: rotate(-17.65deg);
+  animation: x 4.6s linear infinite alternate-reverse;
 }
 
 #content_img2 {
   position: absolute;
-
-  left: 121px;
+  z-index: -1;
+  left: 1em;
   top: 493.16px;
   transform: rotate(-25.04deg);
+  animation: y 4.6s linear infinite alternate;
 }
 #content_img3 {
   position: absolute;
-
+  z-index: -1;
   left: auto;
   right: 2em;
   top: 44.68px;
   transform: rotate(-12.84deg);
+  animation: z 4.6s linear infinite alternate-reverse;
 }
 #content_img4 {
   position: absolute;
+  z-index: -1;
   left: auto;
   right: 2em;
   top: 30em;
   transform: rotate(31.55deg);
+  animation: k 4.6s linear infinite alternate;
 }
 
 .content_section_title {
@@ -91,6 +98,37 @@
 }
 .btn_content_icon svg {
   margin-top: 0px;
+}
+
+/* animation */
+@keyframes x {
+  100% {
+    transform: translateX(30em) translateY(15em);
+  }
+  10% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes y {
+  100% {
+    transform: translateX(20em) translateY(-10em);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes z {
+  100% {
+    transform: translateX(-30em) translateY(10em);
+  }
+  0% {
+    transform: translateZ(15em);
+  }
+}
+@keyframes k {
+  100% {
+    transform: translateX(-20em) translatey(-10em);
+  }
 }
 
 /* responsie code */
@@ -148,5 +186,37 @@
   .content_sub_title {
     margin-top: -10%;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  @keyframes x {
+    100% {
+      transform: translateX(20em) translateY(20em);
+    }
+    10% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes y {
+    100% {
+      transform: translateX(10em) translateY(-5em);
+    }
+    0% {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes z {
+    100% {
+      transform: translateX(-20em) translateY(10em);
+    }
+    0% {
+      transform: translateZ(15em);
+    }
+  }
+  @keyframes k {
+    100% {
+      transform: translateX(-15em) translatey(-0em);
+    }
   }
 }

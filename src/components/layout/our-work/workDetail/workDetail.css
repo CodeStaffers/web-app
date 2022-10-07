@@ -197,3 +197,9 @@
     line-height: 1.9em;
   }
 }
+
+@media screen and (max-width: 660px) {
+  .swiper-slide img {
+    height: 300px;
+  }
+}

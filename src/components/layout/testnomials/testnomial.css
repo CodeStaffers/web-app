@@ -57,10 +57,10 @@
 }
 
 .testnomialuserDetail {
-  margin-top: 1.5em;
+  margin-top: 1.2em;
   display: flex;
   box-sizing: border-box;
-  padding-left: 1em;
+  padding-left: 0.5em;
   justify-content: flex-start;
   align-items: center;
   height: auto;
@@ -93,6 +93,10 @@
   transform: scale(1.02);
 }
 
+.mySwiper > .swiper-button-prev {
+  display: none;
+}
+
 /* Responsive code */
 @media screen and (max-width: 780px) {
   .testnomialQoute {
@@ -104,6 +108,21 @@
   .tesnomialCard {
     margin-right: 0px;
   }
+  .mySwiper > .swiper-button-prev {
+    display: none;
+  }
+  .mySwiper > .swiper-button-next {
+    display: none;
+  }
 }
 
 /* mobile size = 550px */
+
+@media screen and (max-width: 580px) {
+  .testnomialTitle h1 {
+    line-height: 1.2em;
+  }
+  .testnomialTitle p {
+    margin-top: -1.2em;
+  }
+}

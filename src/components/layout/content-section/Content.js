@@ -27,17 +27,19 @@ function Content({ page }) {
     <>
       <section className="content_section">
         <div className="wrapper content__div">
-          <div id="content_img1">
-            <img src="/icon/php.png" alt="" />
-          </div>
-          <div id="content_img2">
-            <img src="/icon/html.png" alt="" />
-          </div>
-          <div id="content_img3">
-            <img src="/icon/css.png" alt="" />
-          </div>
-          <div id="content_img4">
-            <img src="/icon/js.png" alt="" />
+          <div className="rounder_content_wrapper">
+            <div id="content_img1">
+              <img src="/icon/php.png" alt="" />
+            </div>
+            <div id="content_img2">
+              <img src="/icon/html.png" alt="" />
+            </div>
+            <div id="content_img3">
+              <img src="/icon/css.png" alt="" />
+            </div>
+            <div id="content_img4">
+              <img src="/icon/js.png" alt="" />
+            </div>
           </div>
 
           <div className="content_section_title">
