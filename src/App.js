@@ -55,14 +55,19 @@ function App() {
       ) : (
         <div
           style={{
+            backgroundColor: "red",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            height: "100vh",
           }}
+          className="bg_home"
         >
           <div id="signInDiv"></div>
-          <h1>Welcome to CodeStaffers App</h1>
+          <div className="loginName">
+            <h1>Welcome to CodeStaffers App</h1>
+          </div>
         </div>
       )}
     </div>

@@ -192,7 +192,7 @@
 @media screen and (max-width: 568px) {
   @keyframes x {
     100% {
-      transform: translateX(20em) translateY(20em);
+      transform: translateX(15em) translateY(20em);
     }
     10% {
       transform: rotate(360deg);

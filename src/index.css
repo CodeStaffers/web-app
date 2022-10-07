@@ -39,3 +39,10 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
 }
+
+.loginName {
+  text-align: center;
+}
+.bg_home {
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+}
