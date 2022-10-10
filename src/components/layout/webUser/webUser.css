@@ -1,5 +1,5 @@
 .webUserWrapper {
-  padding-top: 3em;
+  /* padding-top: 3em; */
 }
 .webUserTitle {
   text-align: center;
@@ -23,14 +23,14 @@
   text-align: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: -1.5em;
+  margin-top: -2.5em;
 }
-.webUserComp img {
-  display: block;
-  object-fit: contain;
-  margin: 2em;
-  width: 10em;
-}
+
+/* 
+812px - 3
+660 - 2
+425  - 1
+*/
 
 @media screen and (max-width: 768px) {
   .webUserComp img {

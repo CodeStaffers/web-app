@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import "./contact.css";
 import { Button } from "../button/Button";
 import emailjs from "@emailjs/browser";
@@ -25,6 +25,13 @@ function Contact() {
         }
       );
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0, {
+      behavior: "smooth",
+    });
+    // eslint-disable-next-line
+  }, []);
   return (
     <>
       <section className="contactContainer">

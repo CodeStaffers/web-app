@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./about.styles.css";
 import { FcNext } from "react-icons/fc";
 import Divider from "../../Divider";
@@ -21,6 +21,13 @@ function About({ about }) {
     teamUrl,
     titleStrong,
   } = about;
+
+  useEffect(() => {
+    window.scrollTo(0, 0, {
+      behavior: "smooth",
+    });
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>

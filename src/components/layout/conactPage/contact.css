@@ -3,7 +3,7 @@
 }
 .contactTitle {
   text-align: center;
-  margin-top: 12%;
+  margin-top: 10%;
 }
 .contactTitle h1 {
   font-size: 3em;
@@ -40,7 +40,7 @@
 }
 
 .formControl {
-  width: 80%;
+  /* width: 80%; */
   padding: 2em;
   line-height: 3em;
   display: flex;
@@ -148,7 +148,7 @@ input[type="number"] {
     text-align: center;
   }
   .formControl {
-    width: 90%;
+    /* width: 90%; */
     padding: 2em;
     line-height: 4em;
     flex-direction: column;
@@ -188,6 +188,6 @@ input[type="number"] {
 
 @media screen and (max-width: 640px) {
   .contactTitle {
-    margin-top: 20%;
+    margin-top: 25%;
   }
 }
