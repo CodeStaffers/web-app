@@ -145,12 +145,12 @@
     flex-direction: column;
   }
   .ourWorkSectionCard {
-    margin-top: 2em;
+    margin-top: 1em;
     width: 100%;
-    height: 62vh;
+    height: 50vh;
   }
   .ourWorkSectionImage img {
-    height: 17em;
+    height: 12em;
   }
 }
 

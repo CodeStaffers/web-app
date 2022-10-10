@@ -61,3 +61,12 @@
     margin-top: -9em;
   }
 }
+@media screen and (max-width: 525px) {
+  .ourwork-imagebox img {
+    width: 89%;
+    height: 43vh;
+  }
+  .ourwork-imagebox {
+    margin-top: -10em;
+  }
+}

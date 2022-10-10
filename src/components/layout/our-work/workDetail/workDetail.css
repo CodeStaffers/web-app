@@ -136,14 +136,14 @@
   padding-top: 2em;
 }
 
-.swiper {
+.mySwiperWork {
   background-color: rgb(245 245 245);
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
 
-.swiper-slide {
+.mySwiperWork > .swiper-slide {
   text-align: center;
   font-size: 18px;
   border-radius: 10px;
@@ -161,7 +161,7 @@
   align-items: center;
 }
 
-.swiper-slide img {
+.mySwiperWork .swiper-slide img {
   display: block;
   object-fit: cover;
   object-position: top;
@@ -170,23 +170,38 @@
   height: 450px;
 }
 
-.swiper-button-prev {
+.mySwiperWork > .swiper-button-prev {
   background-color: white;
   border-radius: 50%;
   padding: 0px 0.5em;
 }
-.swiper-button-next {
+.mySwiperWork > .swiper-button-next {
   background-color: white;
   border-radius: 50%;
   padding: 0px 0.5em;
 }
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
+.mySwiperWork > .swiper-button-next::after,
+.mySwiperWork > .swiper-button-prev::after {
   font-size: 18px !important;
   font-weight: bold !important;
   color: black !important;
   text-transform: none !important;
+}
+
+@media screen and (max-width: 780px) {
+  .mySwiperWork > .swiper-button-prev {
+    display: none;
+  }
+  .mySwiperWork > .swiper-button-next {
+    display: none;
+  }
+  .swiper {
+    padding-bottom: 0em !important;
+  }
+  .mySwiperWork .swiper-slide img {
+    height: 340px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -199,7 +214,7 @@
 }
 
 @media screen and (max-width: 660px) {
-  .swiper-slide img {
-    height: 300px;
+  .mySwiperWork .swiper-slide img {
+    height: 260px;
   }
 }
