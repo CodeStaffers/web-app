@@ -56,6 +56,13 @@
     padding: 2em;
   }
 }
+
+@media screen and (max-width: 555px) {
+  .service {
+    margin-top: 10%;
+  }
+}
+
 @media screen and (max-width: 580px) {
   .serviceCardWrapper {
     flex-direction: row;

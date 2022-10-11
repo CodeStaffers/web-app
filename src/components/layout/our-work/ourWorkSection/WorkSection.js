@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import "./ourWorkSection.style.css";
 import { Button } from "../../button/Button";
 
 function OurWorkSection({ page, ourWorkTab, ourWorkDetailPage }) {
-  // reverse the ourWorkTab
+  const [workData, setWorkData] = useState([]);
+  const [load, setLoad] = useState(6);
+  const [loadText, setLoadText] = useState("");
   const location = useLocation();
   let { ourWorkSectionTitle } = page;
 
@@ -18,6 +20,21 @@ function OurWorkSection({ page, ourWorkTab, ourWorkDetailPage }) {
       );
     }
   }
+
+  useEffect(() => {
+    setWorkData(ourWorkDetailPage.slice(0, load));
+    // eslint-disable-next-line
+  }, [ourWorkDetailPage, load]);
+  // load more
+
+  const loadMore = () => {
+    setLoadText("loading...");
+
+    setTimeout(() => {
+      setLoad(load + 3);
+      setLoadText("");
+    }, 500);
+  };
 
   return (
     <>
@@ -53,8 +70,8 @@ function OurWorkSection({ page, ourWorkTab, ourWorkDetailPage }) {
             </div>
 
             <div className="ourWorkSectionWrapper">
-              {ourWorkDetailPage &&
-                ourWorkDetailPage.map((item, index) => {
+              {workData &&
+                workData.map((item, index) => {
                   let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
 
                   return (
@@ -97,10 +114,9 @@ function OurWorkSection({ page, ourWorkTab, ourWorkDetailPage }) {
             </div>
 
             <div className="loadMore">
-              <Button
-                buttonSize="btn--large"
-                // onClick={() => alert("Loading more")}
-              >
+              <h6>{loadText}</h6>
+
+              <Button buttonSize="btn--large" onClick={() => loadMore()}>
                 Load More
               </Button>
             </div>
