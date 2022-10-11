@@ -91,18 +91,25 @@
 .clientCardContent {
   box-sizing: border-box;
   padding: 1em 1em;
-  line-height: 1em;
 }
+
+.clientCardContent h4 {
+  margin-top: 0.8em;
+}
+.clientCardContent p {
+  margin-top: -0.8em;
+}
+
 .clientCardQoute {
   color: #b9b9b9b4;
   font-size: 1.5em;
 }
-.tesnomialContent h3 {
+/* .tesnomialContent h3 {
   margin-top: 0.5em;
 }
 .tesnomialContent p {
-  margin-top: -1.5em;
-}
+  margin-top: -1em;
+} */
 .clientCardUserDetails {
   display: flex;
   box-sizing: border-box;
@@ -136,14 +143,14 @@
   padding-top: 2em;
 }
 
-.mySwiperWork {
+.swiper {
   background-color: rgb(245 245 245);
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
 
-.mySwiperWork > .swiper-slide {
+.swiper-slide {
   text-align: center;
   font-size: 18px;
   border-radius: 10px;
@@ -161,7 +168,7 @@
   align-items: center;
 }
 
-.mySwiperWork .swiper-slide img {
+.swiper-slide img {
   display: block;
   object-fit: cover;
   object-position: top;
@@ -170,38 +177,23 @@
   height: 450px;
 }
 
-.mySwiperWork > .swiper-button-prev {
+.swiper-button-prev {
   background-color: white;
   border-radius: 50%;
   padding: 0px 0.5em;
 }
-.mySwiperWork > .swiper-button-next {
+.swiper-button-next {
   background-color: white;
   border-radius: 50%;
   padding: 0px 0.5em;
 }
 
-.mySwiperWork > .swiper-button-next::after,
-.mySwiperWork > .swiper-button-prev::after {
+.swiper-button-next::after,
+.swiper-button-prev::after {
   font-size: 18px !important;
   font-weight: bold !important;
   color: black !important;
   text-transform: none !important;
-}
-
-@media screen and (max-width: 780px) {
-  .mySwiperWork > .swiper-button-prev {
-    display: none;
-  }
-  .mySwiperWork > .swiper-button-next {
-    display: none;
-  }
-  .swiper {
-    padding-bottom: 0em !important;
-  }
-  .mySwiperWork .swiper-slide img {
-    height: 340px;
-  }
 }
 
 @media screen and (max-width: 768px) {
@@ -214,7 +206,7 @@
 }
 
 @media screen and (max-width: 660px) {
-  .mySwiperWork .swiper-slide img {
-    height: 260px;
+  .swiper-slide img {
+    height: 238px;
   }
 }

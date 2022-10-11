@@ -2,8 +2,8 @@
   cursor: pointer;
   position: fixed;
   z-index: 100;
-  bottom: 5%;
-  right: 3%;
+  bottom: 13%;
+  right: 2.4%;
   background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -14,4 +14,10 @@
   color: white;
   border-radius: 50%;
   background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+}
+
+@media screen and (max-width: 880px) {
+  .btnTopPlus {
+    display: none;
+  }
 }
