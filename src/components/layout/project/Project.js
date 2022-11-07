@@ -35,7 +35,11 @@ function Project() {
           <div className="projectCardWrapper">
             {project
               ? project &&
+
+                project.slice(0, 3).map((item, index) => {
+
                 project.slice(0,3).map((item, index) => {
+
                   let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
                   return (
                     <ProjectCard item={item} urlTitle={urlTitle} key={index} />

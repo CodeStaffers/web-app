@@ -1,0 +1,73 @@
+.pricingContainer {
+}
+.pricingTitle {
+}
+.pricingTitle h1 {
+}
+.threeDiv {
+  margin-top: -1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+.growth,
+.bussiness,
+.essentials {
+  flex: 1;
+  line-height: 0.5em;
+
+  /* max-width: 270px; */
+}
+.divider1 {
+  height: 9em;
+  border-bottom: 3px solid black;
+}
+.divider1 p {
+  line-height: normal;
+}
+.divider1 h3 {
+  color: orange;
+}
+.pricing__tag {
+  margin-top: 10px;
+}
+.pricing__tag div {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.pricing__tag .tick {
+  background-color: orange;
+  border-radius: 50%;
+}
+
+.pricingBtn {
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pricingBtn1 {
+  outline: none;
+  padding: 1em 3em;
+  cursor: pointer;
+  border: 4px solid black;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  display: block;
+}
+.pricingBtn2 {
+  cursor: pointer;
+  outline: none;
+  padding: 1em 3em;
+  border: 4px solid black;
+  margin-left: 2em;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: block;
+}
+.pricingBtn1:hover {
+  background-color: black;
+  color: white;
+}
