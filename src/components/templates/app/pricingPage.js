@@ -26,11 +26,7 @@ function PricingPage() {
     // eslint-disable-next-line
   }, []);
 
-  return (
-    <>
-      <Pricing plan={plan} price={price} />
-    </>
-  );
+  return <>{price ? <Pricing plan={plan} price={price} /> : ""}</>;
 }
 
 export default PricingPage;
