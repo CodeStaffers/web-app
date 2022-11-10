@@ -14,7 +14,10 @@ import getOurWorkDetailReducer from "./features/ourWork/ourWorkDetailSlice";
 import getOurGlobalWorkReducer from "./features/ourWork/ourWorkSlugSlice";
 import getAboutReducer from "./features/about/aboutSlice";
 import getPriceReducer from "./features/pricing/pricingSlice";
+
 import getPlanReducer from "./features/pricing/planSlice";
+
+import getPaymentReducer from "./features/pricing/paymentSlice";
 
 export const store = configureStore({
   reducer: {
@@ -34,6 +37,7 @@ export const store = configureStore({
     about: getAboutReducer,
     price: getPriceReducer,
     plan: getPlanReducer,
+    link: getPaymentReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

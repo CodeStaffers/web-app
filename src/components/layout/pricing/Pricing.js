@@ -23,7 +23,10 @@ function Pricing({ plan, price }) {
           <div className="threeDiv">
             {plan &&
               plan.map((item, index) => {
-                const { priceTag, title } = item.fields;
+                const { priceTag, title, payments } = item.fields;
+
+                const { amount, PaymentStripeUrl } = payments.fields;
+
                 return (
                   <>
                     <div className="growth" key={index}>
@@ -42,15 +45,19 @@ function Pricing({ plan, price }) {
                             );
                           })}
                       </div>
+
+                      <div className="pricingBtn">
+                        <button
+                          className="pricingBtn1"
+                          onClick={() => window.open(PaymentStripeUrl)}
+                        >
+                          Pay now {amount} US <span>$</span>
+                        </button>
+                      </div>
                     </div>
                   </>
                 );
               })}
-          </div>
-
-          <div className="pricingBtn">
-            <button className="pricingBtn1">Get a quote</button>
-            <button className="pricingBtn2">i'm an agency</button>
           </div>
         </div>
       </div>
