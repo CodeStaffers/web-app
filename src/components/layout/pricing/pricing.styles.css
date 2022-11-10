@@ -14,9 +14,11 @@
   gap: 3rem;
 }
 .growth {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
   flex: 1;
   line-height: 0.5em;
-
+  padding: 10px;
+  border: 10px;
   /* max-width: 270px; */
 }
 .divider1 {
@@ -57,32 +59,27 @@
 }
 
 .pricingBtn {
-  margin-top: 2em;
+  margin-top: 2em !important;
+  gap: 3em;
   display: flex;
   flex-wrap: wrap;
 }
 .pricingBtn1 {
+  flex: 1;
   outline: none;
   padding: 1em 3em;
   cursor: pointer;
-  border: 4px solid black;
   text-align: center;
+  background-color: orange;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
   transition: all 0.5s ease-in-out;
   display: block;
+  font-size: 16px;
 }
-.pricingBtn2 {
-  cursor: pointer;
-  outline: none;
-  padding: 1em 3em;
-  border: 4px solid black;
-  margin-left: 2em;
-  background-color: black;
-  color: white;
-  text-align: center;
-  display: block;
-}
+
 .pricingBtn1:hover {
-  background-color: black;
   color: white;
 }
 

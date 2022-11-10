@@ -119,4 +119,16 @@
 
 
 ---------spotifyArrowBtn--------------
-
+/* <div className="pricingBtn">
+{[100, 200, 500].map((item, index) => {
+  return (
+    <button
+      className="pricingBtn1"
+      key={index}
+      onClick={() => window.open("")}
+    >
+      Pay now {item} &#x20b9;{" "}
+    </button>
+  );
+})}
+</div> */
