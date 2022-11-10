@@ -1,98 +1,51 @@
-import React from "react";
-import "./pricing.css";
+import React, { useEffect } from "react";
+import "./pricing.styles.css";
 import { TiTick } from "react-icons/ti";
-// TiTick
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+function Pricing({ plan, price }) {
+  const { subTitle, title } = price;
 
-function Pricing() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <section className="pricingContainer">
       <div className="wrapper">
         <div className="pricingWrapper">
           <div className="pricingTitle">
-            <h2>Monthly service plan</h2>
+            <h2>{title}</h2>
+          </div>
+          <div className="pricingSub">
+            <h4>{subTitle}</h4>
           </div>
 
           <div className="threeDiv">
-            <div className="growth">
-              <div className="divider1">
-                <h3>$450/mo</h3>
-                <h5>
-                  <b>GROWTH</b>
-                </h5>
-                <p>
-                  Hosting, Maintance, Support,Google, Analytics, & SEO Reporting
-                </p>
-              </div>
-              <div className="pricing__tag">
-                <div>
-                  <TiTick color={"white"} className="tick" />
-                  <p>Managed Hosting</p>
-                </div>
-                <div>
-                  <TiTick color={"white"} className="tick" />
-
-                  <p>SSL Implementation</p>
-                </div>
-                <div>
-                  <TiTick color={"white"} className="tick" />
-                  <p>Daily Site Backups</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="bussiness">
-              <div className="divider1">
-                <h3>$175/mo</h3>
-                <h5>
-                  <b>BUSSINESS</b>
-                </h5>
-                <p>Hosting, Maintance, Support</p>
-              </div>
-              <div className="pricing__tag">
-                <div>
-                  <TiTick color={"white"} className="tick" />
-
-                  <p>Managed Hosting</p>
-                </div>
-                <div>
-                  <TiTick color={"white"} className="tick" />
-
-                  <p>SSL Implementation</p>
-                </div>
-                <div>
-                  <TiTick color={"white"} className="tick" />
-
-                  <p>Daily Site Backups</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="essentials">
-              <div className="divider1">
-                <h3>$65+/mo</h3>
-                <h5>
-                  <b>ESSENTIALS</b>
-                </h5>
-                <p>Hosting, Maintance Only</p>
-              </div>
-              <div className="pricing__tag">
-                <div>
-                  <TiTick color={"white"} className="tick" />
-
-                  <p>Managed Hosting</p>
-                </div>
-                <div>
-                  <TiTick color={"white"} className="tick" />
-
-                  <p>SSL Implementation</p>
-                </div>
-                <div>
-                  <TiTick color={"white"} className="tick" />
-
-                  <p>Daily Site Backups</p>
-                </div>
-              </div>
-            </div>
+            {plan &&
+              plan.map((item, index) => {
+                const { priceTag, title } = item.fields;
+                return (
+                  <>
+                    <div className="growth" key={index}>
+                      <div className="divider1">
+                        {documentToReactComponents(title)}
+                      </div>
+                      <div className="pricing__tag">
+                        {priceTag &&
+                          priceTag.map((tags, index) => {
+                            const { tag } = tags.fields;
+                            return (
+                              <div key={index} className="tag__con">
+                                <TiTick color={"white"} className="tick" />
+                                <p>{tag}</p>
+                              </div>
+                            );
+                          })}
+                      </div>
+                    </div>
+                  </>
+                );
+              })}
           </div>
 
           <div className="pricingBtn">

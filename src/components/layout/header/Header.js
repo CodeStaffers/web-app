@@ -12,7 +12,7 @@ function Header() {
   const [scroll, setScroll] = useState(false);
 
   const onScrollChange = () => {
-    if (window.scrollY >= 100) {
+    if (window.scrollY >= 50) {
       setScroll(true);
     } else {
       setScroll(false);

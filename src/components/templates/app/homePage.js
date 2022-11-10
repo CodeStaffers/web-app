@@ -4,7 +4,7 @@ import Project from "../../layout/project/Project";
 import Service from "../../layout/service/Service";
 import Testnomial from "../../layout/testnomials/Testnomial";
 import HeroSection from "../../layout/heroSection/HeroSection";
-import PricingPage from "./pricingPage";
+
 function HomePage(props) {
   const { project } = props;
 
@@ -16,7 +16,6 @@ function HomePage(props) {
       <HeroSection />
       <Testnomial />
       <Project project={project} />
-      <PricingPage />
     </>
   );
 }
