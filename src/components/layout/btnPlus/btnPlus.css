@@ -1,0 +1,26 @@
+.btnTopPlus {
+  cursor: pointer;
+  position: fixed;
+  z-index: 100;
+  bottom: 13%;
+  right: 2.4%;
+  background: linear-gradient(160deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  transition: 0.5s ease all;
+}
+.btnTopPlusIcon {
+  color: #000;
+  border-radius: 50%;
+  background: linear-gradient(160deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+}
+.btnTopPlus:hover {
+  transform: scale(110%);
+}
+
+@media screen and (max-width: 880px) {
+  .btnTopPlus {
+    display: none;
+  }
+}

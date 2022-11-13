@@ -1,0 +1,182 @@
+.aboutSection {
+  /* background-color: #5b47db; */
+  margin-top: 0;
+  padding-top: 7em;
+}
+.aboutWrapper {
+  padding: 0 3em;
+}
+
+.aboutTitlePage {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.aboutTitle1 {
+  flex: 1;
+  line-height: 3em;
+}
+.aboutTitle1 h1 {
+  font-size: 3.1em;
+}
+.aboutTitle1 :nth-child(1) {
+  display: inline;
+}
+.aboutTitle1 :nth-child(2) {
+  display: inline;
+  color: rgba(0, 0, 0, 0.514);
+}
+.aboutTitle2 {
+  padding-top: 4.5em;
+  flex: 1;
+}
+
+.aboutBg {
+  margin-top: 2em;
+  width: auto;
+}
+.aboutBg img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  object-position: center center;
+  height: 100vh;
+}
+.aboutSummary {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.summaryTitle {
+  flex: 1;
+}
+.summaryPara {
+  padding-top: 1.5em;
+  flex: 1;
+}
+
+.aboutTeam {
+  margin-top: 4em;
+  padding: 1.5em 3em;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #9090901e;
+}
+.team1 {
+  /* border: 2px solid red; */
+  line-height: 0.8em;
+  flex: 1;
+}
+.team2 {
+  /* padding-top: 2em; */
+  flex: 1;
+}
+
+.aboutAssit {
+  margin-top: 4em;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.assist1 {
+  color: white;
+  flex: 1;
+}
+.assist1 h2 {
+  line-height: 1.3em;
+}
+.assist1 p {
+  color: rgba(255, 254, 254, 0.655);
+}
+
+.AboutBtn {
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  /* background-color: red; */
+}
+.AboutBtn button {
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0.8em 0.3em;
+  width: 30%;
+  background-color: white;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+.AboutBtn div {
+  padding-left: 2em;
+}
+
+.assist2 {
+  padding: 0 10px;
+  flex: 1;
+}
+.assist2 img {
+  display: inline-block;
+  object-fit: cover;
+  width: 70%;
+  border-radius: 1em;
+}
+
+/* responsice code */
+@media screen and (max-width: 824px) {
+  .aboutWrapper,
+  .aboutBg {
+    padding: 0 10px;
+  }
+  .aboutTitlePage {
+    display: block;
+  }
+  .aboutTitle1 h1 {
+    font-size: 2.5em;
+  }
+  .aboutTitle2 {
+    padding-top: 0em;
+  }
+
+  .aboutSummary {
+    display: block;
+  }
+  .summaryPara {
+    padding-top: 0em;
+  }
+  .summaryPara p {
+    margin-top: -10px;
+  }
+  .aboutTeam {
+    padding: 1em;
+    display: block;
+  }
+  .aboutAssit {
+    padding-top: 0.5em;
+    padding-bottom: 1.5em;
+    display: block;
+  }
+
+  .AboutBtn {
+    display: block;
+  }
+  .AboutBtn button {
+    width: 40%;
+    display: inline;
+  }
+  .AboutBtn div {
+    display: inline;
+    padding-left: 1em;
+  }
+
+  .assist2 {
+    margin-top: 3em;
+  }
+  .assist2 img {
+    object-fit: contain;
+    width: 100%;
+    border-radius: 1em;
+  }
+}

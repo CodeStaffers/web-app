@@ -1,0 +1,97 @@
+.mainFooter {
+  background-color: #f5f3f379;
+  margin-top: 5em;
+  padding: 3em 5em;
+}
+.mainFooter_nav {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.mainFooter_nav1 {
+  flex: 1.5;
+}
+
+.mainFooter_image img {
+  width: 7rem;
+}
+.mainFooter_content {
+  margin-top: -1em;
+}
+.mainFooter_content p {
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+.mainFooter_icon {
+  display: flex;
+  margin-top: 3em;
+}
+.mainFooterIcon {
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: 1px solid #23232431;
+}
+.linkdnIcon,
+.twitterIcon,
+.pinterestIcon,
+.faceBookIcon {
+  margin: 0 auto;
+  display: block;
+  padding: 7px;
+}
+.mainFooterNav2 {
+  flex: 1;
+}
+.mainFooterNav3 {
+  flex: 1;
+}
+.mainFooterNav4 {
+  flex: 1;
+}
+.mainFooterNav5 {
+  flex: 1;
+}
+
+.addressList {
+  margin-top: -1.2em;
+  cursor: pointer;
+}
+.contactNumber p {
+  display: inline-block;
+  margin-left: 10px;
+}
+.website a {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+.locationUrl {
+  margin-top: 20px;
+  cursor: pointer;
+}
+.locationUrl p {
+  display: inline;
+  margin-left: 10px;
+}
+.mainFooter_nav_hover:hover {
+  text-decoration: none !important;
+  color: rgba(0, 0, 255, 0.767) !important;
+}
+
+@media screen and (max-width: 1150px) {
+  .mainFooter {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 1001px) {
+  .mainFooter_nav {
+    padding: 10px;
+    flex-direction: column;
+  }
+}
