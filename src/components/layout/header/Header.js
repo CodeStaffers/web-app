@@ -25,7 +25,6 @@ function Header({ page }) {
 
   // define btn click
   const onClick = () => {
-    alert("Click");
     window.open(page.logoUrl, "_blank");
   };
 
