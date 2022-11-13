@@ -1,36 +1,28 @@
 .projectTitle span {
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  font-size: 16px;
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .projectTitle h2 {
-  margin-top: 0em;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
 }
-
 .projectTitle p {
-  font-size: 16px;
-  color: black;
-  margin-top: -2.2em;
-}
-.projectWrapper {
-  padding: 10px;
+  font-size: 20px;
 }
 .projectCardWrapper {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 2.5em;
+  padding-top: 50px;
 }
-
 .ourProjectCard {
   box-sizing: border-box;
-  width: 30%;
+  width: calc(33.33% - 20px);
   margin-bottom: 2em;
-  margin-right: 2em;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
   border-radius: 20px;
   cursor: pointer;

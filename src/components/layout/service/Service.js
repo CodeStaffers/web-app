@@ -3,7 +3,7 @@ import "./service.css";
 import ServiceCard from "./ServiceCard";
 import { useSelector } from "react-redux";
 
-function Service() {
+function Service({ serviceTitle }) {
   const [data, setData] = useState([]);
   const pageData = useSelector((state) => {
     return state.servicePage.servicePage;
@@ -26,7 +26,7 @@ function Service() {
     <section className="service">
       <div className="wrapper">
         <div className="serviseTitle">
-          <h2>Ours services</h2>
+          <h2>{serviceTitle}</h2>
         </div>
         <div className="serviceCardWrapper">
           {data &&

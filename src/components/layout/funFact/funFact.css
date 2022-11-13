@@ -2,7 +2,10 @@
   background-color: #f5f3f379;
   margin-top: 2em;
 } */
-.funFact_card {
+.funFact {
+  padding-bottom: 50px;
+}
+.funFact .funFact_card {
   display: flex;
   text-align: center;
   flex-wrap: wrap;
@@ -10,7 +13,13 @@
   flex-direction: column;
   align-items: center;
 }
-
+.funFact .funFact_card .funFact_title {
+  max-width: 950px;
+  margin: auto;
+}
+.funFact .funFact_card .funFact_title h2 {
+  text-transform: capitalize;
+}
 .funFact_reviews {
   width: 100%;
   display: flex;
@@ -18,15 +27,12 @@
   flex-direction: row;
   align-items: center;
 }
-.funFact_review_items {
-  line-height: 2em;
-}
-
 .review_title h3 {
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 2em;
+  font-size: 3em;
+  margin-bottom: 25px;
 }
 .review_comments {
   margin-top: -15%;
@@ -34,7 +40,7 @@
 .review_comments p {
   color: black;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 /* responsive code */

@@ -65,7 +65,7 @@ function WebUser() {
     return () => window.removeEventListener("resize", resizeWindow);
   }, []);
 
-  const { title, media } = data;
+  const { title, media, topClient } = data;
 
   return (
     <>
@@ -73,7 +73,7 @@ function WebUser() {
         <div className="wrapper">
           <div className="webUserWrapper">
             <div className="webUserTitle">
-              <span>Top Client</span>
+              <span>{topClient}</span>
               {documentToReactComponents(title)}
             </div>
 

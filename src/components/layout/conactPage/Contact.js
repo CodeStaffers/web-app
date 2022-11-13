@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./contact.css";
 import { Button } from "../button/Button";
 import emailjs from "@emailjs/browser";
-function Contact() {
+function Contact({ contact }) {
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -37,9 +37,9 @@ function Contact() {
       <section className="contactContainer">
         <div className="wrapper">
           <div className="contactTitle">
-            <h1>Get In Touch With Us</h1>
+            <h1>{contact.title}</h1>
             <div className="slider"></div>
-            <p>Anything in your mind well be glad to assisst you.</p>
+            <p>{contact.subTitle}</p>
           </div>
           <div className="contactWrapper">
             <div className="contactImage">
@@ -85,7 +85,7 @@ function Contact() {
                 </div>
                 <div className="contactBtn">
                   <Button type="submit" buttonSize="btn--medium">
-                    SEND MESSAGE
+                    {contact.buttonText}
                   </Button>
                 </div>
               </form>

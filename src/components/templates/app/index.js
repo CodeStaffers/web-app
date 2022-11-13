@@ -5,11 +5,12 @@ import Favicon from "react-favicon";
 import MainFooter from "../../layout/mainFooter/MainFooter";
 import BtnPlusTop from "../../layout/btnPlus/BtnPlusTop";
 import HomePage from "./homePage";
-import Contact from "../../layout/conactPage/Contact";
+// import Contact from "../../layout/conactPage/Contact";
 import WebUser from "../../layout/webUser/WebUser";
 import ServiceDetailPage from "./serviceDetailPage";
 import ServiceIndexPage from "./serviceIndexPage";
 import OurWorkPage from "./ourWorkPage";
+import ContactPage from "./contactPage";
 import WorkDetailPage from "./workDetailPage";
 import WorkSlugPage from "./WorkSlugPage";
 import { AboutPage } from "./aboutPage";
@@ -18,10 +19,21 @@ import PricingPage from "./PricingPage";
 function ThemeOne(props) {
   const { page } = props;
 
-  const { featureIcon, titleHome } = page;
+  const {
+    featureIcon,
+    titleHome,
+    serviceTitle,
+    testnomialTitle,
+    testnomialSubTitle,
+    projectTitle,
+    projectDescription,
+    projectSubTitle,
+  } = page;
 
   // set title of home page add icon
   document.title = page.titleHome && titleHome;
+
+  const project = { projectTitle, projectSubTitle, projectDescription };
 
   return (
     <>
@@ -29,7 +41,17 @@ function ThemeOne(props) {
       <BtnPlusTop />
       <Header page={page} />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/"
+          element={
+            <HomePage
+              title={serviceTitle}
+              testnomialTitle={testnomialTitle}
+              testnomialSubTitle={testnomialSubTitle}
+              project={project}
+            />
+          }
+        />
         <Route path="/:slug" element={<WorkSlugPage />} />
         <Route path="/about-us" element={<AboutPage />} />
         <Route path="/our-works" element={<OurWorkPage />} />
@@ -38,7 +60,7 @@ function ThemeOne(props) {
         <Route path="/service" element={<ServiceIndexPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/service/:shortTitle" element={<ServiceDetailPage />} />
-        <Route path="/contacts" element={<Contact />} />
+        <Route path="/contacts" element={<ContactPage />} />
       </Routes>
       <WebUser />
       <MainFooter />

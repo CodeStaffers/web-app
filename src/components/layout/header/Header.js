@@ -6,8 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { Button } from "../button/Button";
 import { NavLink } from "react-router-dom";
 
-function Header() {
-  const url = "https://www.digitelle.no/";
+function Header({ page }) {
   const [clicked, setClicked] = useState(false);
   const [scroll, setScroll] = useState(false);
 
@@ -26,7 +25,8 @@ function Header() {
 
   // define btn click
   const onClick = () => {
-    window.open(url, "_blank");
+    alert("Click");
+    window.open(page.logoUrl, "_blank");
   };
 
   return (
@@ -36,7 +36,7 @@ function Header() {
           <div className="NavbarItems">
             <div className="navbar-logo">
               <NavLink to="/">
-                <img src="/image/logo.png" alt="logo" />
+                <img src={page.logo && page.logo.fields.file.url} alt="logo" />
               </NavLink>
             </div>
 

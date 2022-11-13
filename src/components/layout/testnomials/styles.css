@@ -3,28 +3,9 @@
   --swiper-navigation-color: white;
 }
 .swiper {
-  background-color: white !important;
-  padding-bottom: 4em !important;
+  background-color: #f9f9f9 !important;
   width: 100%;
   height: 100%;
-}
-.swiper-slide {
-  font-size: 18px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  width: 30%;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
 }
 
 .mySwiper > .swiper-button-next,
@@ -40,45 +21,51 @@
   align-items: center;
   justify-content: center;
   color: var(--swiper-navigation-color) !important;
+  transition: 0.5s ease all;
 }
 
 /* left */
 .mySwiper > .swiper-button-prev {
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
   border-radius: 50%;
   padding: 0px 0em;
   padding: 2px;
-  width: 2em !important;
-  height: 2em;
+  width: 42px !important;
+  height: 42px;
 }
 .mySwiper > .swiper-button-next {
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
   border-radius: 50%;
   padding: 0px 0em;
   padding: 2px;
-  width: 2em !important;
-  height: 2em;
+  width: 42px !important;
+  height: 42px;
 }
 .mySwiper > .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  right: 83px !important;
+  right: 77px !important;
+}
+
+.mySwiper > .swiper-button-prev:hover,
+.mySwiper > .swiper-button-next:hover {
+  transform: scale(106%);
 }
 
 .mySwiper > .swiper-button-prev,
 .swiper-rtl .swiper-button-next {
-  right: 83px !important;
+  right: 77px !important;
 }
 
 .mySwiper > .swiper-button-prev,
 .mySwiper > .swiper-rtl .mySwiper > .swiper-button-next {
-  right: 83px !important;
+  right: 77px !important;
 }
 
 .mySwiper > .swiper-button-next::after,
 .mySwiper > .swiper-button-prev::after {
-  font-size: 18px !important;
+  font-size: 20px !important;
   font-weight: bold !important;
-  color: white !important;
+  color: #000 !important;
   text-transform: none !important;
 }
 

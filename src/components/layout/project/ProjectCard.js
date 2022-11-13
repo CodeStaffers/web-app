@@ -6,7 +6,7 @@ function ProjectCard({ item, urlTitle }) {
   return (
     <>
       <div className="ourProjectCard">
-        <div>
+        <div className="projectCardInner">
           <Link
             to={`/our-works/${urlTitle}`}
             state={{ id: item.sys.id, titlePage: urlTitle }}
