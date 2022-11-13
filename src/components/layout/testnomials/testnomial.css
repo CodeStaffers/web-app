@@ -1,76 +1,73 @@
 .testnomialContainer {
   padding: 10px;
 }
-
+.testinomialSection h2 {
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
 .testnomialTitleContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
 }
-
-.testnomialTitle p {
-  margin-top: -2em;
+.testinomialSection .testnomialTitle p {
+  font-size: 20px;
 }
-
 .testnomialQoute {
   color: #b9b9b9b4;
   font-size: 5em;
 }
-
 .testnomialCardWrapper {
-  /* display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  flex-wrap: wrap; */
-  margin-top: 2em;
+  padding-top: 50px;
+}
+.testnomialCardWrapper .swiper {
+  padding-bottom: 100px;
 }
 .tesnomialCard {
   cursor: pointer;
   text-align: left;
-  border-radius: 5px;
+  border-radius: 8px;
   transition: all 0.5s ease;
   overflow: hidden;
 }
-
+.testnomialCardWrapper .tesnomialCard {
+  background-color: #fff !important;
+  font-size: 18px;
+  box-shadow: rgb(100 100 111 / 7%) 0px 7px 29px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 38px 30px;
+}
 .tesnomialContent {
   box-sizing: border-box;
-  padding: 1em 1em;
 }
 .testnomialQoute2 {
   color: #b9b9b9b4;
   font-size: 2em;
 }
-.tesnomialContent h3 {
-  margin-top: -0.8em;
+.tesnomialContent h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
-.tesnomialContent p {
-  margin-top: -1.5em;
-}
-
-.tesnomialContent :nth-child(2) {
-  margin-top: 0.9em;
-}
-
-.tesnomialContent :nth-child(4) {
-  margin-top: 1em;
-}
-
 .testnomialuserDetail {
-  margin-top: 1.2em;
+  margin-top: 35px;
   display: flex;
   box-sizing: border-box;
-  padding-left: 0.5em;
   justify-content: flex-start;
   align-items: center;
   height: auto;
-  background-color: #f5f3f379;
 }
-
 .testnomialImage {
   overflow: hidden;
 }
-
 .testnomialImage img {
   overflow: hidden;
   text-align: center;
@@ -84,13 +81,12 @@
   box-sizing: border-box;
   margin-left: 2em;
 }
-
-.testnomialUser p {
-  margin-top: -2em;
-}
-
 .tesnomialCard:hover {
   transform: scale(1.02);
+}
+.testnomialuserDetail h6,
+.testnomialuserDetail p {
+  margin: 0;
 }
 
 .mySwiper > .swiper-button-prev {

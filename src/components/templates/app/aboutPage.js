@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import AboutUs from "../../layout/about-us/About";
 import { useSelector } from "react-redux";
+import AboutUs from "../../layout/about-us/About";
 
 export const AboutPage = () => {
   const [about, setAbout] = useState([]);

@@ -3,7 +3,9 @@ import "./project.css";
 import ProjectCard from "./ProjectCard";
 import { useSelector } from "react-redux";
 
-function Project() {
+function Project(pdata) {
+  const { projectTitle, projectSubTitle, projectDescription } = pdata.pdata;
+
   const [project, setProject] = useState([]);
   const pageData = useSelector((state) => {
     return state.ourWorkDetail.ourWorkDetail;
@@ -24,18 +26,15 @@ function Project() {
       <div className="wrapper projectManage">
         <div className="projectWrapper">
           <div className="projectTitle">
-            <span>Our project</span>
-            <h2>Some of our recent works</h2>
-            <p>
-              There are many variations of passages of Lorem Ipsum available,{" "}
-              <br /> but the majority have suffered alteration.
-            </p>
+            <span>{projectSubTitle}</span>
+            <h2>{projectTitle}</h2>
+            <p style={{ maxWidth: "60%" }}>{projectDescription}</p>
           </div>
 
           <div className="projectCardWrapper">
             {project
               ? project &&
-                project.slice(0,3).map((item, index) => {
+                project.slice(0, 3).map((item, index) => {
                   let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
                   return (
                     <ProjectCard item={item} urlTitle={urlTitle} key={index} />

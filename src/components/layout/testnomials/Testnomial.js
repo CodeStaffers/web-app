@@ -14,7 +14,7 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import "./styles.css";
 
-function Testnomial() {
+function Testnomial(props) {
   const [slide, setSlide] = useState(3);
   const [swiper, setSwiper] = useState();
   const [data, setData] = useState([]);
@@ -64,14 +64,14 @@ function Testnomial() {
 
   return (
     <>
-      <section>
+      <section className="testinomialSection">
         <div className="wrapper testnomialContainer">
           <div className="testnomialTitleContainer">
             <div className="testnomialTitle">
-              <h2>What they say about us</h2>
-              <p>Our beloved customer testnomial about our service</p>
+              <h2>{props.testnomialTitle}</h2>
+              <p>{props.testnomialSubTitle}</p>
             </div>
-            <div className="">
+            <div className="QuoteIcon">
               <FaQuoteRight className="testnomialQoute" />
             </div>
           </div>

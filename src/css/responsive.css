@@ -1,10 +1,9 @@
 .wrapper {
   max-width: 1560px;
-  /* background-color: rebeccapurple; */
   margin: 0px auto;
   width: 80%;
   box-sizing: border-box;
-  padding: 1em 0px;
+  padding: 0 20px;
 }
 
 section {
@@ -28,20 +27,20 @@ h2 {
 /* subtitle */
 
 h3 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: 700;
 }
 
 /* card code*/
 
 h4 {
-  font-size: 1.4em;
+  font-size: 2em;
   font-weight: 700;
 }
 
 /* points something */
 h5 {
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: 700;
 }
 
@@ -52,7 +51,7 @@ h6 {
 }
 p {
   /* 15px 18px variant */
-  font-size: 15px;
+  font-size: 16px;
 }
 
 a {
@@ -84,4 +83,9 @@ a:hover {
   .wrapper {
     /* width: 100%; */
   }
+}
+
+
+#root {
+  background-color: #f9f9f9;
 }

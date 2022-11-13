@@ -6,25 +6,27 @@ function ServiceCard({ title, shortText, id, color, logo }) {
   return (
     <>
       <div className="cardItem">
-        <Link
-          to={`/service/${urlTitle}`}
-          state={{ id: id, titlePage: title }}
-          className="service_link"
-        >
-          <div className="serviceLogo">
-            <img
-              style={{ color: color }}
-              src={logo && logo.fields.file.url}
-              alt="cardLogo"
-            />
-          </div>
-          <div className="serviceCardTitle" style={{ color: "black" }}>
-            <h5>{title}</h5>
-          </div>
-          <div className="serviceSummary">
-            <p>{shortText}</p>
-          </div>
-        </Link>
+        <div className="innerCardItem">
+          <Link
+            to={`/service/${urlTitle}`}
+            state={{ id: id, titlePage: title }}
+            className="service_link"
+          >
+            <div className="serviceLogo">
+              <img
+                style={{ color: color }}
+                src={logo && logo.fields.file.url}
+                alt="cardLogo"
+              />
+            </div>
+            <div className="serviceCardTitle" style={{ color: "black" }}>
+              <h5>{title}</h5>
+            </div>
+            <div className="serviceSummary">
+              <p>{shortText}</p>
+            </div>
+          </Link>
+        </div>
       </div>
     </>
   );

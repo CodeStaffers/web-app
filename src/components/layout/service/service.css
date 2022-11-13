@@ -4,41 +4,49 @@
 .serviseTitle {
   text-align: center;
 }
-
+.serviseTitle h2 {
+  text-transform: capitalize;
+}
 .serviceCardWrapper {
   display: flex;
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
 }
-
 .cardItem {
-  width: 24%;
-  padding: 1.5em 2.5em;
-  margin: 1em;
-  border-radius: 10px;
-  background-color: #f6f6f6ba;
-  cursor: pointer;
-  transition: all 0.3s;
+  width: calc(33.33% - 20px);
+  padding: 10px;
 }
-
+.cardItem .innerCardItem {
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.cardItem .innerCardItem a {
+  padding: 3em 2.5em;
+  display: block;
+}
 .serviceCardTitle h5 {
   margin-bottom: 1em;
 }
-
 .serviceLogo img {
   display: block;
   object-fit: cover;
   height: 2.5em;
   width: 2.5em;
 }
-.serviceSummary p {
+.service .serviceSummary p {
   color: black;
+  font-size: 20px;
+}
+.cardItem .innerCardItem:hover {
+  transform: scale(1.02);
+  box-shadow: rgb(100 100 111 / 7%) 0px 7px 29px 0px;
 }
 
-.cardItem:hover {
-  transform: translateY(-5px);
-}
 
 /* responsive code */
 @media screen and (max-width: 960px) {

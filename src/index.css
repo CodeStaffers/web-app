@@ -23,24 +23,23 @@ body {
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  color: aliceblue;
-  background-color: rgb(255, 251, 251);
+  background-color: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(120deg, #9e92ed 20.69%, #0fe3ff 79.69%);
+  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
   -webkit-text-fill-color: transparent;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
 }
 
 .loginName {

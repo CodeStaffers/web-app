@@ -4,16 +4,19 @@
   z-index: 100;
   bottom: 13%;
   right: 2.4%;
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  background: linear-gradient(160deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  transition: 0.5s ease all;
 }
-
 .btnTopPlusIcon {
-  color: white;
+  color: #000;
   border-radius: 50%;
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  background: linear-gradient(160deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+}
+.btnTopPlus:hover {
+  transform: scale(110%);
 }
 
 @media screen and (max-width: 880px) {

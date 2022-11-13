@@ -18,6 +18,7 @@ import getPriceReducer from "./features/pricing/pricingSlice";
 import getPlanReducer from "./features/pricing/planSlice";
 
 import getPaymentReducer from "./features/pricing/paymentSlice";
+import getContactReducer from "./features/contact/contactSlice";
 
 export const store = configureStore({
   reducer: {
@@ -38,6 +39,7 @@ export const store = configureStore({
     price: getPriceReducer,
     plan: getPlanReducer,
     link: getPaymentReducer,
+    contact: getContactReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
