@@ -7,14 +7,24 @@ import { Link } from "react-router-dom";
 function SlugDetail() {
   const location = useLocation();
 
-  console.log(location);
+  const { item, tagSlug, clientInfo } =
+    location.state === null
+      ? JSON.parse(localStorage.getItem("slug"))
+      : location.state;
 
   useEffect(() => {
     window.scrollTo(0, 0);
+
+    localStorage.setItem(
+      "slug",
+      JSON.stringify({
+        item: item,
+        tagSlug: tagSlug,
+        clientInfo: clientInfo,
+      })
+    );
     // eslint-disable-next-line
   }, []);
-
-  const { item, tagSlug, clientInfo } = location.state;
 
   const it = { tagSlug: tagSlug, clientInfo: clientInfo };
 

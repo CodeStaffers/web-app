@@ -39,7 +39,7 @@ function Service({ serviceTitle }) {
                   shortText={item.fields.shortText}
                   url={item.fields.url}
                   color={item.fields.color}
-                  id={item.sys.id}
+                  id={item.fields.uniqueField}
                 />
               );
             })}

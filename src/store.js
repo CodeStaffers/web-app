@@ -5,6 +5,7 @@ import getHeroSectionReducer from "./features/heroSection/heroSectionSlice";
 import getTestinomialReducer from "./features/testnomial/testnomialSlice";
 import getBrandReducer from "./features/ourBrand/brandSlice";
 import getServiceIndexSlice from "./features/serviceIndex/serviceIndexSlice";
+import getServiceListingSlice from "./features/serviceIndex/serviceListingPageSlice";
 import getFooterReducer from "./features/footer/footerSlice";
 import getServiceDetailReducer from "./features/serviceDetail/serviceDetailSlice";
 import getOurWorkReducer from "./features/ourWork/ourWorkSlice";
@@ -28,6 +29,7 @@ export const store = configureStore({
     testinomial: getTestinomialReducer,
     brand: getBrandReducer,
     serviceIndex: getServiceIndexSlice,
+    serviceList: getServiceListingSlice,
     footer: getFooterReducer,
     serviceDetail: getServiceDetailReducer,
     ourWork: getOurWorkReducer,
