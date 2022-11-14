@@ -22,7 +22,10 @@ function WorkDetail({ ourWorkDetailPage }) {
   const [workDetail, setWorkDetail] = useState([]);
 
   const location = useLocation();
-  const { titlePage, id } = location.state;
+  const { titlePage, id } =
+    location.state === null
+      ? JSON.parse(localStorage.getItem("work"))
+      : location.state;
 
   // console.log(id);
 
@@ -36,6 +39,15 @@ function WorkDetail({ ourWorkDetailPage }) {
     window.scrollTo(0, 0, {
       behavior: "smooth",
     });
+
+    localStorage.setItem(
+      "work",
+      JSON.stringify({
+        id: id,
+        titlePage: titlePage,
+      })
+    );
+
     // eslint-disable-next-line
   }, []);
 

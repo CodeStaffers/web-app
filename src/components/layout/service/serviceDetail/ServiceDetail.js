@@ -8,7 +8,14 @@ import { Button } from "../../button/Button";
 
 function ServiceDetail({ serviceData }) {
   const location = useLocation();
-  const { id, titlePage } = location.state;
+
+  // var { id, titlePage } = location.state;
+
+  let { id, titlePage } =
+    location.state === null
+      ? JSON.parse(localStorage.getItem("data"))
+      : location.state;
+  // console.log(location.state);
 
   const [data, setData] = useState([]);
   const pageData = useSelector((state) => {
@@ -17,6 +24,7 @@ function ServiceDetail({ serviceData }) {
 
   const getPageData = async () => {
     const d = await pageData;
+    // console.log(d);
     setData(d);
   };
 
@@ -25,11 +33,18 @@ function ServiceDetail({ serviceData }) {
       behavior: "smooth",
     });
     getPageData();
+    localStorage.setItem(
+      "data",
+      JSON.stringify({
+        id: id,
+        titlePage: titlePage,
+      })
+    );
     // eslint-disable-next-line
   }, []);
 
-  const findDataById = data && data.filter((item) => id === item.sys.id);
-
+  const findDataById =
+    data && data.filter((item) => id === item.fields.uniqueField);
   const { description, featureImage } = findDataById[0]
     ? findDataById[0].fields
     : "";

@@ -5,10 +5,10 @@ import "./serviceIndexSection.css";
 import ReactMarkdown from "react-markdown";
 import { useSelector } from "react-redux";
 
-function ServiceIndex({ serviceData }) {
+function ServiceIndex() {
   const [data, setData] = useState([]);
   const pageData = useSelector((state) => {
-    return state.servicePage.servicePage;
+    return state.serviceList.serviceList;
   });
 
   const getPageData = async () => {
@@ -28,16 +28,16 @@ function ServiceIndex({ serviceData }) {
           <div className="toggle_section">
             {data &&
               data.map((item, index) => {
+                console.log(item);
                 let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
-
+                // item.fields.direction
+                // index % 2 !== 1
                 return (
                   <div
                     className="service_index_card_section"
                     key={index}
                     style={{
-                      flexDirection: item.fields.direction
-                        ? "row"
-                        : "row-reverse",
+                      flexDirection: index % 2 !== 1 ? "row" : "row-reverse",
                     }}
                   >
                     <div className="service_index_content_section__body">
@@ -50,7 +50,7 @@ function ServiceIndex({ serviceData }) {
                         <Link
                           to={`/service/${urlTitle}`}
                           state={{
-                            id: item.sys.id,
+                            id: item.fields.uniqueField,
                             titlePage: item.fields.title,
                           }}
                         >
