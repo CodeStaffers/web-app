@@ -1,13 +1,20 @@
 import React, { useEffect, useState } from "react";
+import jwt_decode from "jwt-decode";
 import { client } from "./client";
-import "./App.css";
-import Content from "./components/content-section/Content";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import Rating from "./components/rating/Rating";
+import ThemeOne from "./components/templates/app/index";
+
+const clientId = process.env.REACT_APP_ACCESS_ID;
 
 function App() {
   const [page, setPage] = useState([]);
+
+  const [user, setUser] = useState({});
+  function handleCallbackResponse(response) {
+    var obj = jwt_decode(response.credential);
+    console.log(obj.exp);
+    setUser(obj);
+    document.getElementById("signInDiv").hidden = true;
+  }
 
   const getPage = async () => {
     try {
@@ -20,17 +27,83 @@ function App() {
       console.error(err);
     }
   };
+
   useEffect(() => {
+    /* global google */
+    google.accounts.id.initialize({
+      client_id: clientId,
+      callback: handleCallbackResponse,
+    });
+    google.accounts.id.prompt();
+    google.accounts.id.renderButton(document.getElementById("signInDiv"), {
+      theme: "outline",
+      size: "large",
+    });
     getPage();
   }, []);
+
   return (
     <div className="App1">
-      <Header />
-      <Content page={page} />
-      <Rating />
-      <Footer />
+      {/*       
+    
+      {/* {Object.keys(user).length != 0 && (
+        <button onClick={(e) => handleSignOut(e)}>Sign Out</button>
+      )} */}
+
+      {Object.keys(user).length !== 0 ? (
+        <ThemeOne page={page} />
+      ) : (
+        <div
+          style={{
+            backgroundColor: "red",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh",
+          }}
+          className="bg_home"
+        >
+          <div id="signInDiv"></div>
+          <div className="loginName">
+            <h1>Welcome to CodeStaffers App</h1>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 export default App;
+
+// import React, { useEffect, useState } from "react";
+// import { client } from "./client";
+// import ThemeOne from "./components/templates/app/index";
+
+// function App() {
+//   const [page, setPage] = useState([]);
+
+//   const getPage = async () => {
+//     try {
+//       const response = await client.getEntries({
+//         content_type: "landingPage",
+//       });
+//       const responseData = response && response.items[0].fields;
+//       if (responseData) setPage(responseData);
+//     } catch (err) {
+//       console.error(err);
+//     }
+//   };
+
+//   useEffect(() => {
+//     getPage();
+//   }, []);
+
+//   return (
+//     <div className="App1">
+//       <ThemeOne page={page} />
+//     </div>
+//   );
+// }
+
+// export default App;

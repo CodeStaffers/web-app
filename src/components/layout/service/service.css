@@ -1,0 +1,90 @@
+.service {
+  margin-top: 0;
+}
+.serviseTitle {
+  text-align: center;
+}
+.serviseTitle h2 {
+  text-transform: capitalize;
+}
+.serviceCardWrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.cardItem {
+  width: calc(33.33% - 20px);
+  padding: 10px;
+}
+.cardItem .innerCardItem {
+  border-radius: 8px;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+.cardItem .innerCardItem a {
+  padding: 3em 2.5em;
+  display: block;
+}
+.serviceCardTitle h5 {
+  margin-bottom: 1em;
+}
+.serviceLogo img {
+  display: block;
+  object-fit: cover;
+  height: 2.5em;
+  width: 2.5em;
+}
+.service .serviceSummary p {
+  color: black;
+  font-size: 20px;
+}
+.cardItem .innerCardItem:hover {
+  transform: scale(1.02);
+  box-shadow: rgb(100 100 111 / 7%) 0px 7px 29px 0px;
+}
+
+
+/* responsive code */
+@media screen and (max-width: 960px) {
+  .cardItem {
+    width: 20%;
+    padding: 2.2em;
+  }
+}
+@media screen and (max-width: 780px) {
+  .service {
+    margin-top: 0%;
+  }
+  .cardItem {
+    width: 30%;
+    padding: 2em;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  .service {
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .serviceCardWrapper {
+    flex-direction: row;
+  }
+  .cardItem {
+    width: 100%;
+    display: block;
+    padding: 10px 1em;
+    margin: 10px;
+  }
+  .serviceCardTitle {
+    margin-top: -20px;
+  }
+  .serviceSummary {
+    margin-top: -7px;
+  }
+}

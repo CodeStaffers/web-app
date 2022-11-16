@@ -1,0 +1,78 @@
+:root {
+  --primary--content: black;
+}
+.service__index__container {
+  margin-top: 0;
+  height: auto;
+  padding-top: 8em;
+  background-color: #f5f3f379;
+}
+.service__index__wrapper {
+  padding: 10px;
+}
+.service_index_titile h2 {
+  font-size: 3em;
+}
+
+.service__index__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.serviceIndexContent {
+  flex: 1;
+}
+.service__index__btn {
+  margin-top: 2.5em;
+}
+
+.service__index__image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.service__index__image img {
+  display: block;
+  object-fit: contain;
+  width: 65%;
+}
+
+@media screen and (max-width: 1150px) {
+  .service__index__image img {
+    display: block;
+    object-fit: contain;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .service__index__container {
+    padding-top: 5em;
+  }
+
+  .service__index__wrapper {
+    padding-top: 0%;
+    flex-direction: column;
+  }
+  .service_index_titile h2 {
+    font-size: 2em;
+  }
+  .service_index_content_tag h3 {
+    font-size: 1.5em;
+  }
+
+  .service__index__btn {
+    margin-top: 2em;
+  }
+
+  .service__index__image {
+    margin-top: 2em;
+  }
+  .service__index__image img {
+    display: block;
+    object-fit: contain;
+    width: 80%;
+  }
+}

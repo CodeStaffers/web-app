@@ -1,11 +1,50 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap"); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&display=swap"); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap"); */
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800;1&display=swap"); */
+:root {
+  --tawk-header-background-color: rgb(25, 26, 30);
+  --tawk-header-text-color: rgb(255 255 255);
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: white;
+  font-family: "Poppins";
+  overflow-x: hidden;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+  -webkit-text-fill-color: transparent;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+}
+
+.loginName {
+  text-align: center;
+}
+.bg_home {
+  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
 }
