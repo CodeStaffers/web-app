@@ -1,7 +1,7 @@
 .projectTitle span {
   font-weight: bold;
   font-size: 20px;
-  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+  background: linear-gradient(120deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -11,6 +11,7 @@
   text-transform: capitalize;
 }
 .projectTitle p {
+  max-width: 60%;
   font-size: 20px;
 }
 .projectCardWrapper {
@@ -75,7 +76,9 @@
     margin-bottom: 1em;
     margin-right: 1em;
   }
-
+  .projectTitle p {
+    max-width: 100%;
+  }
   .ourProjectSubtitle {
     box-sizing: border-box;
     padding: 10px 0px 0em 10px;
