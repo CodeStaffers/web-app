@@ -28,7 +28,7 @@ function Project(pdata) {
           <div className="projectTitle">
             <span>{projectSubTitle}</span>
             <h2>{projectTitle}</h2>
-            <p style={{ maxWidth: "60%" }}>{projectDescription}</p>
+            <p>{projectDescription}</p>
           </div>
 
           <div className="projectCardWrapper">

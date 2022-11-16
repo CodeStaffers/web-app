@@ -74,13 +74,20 @@
 }
 
 @media screen and (max-width: 780px) {
+  .content_section__body {
+    width: 100%;
+  }
   .card_section {
+    width: 100%;
     display: block;
   }
   .hero_btn_try {
     display: block;
     width: 35%;
     padding: 10px;
+  }
+  .card_section .section_image {
+    width: 100%;
   }
   .section_image img {
     width: 80%;
