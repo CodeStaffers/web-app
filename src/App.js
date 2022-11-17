@@ -55,7 +55,6 @@ function App() {
       ) : (
         <div
           style={{
-            backgroundColor: "red",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -66,7 +65,7 @@ function App() {
         >
           <div id="signInDiv"></div>
           <div className="loginName">
-            <h1>Welcome to CodeStaffers App</h1>
+            <h1>Welcome to Elite Web Solutions</h1>
           </div>
         </div>
       )}
