@@ -33,18 +33,18 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+  background: linear-gradient(120deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
   -webkit-text-fill-color: transparent;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+  background: linear-gradient(120deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
 }
 
 .loginName {
   text-align: center;
 }
 .bg_home {
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  background: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
 }

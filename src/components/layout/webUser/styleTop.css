@@ -47,7 +47,7 @@
 
 /* left */
 .myTopSwiper > .swiper-button-prev {
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  background: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
   border-radius: 50%;
   padding: 0px 0em;
   padding: 2px;
@@ -55,7 +55,7 @@
   height: 2em;
 }
 .myTopSwiper > .swiper-button-next {
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
+  background: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
   border-radius: 50%;
   padding: 0px 0em;
   padding: 2px;
