@@ -1,182 +1,133 @@
 .aboutSection {
   /* background-color: #5b47db; */
   margin-top: 0;
-  padding-top: 7em;
+  padding-top: 10em;
 }
 .aboutWrapper {
   padding: 0 3em;
 }
 
-.aboutTitlePage {
+.aboutTitleDiv {
+  position: relative;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
+  z-index: 1000;
+  color: black;
 }
-.aboutTitle1 {
+.aboutTitle {
   flex: 1;
-  line-height: 3em;
+  width: 25%;
 }
-.aboutTitle1 h1 {
-  font-size: 3.1em;
-}
-.aboutTitle1 :nth-child(1) {
-  display: inline;
-}
-.aboutTitle1 :nth-child(2) {
-  display: inline;
-  color: rgba(0, 0, 0, 0.514);
-}
-.aboutTitle2 {
-  padding-top: 4.5em;
-  flex: 1;
+.aboutTitle h1 {
+  position: relative;
+  left: 58%;
+  margin: 5px 0;
+  font-size: 5em;
 }
 
-.aboutBg {
-  margin-top: 2em;
-  width: auto;
+.aboutSections {
+  flex: 2;
+  width: 75%;
 }
-.aboutBg img {
+.aboutImages {
+  width: 100%;
+}
+
+.aboutImages img {
+  border-radius: 20px;
   display: block;
   object-fit: cover;
   width: 100%;
-  object-position: center center;
-  height: 100vh;
+  height: 400px;
 }
-.aboutSummary {
+
+.aboutSecTitle {
+  text-align: center;
+}
+.aboutSecTitle p {
+  margin: 0 auto;
+  margin-top: -2em;
+  max-width: 80%;
+}
+.aboutSectionWrapper {
+  margin-top: 7em;
   display: flex;
+  gap: 0em;
   flex-direction: row;
   flex-wrap: wrap;
 }
-.summaryTitle {
+.right {
   flex: 1;
 }
-.summaryPara {
-  padding-top: 1.5em;
-  flex: 1;
-}
-
-.aboutTeam {
-  margin-top: 4em;
-  padding: 1.5em 3em;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: #9090901e;
-}
-.team1 {
-  /* border: 2px solid red; */
-  line-height: 0.8em;
-  flex: 1;
-}
-.team2 {
-  /* padding-top: 2em; */
-  flex: 1;
-}
-
-.aboutAssit {
-  margin-top: 4em;
-  padding-top: 3em;
-  padding-bottom: 3em;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-.assist1 {
-  color: white;
-  flex: 1;
-}
-.assist1 h2 {
-  line-height: 1.3em;
-}
-.assist1 p {
-  color: rgba(255, 254, 254, 0.655);
-}
-
-.AboutBtn {
-  margin-top: 2em;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  /* background-color: red; */
-}
-.AboutBtn button {
-  cursor: pointer;
-  font-size: 1em;
-  padding: 0.8em 0.3em;
-  width: 30%;
-  background-color: white;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-}
-.AboutBtn div {
-  padding-left: 2em;
-}
-
-.assist2 {
-  padding: 0 10px;
-  flex: 1;
-}
-.assist2 img {
-  display: inline-block;
+.aboutRightImage img {
+  display: block;
   object-fit: cover;
-  width: 70%;
-  border-radius: 1em;
+  width: 80%;
+  border-radius: 5px;
+}
+.left {
+  flex: 1;
+}
+
+.left div > h4 {
+  margin: 0 0;
 }
 
 /* responsice code */
-@media screen and (max-width: 824px) {
-  .aboutWrapper,
-  .aboutBg {
-    padding: 0 10px;
+@media screen and (max-width: 950px) {
+  .aboutSection {
+    padding-top: 6em;
   }
-  .aboutTitlePage {
+  .aboutTitleDiv {
     display: block;
   }
-  .aboutTitle1 h1 {
-    font-size: 2.5em;
+  .aboutTitle {
+    width: 100%;
   }
-  .aboutTitle2 {
-    padding-top: 0em;
+  .aboutTitle h1 {
+    position: static;
+    left: 0;
+    font-size: 4em;
+  }
+  .aboutSections {
+    width: 100%;
   }
 
-  .aboutSummary {
+  .aboutSecTitle p {
+    max-width: 100%;
+  }
+  .aboutSectionWrapper {
     display: block;
   }
-  .summaryPara {
-    padding-top: 0em;
-  }
-  .summaryPara p {
-    margin-top: -10px;
-  }
-  .aboutTeam {
-    padding: 1em;
+  .aboutRightImage img {
     display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
   }
-  .aboutAssit {
-    padding-top: 0.5em;
-    padding-bottom: 1.5em;
-    display: block;
+  .left {
+    margin-top: 2em;
   }
+}
 
-  .AboutBtn {
-    display: block;
+@media screen and (max-width: 780px) {
+  .aboutSecTitle p {
+    max-width: 100%;
+    margin-top: -0em;
   }
-  .AboutBtn button {
-    width: 40%;
-    display: inline;
-  }
-  .AboutBtn div {
-    display: inline;
-    padding-left: 1em;
-  }
-
-  .assist2 {
+  .aboutSectionWrapper {
     margin-top: 3em;
   }
-  .assist2 img {
-    object-fit: contain;
-    width: 100%;
-    border-radius: 1em;
+  .aboutSecondSection {
+    margin-top: 5em;
   }
+  .aboutImages img {
+    height: 250px;
+  }
+  .aboutSecTitle {
+    text-align: left;
+  }
+}
+.aboutWrapperDoc p > * {
+  font-size: 20px !important;
 }
