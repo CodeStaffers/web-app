@@ -118,7 +118,7 @@
   }
   .nav-menu.active {
     background: #000;
-    background: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
+    background: linear-gradient(160deg, #b1fcfa 79.69%, #fcc1ff 20.69%);
     mix-blend-mode: overlay;
     color: white;
     left: 0;

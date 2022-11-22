@@ -43,7 +43,7 @@ function Contact({ contact }) {
           </div>
           <div className="contactWrapper">
             <div className="contactImage">
-              <img src="/image/contact.png" alt="con" />
+              <img src="/image/contact.png" alt="con" loading="lazy" />
             </div>
             <div className="contactForm">
               <form ref={form} onSubmit={sendEmail} className="formControl">

@@ -24,7 +24,6 @@ function Pricing({ plan, price }) {
             {plan &&
               plan.map((item, index) => {
                 const { priceTag, title, payments } = item.fields;
-
                 const { amount, PaymentStripeUrl } = payments.fields;
 
                 return (
