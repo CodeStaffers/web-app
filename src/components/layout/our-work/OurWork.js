@@ -44,12 +44,13 @@ function OurWork() {
           </div>
           <div className="rectangleWrapper">
             <div className="rectangle_ring">
-              <img src="/image/ring.png" alt="ring" />
+              <img src="/image/ring.png" alt="ring" loading="lazy" />
             </div>
             <div className="ourwork-imagebox">
               <img
                 src={data.bannerImage ? data.bannerImage.fields.file.url : ""}
                 alt="banner"
+                loading="lazy"
               />
             </div>
           </div>

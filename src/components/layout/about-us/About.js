@@ -5,7 +5,6 @@ import "./about.styles.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 function About({ about }) {
-  console.log(about);
   const {
     title,
     summary,
@@ -16,7 +15,6 @@ function About({ about }) {
     leftTitle,
     leftSummary,
   } = about;
-
   useEffect(() => {
     window.scrollTo(0, 0, {
       behavior: "smooth",
@@ -35,7 +33,11 @@ function About({ about }) {
 
             <div className="aboutSections">
               <div className="aboutImages">
-                <img src={media.fields && media.fields.file.url} alt="image2" />
+                <img
+                  src={media.fields && media.fields.file.url}
+                  alt="image2"
+                  loading="lazy"
+                />
               </div>
               <div className="aboutContent">
                 <p>{documentToReactComponents(summary)}</p>
