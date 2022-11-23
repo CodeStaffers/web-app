@@ -3,7 +3,9 @@ import "./serviceDetail.css";
 import { useLocation } from "react-router-dom";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { useSelector } from "react-redux";
+import ServiceDetailHero from "../serviceDetailComp/ServiceDetailHero";
 
+import ServiceDetailFeature from "../serviceDetailComp/ServiceDetailFeature";
 import { Button } from "../../button/Button";
 
 function ServiceDetail({ serviceData }) {
@@ -45,9 +47,16 @@ function ServiceDetail({ serviceData }) {
 
   const findDataById =
     data && data.filter((item) => id === item.fields.uniqueField);
-  const { description, featureImage } = findDataById[0]
-    ? findDataById[0].fields
-    : "";
+
+  const {
+    description,
+    featureImage,
+    relatedInoformationCard,
+    relatedImage,
+    relatedSummary,
+    relatedContent,
+    relatedTitle,
+  } = findDataById[0] ? findDataById[0].fields : "";
 
   return (
     <>
@@ -76,6 +85,16 @@ function ServiceDetail({ serviceData }) {
           </div>
         </div>
       </section>
+      (
+      <ServiceDetailHero
+        summary={relatedSummary}
+        image={relatedImage}
+        content={relatedContent}
+      />
+      <ServiceDetailFeature
+        data={relatedInoformationCard}
+        title={relatedTitle}
+      />
     </>
   );
 }

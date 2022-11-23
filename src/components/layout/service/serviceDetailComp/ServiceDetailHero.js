@@ -1,25 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import "./serviceHero.css";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
-function ServiceHeroHero({ summary2, image2, content2 }) {
-  const [data, setData] = useState([]);
-  const pageData = useSelector((state) => {
-    return state.serviceDetail.serviceDetail;
-  });
+function ServiceHeroHero({ summary, image, content }) {
+  // const [data, setData] = useState([]);
+  // const pageData = useSelector((state) => {
+  //   return state.serviceDetail.serviceDetail;
+  // });
 
-  const getPageData = async () => {
-    const d = await pageData;
-    setData(d);
-  };
+  // const getPageData = async () => {
+  //   const d = await pageData;
+  //   setData(d);
+  // };
 
-  useEffect(() => {
-    getPageData();
-    // eslint-disable-next-line
-  }, []);
+  // useEffect(() => {
+  //   getPageData();
+  //   // eslint-disable-next-line
+  // }, []);
 
-  const { summary, image, content } = data;
+  // const { summary, image, content } =
+  //   props.data.lenght !== 0 ? props.data[0].fields : "";
+  // console.log(props.data[0].fields);
+  // const { summary, image, content } = data;
 
   return (
     <>
