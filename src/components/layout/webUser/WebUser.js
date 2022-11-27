@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper";
+import { Autoplay } from "swiper";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -88,10 +88,10 @@ function WebUser() {
                   clickable: true,
                 }}
                 autoplay={{
-                  delay: 3000,
+                  delay: 4000,
                   disableOnInteraction: false,
                 }}
-                modules={[Navigation, Pagination, Autoplay]}
+                modules={[Autoplay]}
                 navigation={{
                   prevEl: prevRef?.current,
                   nextEl: nextRef?.current,

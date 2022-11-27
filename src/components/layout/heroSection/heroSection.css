@@ -43,9 +43,10 @@
   text-decoration: none;
   margin-left: 2em;
   font-weight: bold;
+  transition: 0.5s ease all;
 }
 .content_see_all:hover {
-  color: #000 !important;
+  color: #fcc1ff !important;
 }
 
 @media screen and (max-width: 1150px) {

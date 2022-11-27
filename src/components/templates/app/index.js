@@ -57,9 +57,9 @@ function ThemeOne(props) {
         <Route path="/our-works" element={<OurWorkPage />} />
         <Route path="/our-works/content-hub/:detail" element={<SlugDetail />} />
         <Route path="/our-works/:title" element={<WorkDetailPage />} />
-        <Route path="/service" element={<ServiceIndexPage />} />
+        <Route path="/services" element={<ServiceIndexPage />} />
+        <Route path="/services/:shortTitle" element={<ServiceDetailPage />} />
         <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/service/:shortTitle" element={<ServiceDetailPage />} />
         <Route path="/contacts" element={<ContactPage />} />
       </Routes>
       <WebUser />

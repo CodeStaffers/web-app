@@ -21,7 +21,6 @@ export const Button = ({
   const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[0];
 
   // click methods
-
   return (
     <a
       className={`btn btn-sm ${btnHeader} ${checkButtonStyle} ${checkButtonSize}`}

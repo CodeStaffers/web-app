@@ -1,6 +1,6 @@
 :root {
-  --primary: linear-gradient(160deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
-  --btn-color: linear-gradient(160deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+  --primary: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
+  --btn-color: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
 }
 
 .btn,
@@ -11,7 +11,7 @@
   outline: none;
   border: none;
   cursor: pointer;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .btn:hover {

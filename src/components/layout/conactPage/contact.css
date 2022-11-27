@@ -1,14 +1,23 @@
 .contactContainer {
+  padding-top: 113px;
   margin-top: 0;
 }
-.contactTitle {
+.contactContainer .contactTitle {
   text-align: center;
-  margin-top: 10%;
+  padding: 50px 0;
+  max-width: 780px;
+  width: 100%;
+  margin: auto;
 }
-.contactTitle h1 {
-  font-size: 3em;
+.contactContainer .contactTitle h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
-
+.contactContainer .contactTitle p {
+  font-size: 18px;
+  line-height: 1.6;
+}
 .slider {
   margin: 0 auto;
   margin-top: -30px;
@@ -18,11 +27,9 @@
   width: 150px;
 }
 .contactWrapper {
-  margin-top: 5%;
   display: flex;
   justify-content: center;
-  flex-direction: wrap;
-  flex-direction: row;
+  flex-wrap: wrap;
 }
 .contactImage {
   display: flex;
@@ -58,8 +65,8 @@
 .formControl input {
   height: 2.5em;
   margin-bottom: 1.1em;
-  background-color: rgba(18, 17, 17, 0.112);
-  padding: 7px;
+  background-color: #ffffff;
+  padding: 9px 15px;
   border: none;
   font-weight: bold;
   font-size: 13px;
@@ -70,10 +77,10 @@
   width: 98%;
   height: 10em;
   border: none;
+  background-color: #ffffff;
+  padding: 9px 15px;
   font-family: "Poppins";
-  background-color: rgba(128, 128, 128, 0.112);
-  padding: 7px;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 13px;
   border-radius: 5px;
   outline: none;
