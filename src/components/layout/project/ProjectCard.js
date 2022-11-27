@@ -1,6 +1,7 @@
 import React from "react";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Link } from "react-router-dom";
+import { Button } from "../button/Button";
 
 function ProjectCard({ item, urlTitle }) {
   return (
@@ -23,13 +24,9 @@ function ProjectCard({ item, urlTitle }) {
               item.fields.tagSlug.map((tag, index) => {
                 const { slug, title } = tag ? tag.fields : "";
                 return (
-                  <Link
-                    to={`/${slug}`}
-                    state={{ item: item.fields }}
-                    key={index}
-                  >
-                    <p>{title}</p>
-                  </Link>
+                  <Button buttonSize="btn--medium" url={`/${slug}`}>
+                    {title}
+                  </Button>
                 );
               })}
           </div>

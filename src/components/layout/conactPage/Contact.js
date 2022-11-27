@@ -38,7 +38,6 @@ function Contact({ contact }) {
         <div className="wrapper">
           <div className="contactTitle">
             <h1>{contact.title}</h1>
-            <div className="slider"></div>
             <p>{contact.subTitle}</p>
           </div>
           <div className="contactWrapper">

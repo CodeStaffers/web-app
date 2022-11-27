@@ -1,7 +1,5 @@
-.testnomialContainer {
-  padding: 10px;
-}
 .testinomialSection h2 {
+  margin-top: 15px;
   margin-bottom: 15px;
   text-transform: capitalize;
 }
@@ -17,6 +15,13 @@
 .testnomialQoute {
   color: #b9b9b9b4;
   font-size: 5em;
+}
+.testnomialTitle span {
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(120deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .testnomialCardWrapper {
   padding-top: 50px;

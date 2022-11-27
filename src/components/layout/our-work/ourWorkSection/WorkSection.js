@@ -116,9 +116,13 @@ function OurWorkSection({ page, ourWorkTab, ourWorkDetailPage }) {
             <div className="loadMore">
               <h6>{loadText}</h6>
 
-              <Button buttonSize="btn--large" onClick={() => loadMore()}>
-                Load More
-              </Button>
+              {load >= ourWorkDetailPage.length ? (
+                ""
+              ) : (
+                <Button buttonSize="btn--large" onClick={() => loadMore()}>
+                  Load More
+                </Button>
+              )}
             </div>
           </div>
         </div>

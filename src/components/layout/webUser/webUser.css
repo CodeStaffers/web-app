@@ -6,9 +6,8 @@
 }
 .webUserTitle span {
   display: inline-block;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  font-size: 16px;
+  font-weight: bold;
+  font-size: 20px;
   margin-bottom: 1.5em;
   background: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
   -webkit-background-clip: text;
@@ -26,7 +25,7 @@
   margin-top: -2.5em;
 }
 
-/* 
+/*
 812px - 3
 660 - 2
 425  - 1

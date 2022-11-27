@@ -8,7 +8,7 @@ function ServiceCard({ title, shortText, id, color, logo }) {
       <div className="cardItem">
         <div className="innerCardItem">
           <Link
-            to={`/service/${urlTitle}`}
+            to={`/services/${urlTitle}`}
             state={{ id: id, titlePage: title }}
             className="service_link"
           >

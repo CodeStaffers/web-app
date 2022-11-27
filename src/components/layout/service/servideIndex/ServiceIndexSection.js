@@ -28,7 +28,6 @@ function ServiceIndex() {
           <div className="toggle_section">
             {data &&
               data.map((item, index) => {
-                console.log(item);
                 let urlTitle = item.fields.title.replace(/\s+|[,/]/g, "-");
                 // item.fields.direction
                 // index % 2 !== 1
@@ -47,15 +46,12 @@ function ServiceIndex() {
                         </ReactMarkdown>
                       </div>
                       <div className="service_index_content_btn">
-                        <Link
-                          to={`/service/${urlTitle}`}
-                          state={{
-                            id: item.fields.uniqueField,
-                            titlePage: item.fields.title,
-                          }}
+                        <Button
+                          buttonSize="btn--medium"
+                          // url={`/services/${urlTitle}`}
                         >
-                          <Button cName={"btn--medium"}>Read more</Button>
-                        </Link>
+                          <Link to={`/services/${urlTitle}`}>read more</Link>
+                        </Button>
                       </div>
                     </div>
                     <div className="service_index_section_image">

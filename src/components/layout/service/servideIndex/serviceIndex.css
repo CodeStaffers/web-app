@@ -4,14 +4,16 @@
 .service__index__container {
   margin-top: 0;
   height: auto;
-  padding-top: 8em;
+  padding-top: 113px;
   background-color: #f5f3f379;
 }
 .service__index__wrapper {
-  padding: 10px;
+  padding: 40px 0;
 }
-.service_index_titile h2 {
-  font-size: 3em;
+.service_index_titile h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.1;
 }
 
 .service__index__wrapper {
@@ -21,10 +23,23 @@
   flex-wrap: wrap;
 }
 .serviceIndexContent {
-  flex: 1;
+  max-width: 800px;
+  margin: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+.serviceIndexContent p {
+  font-size: 18px;
+  line-height: 1.7;
 }
 .service__index__btn {
-  margin-top: 2.5em;
+  margin-top: 20px;
+  display: flex;
 }
 
 .service__index__image {

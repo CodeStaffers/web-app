@@ -23,13 +23,9 @@ function ServiceIndex() {
     getPageData();
     // eslint-disable-next-line
   }, []);
-  const { summary, media, btnUrl, titleBtn } = data;
+  const { summary, btnUrl, titleBtn } = data;
 
   // click method
-
-  const onClick = () => {
-    window.open(btnUrl, "_blank");
-  };
 
   return (
     <section className="service__index__container">
@@ -40,14 +36,13 @@ function ServiceIndex() {
               {documentToReactComponents(summary)}
             </div>
             <div className="service__index__btn">
-              <Button url={btnUrl} onClick={onClick}>
-                {titleBtn}
+              <Button url={btnUrl} onClick={btnUrl}>
+                <a href={btnUrl} target="_blank" rel="noreferrer">
+                  {" "}
+                  {titleBtn}
+                </a>
               </Button>
             </div>
-          </div>
-
-          <div className="service__index__image">
-            <img src={media && media.fields.file.url} alt="" />
           </div>
         </div>
       </div>

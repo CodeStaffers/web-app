@@ -68,6 +68,7 @@ function Testnomial(props) {
         <div className="wrapper testnomialContainer">
           <div className="testnomialTitleContainer">
             <div className="testnomialTitle">
+              <span>Testimonials</span>
               <h2>{props.testnomialTitle}</h2>
               <p>{props.testnomialSubTitle}</p>
             </div>

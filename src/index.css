@@ -48,3 +48,9 @@ body {
 .bg_home {
   background: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
 }
+.swiper-pagination {
+  display: none;
+}
+a {
+  color: black !important;
+}

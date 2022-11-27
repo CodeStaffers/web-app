@@ -40,11 +40,14 @@
 }
 .service .serviceSummary p {
   color: black;
-  font-size: 20px;
+  font-size: 18px;
 }
 .cardItem .innerCardItem:hover {
   transform: scale(1.02);
   box-shadow: rgb(100 100 111 / 7%) 0px 7px 29px 0px;
+}
+.serviceCardWrapper .cardItem:nth-child(n+4) .serviceCardTitle {
+  min-height: 70px;
 }
 
 

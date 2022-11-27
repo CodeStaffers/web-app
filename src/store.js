@@ -20,6 +20,7 @@ import getPlanReducer from "./features/pricing/planSlice";
 
 import getPaymentReducer from "./features/pricing/paymentSlice";
 import getContactReducer from "./features/contact/contactSlice";
+import getFaqReducer from "./features/faq/faqSlice";
 
 export const store = configureStore({
   reducer: {
@@ -42,6 +43,7 @@ export const store = configureStore({
     plan: getPlanReducer,
     link: getPaymentReducer,
     contact: getContactReducer,
+    faq: getFaqReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

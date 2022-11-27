@@ -29,41 +29,39 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-
 .ourProjectCard a {
   color: black;
+  padding: 5px 20px;
 }
-
-.ourProjectSubtitle :first-child {
-  font-weight: 600;
-  letter-spacing: 0.5px;
+.ourProjectSubtitle p {
   font-size: 16px;
-  background: linear-gradient(120deg, #5f45ff 20.69%, #0fe3ff 79.69%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+  margin: 0;
+}
+.ourProjectSubtitle h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
 }
 .ourProjectImage {
   display: block;
   overflow: hidden;
 }
-
 .ourProjectImage img {
   display: block;
   object-fit: cover;
   width: 100%;
-  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   height: 13em;
 }
 .ourProjectSubtitle {
+  padding: 20px 20px 0em 20px;
   box-sizing: border-box;
-  padding: 1em 15px 0em 15px;
-  box-sizing: border-box;
-  line-height: 0.1em;
 }
 .ourProjectSubtitle p {
   font-size: 15px;
 }
-
 .ourProjectCard:hover {
   transform: translateY(-10px);
 }
