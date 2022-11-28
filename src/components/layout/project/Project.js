@@ -3,8 +3,8 @@ import "./project.css";
 import ProjectCard from "./ProjectCard";
 import { useSelector } from "react-redux";
 
-function Project(pdata) {
-  const { projectTitle, projectSubTitle, projectDescription } = pdata.pdata;
+function Project(props) {
+  const { projectTitle, projectSubTitle, projectDescription } = props.pdata;
 
   const [project, setProject] = useState([]);
   const pageData = useSelector((state) => {
@@ -22,16 +22,16 @@ function Project(pdata) {
   }, []);
 
   return (
-    <section className="projectContainer">
-      <div className="wrapper projectManage">
-        <div className="projectWrapper">
-          <div className="projectTitle">
+    <section className="ourProjectContainer">
+      <div className="wrapper ourProjectManage">
+        <div className="ourProjectWrapper">
+          <div className="ourProjectTitle">
             <span>{projectSubTitle}</span>
             <h2>{projectTitle}</h2>
             <p>{projectDescription}</p>
           </div>
 
-          <div className="projectCardWrapper">
+          <div className="ourProjectCardWrapper">
             {project
               ? project &&
                 project.slice(0, 3).map((item, index) => {

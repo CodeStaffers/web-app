@@ -16,6 +16,7 @@ import WorkSlugPage from "./WorkSlugPage";
 import { AboutPage } from "./aboutPage";
 import SlugDetail from "../../layout/our-work/slugDetail/SlugDetail";
 import PricingPage from "./PricingPage";
+import ProjectPage from "./projectPage";
 function ThemeOne(props) {
   const { page } = props;
 
@@ -62,6 +63,7 @@ function ThemeOne(props) {
         <Route path="/our-works/content-hub/:detail" element={<SlugDetail />} />
         <Route path="/our-works/:title" element={<WorkDetailPage />} />
         <Route path="/services" element={<ServiceIndexPage />} />
+        <Route path="/project" element={<ProjectPage />} />
         <Route path="/services/:shortTitle" element={<ServiceDetailPage />} />
         <Route path="/pricing" element={<PricingPage />} />
         <Route path="/contacts" element={<ContactPage />} />
