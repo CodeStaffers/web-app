@@ -45,7 +45,7 @@
 .nav-links {
   position: relative;
   align-self: center;
-  margin: 5px;
+  /* margin: 5px; */
   color: black;
   text-decoration: none;
   font-weight: 500;
@@ -139,6 +139,7 @@
   .nav-links {
     border-radius: 10px;
     font-size: 17px;
+    margin: 5px;
     /* background-color: rgb(138 43 226); */
     background: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
     display: flex;

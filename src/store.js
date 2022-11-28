@@ -22,6 +22,8 @@ import getPaymentReducer from "./features/pricing/paymentSlice";
 import getContactReducer from "./features/contact/contactSlice";
 import getFaqReducer from "./features/faq/faqSlice";
 
+import getProjectReducer from "./features/project/projectSlice";
+
 export const store = configureStore({
   reducer: {
     page: getPageReducer,
@@ -44,6 +46,7 @@ export const store = configureStore({
     link: getPaymentReducer,
     contact: getContactReducer,
     faq: getFaqReducer,
+    project: getProjectReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

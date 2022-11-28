@@ -1,20 +1,20 @@
-.projectTitle span {
+.ourProjectTitle span {
   font-weight: bold;
   font-size: 20px;
   background: linear-gradient(120deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.projectTitle h2 {
+.ourProjectTitle h2 {
   margin-top: 15px;
   margin-bottom: 15px;
   text-transform: capitalize;
 }
-.projectTitle p {
+.ourProjectTitle p {
   max-width: 60%;
   font-size: 20px;
 }
-.projectCardWrapper {
+.ourProjectCardWrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -74,7 +74,7 @@
     margin-bottom: 1em;
     margin-right: 1em;
   }
-  .projectTitle p {
+  .ourProjectTitle p {
     max-width: 100%;
   }
   .ourProjectSubtitle {
@@ -90,7 +90,7 @@
 }
 
 @media screen and (max-width: 635px) {
-  .projectCardWrapper {
+  .ourProjectCardWrapper {
     display: block;
     flex-direction: column;
     padding-top: 15px;
@@ -105,7 +105,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .projectTitle h2 {
+  .ourProjectTitle h2 {
     line-height: 1.2;
     margin-top: 0em;
     margin-bottom: -89px;
