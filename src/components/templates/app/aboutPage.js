@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import AboutUs from "../../layout/about-us/About";
 
-export const AboutPage = () => {
+export const AboutPage = (props) => {
   const [about, setAbout] = useState([]);
 
   const pageData = useSelector((state) => {
@@ -16,6 +16,7 @@ export const AboutPage = () => {
 
   useEffect(() => {
     getPageData();
+    document.querySelector(".nav-menu").classList.remove("active");
     // eslint-disable-next-line
   }, []);
 

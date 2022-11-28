@@ -17,7 +17,6 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
   font-family: "Poppins";
   overflow-x: hidden;
 }
@@ -53,4 +52,15 @@ body {
 }
 a {
   color: black !important;
+}
+
+.tawk-custom-color
+  .tawk-custom-border-color
+  .tawk-button
+  .tawk-button-circle
+  .tawk-button-large {
+  background-color: rgb(59, 226, 65) !important;
+}
+.tawk-mobile {
+  background-color: rgb(30, 23, 233) !important;
 }

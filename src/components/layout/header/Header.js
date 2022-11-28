@@ -6,10 +6,9 @@ import { AiOutlineClose } from "react-icons/ai";
 import { Button } from "../button/Button";
 import { NavLink } from "react-router-dom";
 
-function Header({ page }) {
+function Header({ data, page }) {
   const [clicked, setClicked] = useState(false);
   const [scroll, setScroll] = useState(false);
-
   const onScrollChange = () => {
     if (window.scrollY >= 50) {
       setScroll(true);

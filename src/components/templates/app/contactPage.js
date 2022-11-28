@@ -19,6 +19,10 @@ function ContactPage() {
     // eslint-disable-next-line
   }, []);
 
+  useEffect(() => {
+    document.querySelector(".nav-menu").classList.remove("active");
+  }, []);
+
   return <>{contact ? <Contact contact={contact} /> : ""}</>;
 }
 

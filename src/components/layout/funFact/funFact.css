@@ -19,6 +19,7 @@
 }
 .funFact .funFact_card .funFact_title h2 {
   text-transform: capitalize;
+  line-height: 55px;
 }
 .funFact_reviews {
   width: 100%;
@@ -28,7 +29,7 @@
   align-items: center;
 }
 .review_title h3 {
-  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+  background: linear-gradient(120deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 3em;

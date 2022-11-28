@@ -6,7 +6,7 @@ import { BsFacebook, BsTwitter, BsPinterest, BsLinkedin } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-function MainFooter({ page }) {
+function MainFooter() {
   const [data, setData] = useState([]);
   const pageData = useSelector((state) => {
     return state.footer.footer;
@@ -162,7 +162,10 @@ function MainFooter({ page }) {
           </div>
 
           <div className="mainFooter_copyright">
-            <p>Copyright © 2022 all rights reserved <strong>Elite Web Solutions</strong></p>
+            <p>
+              Copyright © 2022 all rights reserved{" "}
+              <strong>Elite Web Solutions</strong>
+            </p>
           </div>
         </div>
       </div>

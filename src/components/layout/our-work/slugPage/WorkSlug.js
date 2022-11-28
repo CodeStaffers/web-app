@@ -9,7 +9,6 @@ function WorkSlugPage() {
 
   const location = useLocation();
   const { slug } = useParams();
-
   const pageData = useSelector((state) => {
     return state.ourGlobalWork.ourGlobalWork;
   });
@@ -22,9 +21,7 @@ function WorkSlugPage() {
 
   useEffect(() => {
     getPageData();
-
     window.scrollTo(0, 0);
-
     // eslint-disable-next-line
   }, []);
 

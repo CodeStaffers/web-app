@@ -69,28 +69,12 @@ a:hover {
 
 @media screen and (max-width: 780px) {
   h2 {
-    font-size: 2em;
+    font-size: 2.3em;
   }
   h3 {
     font-size: 1.7em;
   }
-  .wrapper {
-    width: 100%;
-  }
 }
-
-@media screen and (max-width: 1250px) {
-  .wrapper {
-    width: 95%;
-  }
-}
-
-@media screen and (max-width: 1073px) {
-  .wrapper {
-    /* width: 100%; */
-  }
-}
-
 
 #root {
   background-color: #f9f9f9;

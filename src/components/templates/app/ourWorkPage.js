@@ -34,6 +34,10 @@ function OurWorkPage() {
     // eslint-disable-next-line
   }, []);
 
+  useEffect(() => {
+    document.querySelector(".nav-menu").classList.remove("active");
+  }, []);
+
   return (
     <>
       <OurWork />

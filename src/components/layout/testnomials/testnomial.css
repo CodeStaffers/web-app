@@ -62,6 +62,9 @@
   margin-top: 15px;
   margin-bottom: 15px;
 }
+.tesnomialContent p {
+  font-size: 18px;
+}
 .testnomialuserDetail {
   margin-top: 35px;
   display: flex;
@@ -70,6 +73,7 @@
   align-items: center;
   height: auto;
 }
+
 .testnomialImage {
   overflow: hidden;
 }
@@ -86,6 +90,7 @@
   box-sizing: border-box;
   margin-left: 2em;
 }
+
 .tesnomialCard:hover {
   transform: scale(1.02);
 }
@@ -124,6 +129,6 @@
     line-height: 1.2em;
   }
   .testnomialTitle p {
-    margin-top: -1.2em;
+    margin-top: -0.2em;
   }
 }

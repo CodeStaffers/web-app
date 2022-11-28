@@ -46,16 +46,14 @@
   transform: scale(1.02);
   box-shadow: rgb(100 100 111 / 7%) 0px 7px 29px 0px;
 }
-.serviceCardWrapper .cardItem:nth-child(n+4) .serviceCardTitle {
+.serviceCardWrapper .cardItem:nth-child(n + 4) .serviceCardTitle {
   min-height: 70px;
 }
-
 
 /* responsive code */
 @media screen and (max-width: 960px) {
   .cardItem {
-    width: 20%;
-    padding: 2.2em;
+    width: block;
   }
 }
 @media screen and (max-width: 780px) {
@@ -63,14 +61,14 @@
     margin-top: 0%;
   }
   .cardItem {
-    width: 30%;
+    width: 100%;
     padding: 2em;
   }
 }
 
 @media screen and (max-width: 555px) {
   .service {
-    margin-top: 10%;
+    margin-top: 5%;
   }
 }
 
@@ -81,7 +79,7 @@
   .cardItem {
     width: 100%;
     display: block;
-    padding: 10px 1em;
+    padding: 10px 0em;
     margin: 10px;
   }
   .serviceCardTitle {

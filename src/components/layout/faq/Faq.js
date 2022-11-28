@@ -11,7 +11,6 @@ function Faq() {
 
   const getPageData = async () => {
     const d = await pageData;
-    console.log(d);
     setFdata(d);
   };
 
@@ -25,8 +24,6 @@ function Faq() {
     rowTitleColor: "#fcc1ff",
     rowContentColor: "black",
     titleTextColor: "blue",
-    titleTextSize: "60px",
-    rowContentTextSize: "18px",
   };
 
   const config = {
@@ -53,7 +50,7 @@ function Faq() {
           <p>{faq}</p>
           <h2>{title}</h2>
         </div>
-        <div>
+        <div className="faqDiv">
           <FaqComp
             data={{
               rows: faqData,
