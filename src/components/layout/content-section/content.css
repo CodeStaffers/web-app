@@ -7,7 +7,6 @@
 }
 .content__div {
   position: relative;
-  /* top: 10em; */
   margin-bottom: 2em;
 }
 
@@ -65,9 +64,7 @@
 }
 .content__title h1 b {
   padding: 20px;
-  /* background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
+
   display: block;
 }
 .content_sub_title {
@@ -93,42 +90,10 @@
 }
 
 /* animation */
-@keyframes x {
-  100% {
-    transform: translateX(30em) translateY(15em);
-  }
-  10% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes y {
-  100% {
-    transform: translateX(20em) translateY(-10em);
-  }
-  0% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes z {
-  100% {
-    transform: translateX(-30em) translateY(10em);
-  }
-  0% {
-    transform: translateZ(15em);
-  }
-}
-@keyframes k {
-  100% {
-    transform: translateX(-20em) translatey(-10em);
-  }
-}
 
 /* responsie code */
 
 @media screen and (max-width: 960px) {
-  .content_section {
-    margin-bottom: 5%;
-  }
   .content__title h1 {
     font-weight: bolder;
     display: inline;
@@ -139,24 +104,29 @@
     text-align: center;
   }
   .content__title :nth-child(1) {
-    line-height: 1em;
-  }
-  .content__title :nth-child(2) {
-    line-height: 1em;
+    line-height: 55px;
   }
 }
 
 @media screen and (max-width: 720px) {
+  .content_section {
+    height: 90vh;
+  }
+  .content__title {
+    margin-top: -0em;
+  }
   .content__div {
     top: 2em;
   }
 }
 
 @media screen and (max-width: 540px) {
+  .content_section {
+    height: 100vh;
+  }
   .content__div {
     top: 2em;
   }
-
   .content_section {
     margin-bottom: 5%;
   }
@@ -171,50 +141,11 @@
     text-align: center;
   }
 
-  .content__title :nth-child(1) {
-    display: inline-block;
-    padding: 0px;
-    line-height: 1.2em;
-  }
-  .content__title :nth-child(2) {
-    display: inline-block;
-    margin-top: -0.7em;
-    line-height: 1.2em;
-  }
   .content_sub_title {
     margin-top: -10%;
     text-align: center;
   }
-}
-
-@media screen and (max-width: 568px) {
-  @keyframes x {
-    100% {
-      transform: translateX(15em) translateY(20em);
-    }
-    10% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes y {
-    100% {
-      transform: translateX(10em) translateY(-5em);
-    }
-    0% {
-      transform: rotate(360deg);
-    }
-  }
-  @keyframes z {
-    100% {
-      transform: translateX(-20em) translateY(10em);
-    }
-    0% {
-      transform: translateZ(15em);
-    }
-  }
-  @keyframes k {
-    100% {
-      transform: translateX(-15em) translatey(-0em);
-    }
+  .start_project_content__div {
+    margin-top: 3em;
   }
 }

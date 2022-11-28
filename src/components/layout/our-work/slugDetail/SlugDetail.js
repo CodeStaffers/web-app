@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Link } from "react-router-dom";
+import { Button } from "../../button/Button";
 function SlugDetail() {
   const location = useLocation();
 
@@ -40,15 +41,17 @@ function SlugDetail() {
                 tagSlug.map((tag, index) => {
                   const { slug, title } = tag ? tag.fields : "";
                   return (
-                    <Link
-                      to={`/${slug}`}
-                      key={index}
-                      state={{
-                        item: it,
-                      }}
-                    >
-                      <p>{title}</p>
-                    </Link>
+                    <Button>
+                      <Link
+                        to={`/${slug}`}
+                        key={index}
+                        state={{
+                          item: it,
+                        }}
+                      >
+                        {title}
+                      </Link>
+                    </Button>
                   );
                 })}
             </div>

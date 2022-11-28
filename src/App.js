@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import jwt_decode from "jwt-decode";
 import { client } from "./client";
 import ThemeOne from "./components/templates/app/index";
-
+import "./css/responsive.css";
 const clientId = process.env.REACT_APP_ACCESS_ID;
 
 function App() {

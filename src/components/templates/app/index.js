@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "../../layout/header/Header";
 import Favicon from "react-favicon";
@@ -34,6 +34,10 @@ function ThemeOne(props) {
   document.title = page.titleHome && titleHome;
 
   const project = { projectTitle, projectSubTitle, projectDescription };
+
+  useEffect(() => {
+    console.log("url changed");
+  });
 
   return (
     <>

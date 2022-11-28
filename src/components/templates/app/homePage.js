@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Content from "../../layout/content-section/Content";
 import FunFact from "../../layout/funFact/FunFact";
 import Project from "../../layout/project/Project";
@@ -8,6 +9,11 @@ import Faq from "../../layout/faq/Faq";
 
 function HomePage(props) {
   const { project, title, testnomialSubTitle, testnomialTitle } = props;
+
+  useEffect(() => {
+    document.querySelector(".nav-menu").classList.remove("active");
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>

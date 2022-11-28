@@ -1,6 +1,6 @@
 .slugDetailContainer {
   margin-top: 0;
-  padding-top: 5em;
+  padding-top: 7em;
 }
 .slugDetailWrapper {
   padding: 10px;
@@ -34,9 +34,4 @@
 }
 
 .Detailtags p {
-  padding: 1px 5px;
-  border: 0.5px solid #5f45ff;
-  color: #5f45ff;
-  border-radius: 5px;
-  margin-right: 10px;
 }

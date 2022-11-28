@@ -97,13 +97,15 @@ function OurWorkSection({ page, ourWorkTab, ourWorkDetailPage }) {
                             item.fields.tagSlug.map((tag, index) => {
                               const { slug, title } = tag ? tag.fields : "";
                               return (
-                                <Link
-                                  to={`/${slug}`}
-                                  state={{ item: item.fields }}
-                                  key={index}
-                                >
-                                  <p>{title}</p>
-                                </Link>
+                                <Button style={{ marginLeftL: "10px" }}>
+                                  <Link
+                                    to={`/${slug}`}
+                                    state={{ item: item.fields }}
+                                    key={index}
+                                  >
+                                    {title}
+                                  </Link>
+                                </Button>
                               );
                             })}
                         </div>
@@ -115,7 +117,6 @@ function OurWorkSection({ page, ourWorkTab, ourWorkDetailPage }) {
 
             <div className="loadMore">
               <h6>{loadText}</h6>
-
               {load >= ourWorkDetailPage.length ? (
                 ""
               ) : (

@@ -23,9 +23,16 @@ function ProjectCard({ item, urlTitle }) {
             {item.fields &&
               item.fields.tagSlug.map((tag, index) => {
                 const { slug, title } = tag ? tag.fields : "";
+
                 return (
-                  <Button buttonSize="btn--medium" url={`/${slug}`}>
-                    {title}
+                  <Button buttonSize="btn--medium" key={index}>
+                    <Link
+                      to={`/${slug}`}
+                      state={{ item: item.fields }}
+                      key={index}
+                    >
+                      {title}
+                    </Link>
                   </Button>
                 );
               })}
