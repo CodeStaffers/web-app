@@ -14,11 +14,11 @@ export const MenuItems = [
     url: "/services",
     cName: "nav-links ",
   },
-  {
-    title: "Project",
-    url: "/project",
-    cName: "nav-links ",
-  },
+  // {
+  //   title: "Project",
+  //   url: "/project",
+  //   cName: "nav-links ",
+  // },
   {
     title: "Pricing",
     url: "/pricing",
