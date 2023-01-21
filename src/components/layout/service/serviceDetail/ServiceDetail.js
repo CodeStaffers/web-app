@@ -13,7 +13,12 @@ function ServiceDetail({ serviceData }) {
 
   // var { id, titlePage } = location.state;
 
-  let { id, titlePage } =
+  let id =
+    location.state === null
+      ? JSON.parse(localStorage.getItem("data"))
+      : location.state;
+  
+  let titlePage =
     location.state === null
       ? JSON.parse(localStorage.getItem("data"))
       : location.state;
