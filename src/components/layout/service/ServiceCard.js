@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 function ServiceCard({ title, shortText, id, color, logo }) {
   let urlTitle = title.replace(/\s+|[,/]/g, "-");
-
+  console.log(urlTitle);
   return (
     <>
       <div className="cardItem">
         <div className="innerCardItem">
           <Link
             to={`/services/${urlTitle}`}
-            state={{ id: id, titlePage: title }}
+            // state={{ id: id, titlePage: title }}
             className="service_link"
           >
             <div className="serviceLogo">
