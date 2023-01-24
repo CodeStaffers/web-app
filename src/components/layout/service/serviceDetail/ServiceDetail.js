@@ -26,7 +26,7 @@ function ServiceDetail({ serviceData }) {
 
   const getPageData = async () => {
     const d = await pageData;
-    // console.log(d);
+    console.log(d);
     setData(d);
   };
 
@@ -57,6 +57,7 @@ function ServiceDetail({ serviceData }) {
     relatedContent,
     relatedTitle,
   } = findDataById[0] ? findDataById[0].fields : "";
+
 
   return (
     <>
