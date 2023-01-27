@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./mainFooter.css";
 import { FcCallback, FcTreeStructure, FcMindMap } from "react-icons/fc";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BsFacebook, BsTwitter, BsPinterest, BsLinkedin } from "react-icons/bs";
+import { BsFacebook, BsTwitter, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 
@@ -69,7 +69,7 @@ function MainFooter() {
                 </div>
                 <div className="mainFooterIcon ">
                   <a href={pinterestUrl}>
-                    <BsPinterest size={25} className="pinterestIcon" />
+                    <BsInstagram size={25} className="pinterestIcon" />
                   </a>
                 </div>
                 <div className="mainFooterIcon ">
@@ -79,7 +79,7 @@ function MainFooter() {
                 </div>
               </div>
             </div>
-
+            {/* 
             <div className="mainFooterNav3">
               <div className="aboutUs">
                 <div className="footerTitle">
@@ -107,12 +107,12 @@ function MainFooter() {
                     })}
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="mainFooterNav4">
               <div className="service">
                 <div className="footerTitle">
-                  <h4>service</h4>
+                  <h4>services</h4>
                 </div>
                 <div className="footerList">
                   {service &&
