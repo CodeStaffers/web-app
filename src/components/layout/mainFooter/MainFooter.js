@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./mainFooter.css";
-import { FcCallback, FcTreeStructure, FcMindMap } from "react-icons/fc";
+import {
+  FcCallback,
+  FcTreeStructure,
+  FcMindMap,
+  FcAddressBook,
+} from "react-icons/fc";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BsFacebook, BsTwitter, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
@@ -33,6 +38,7 @@ function MainFooter() {
     service,
     phone,
     address,
+    otherAddress,
     website,
   } = data;
 
@@ -149,11 +155,15 @@ function MainFooter() {
                   </div>
                   <div className="contactFooter">
                     <FcTreeStructure size={20} />
-                    <a href={website}>{website}</a>
+                    <a href={`mailto:${website}`}>{website}</a>
+                  </div>
+                  <div className="contactFooter">
+                    <FcAddressBook size={20} />
+                    <p>{address}</p>
                   </div>
                   <div className="contactFooter">
                     <FcMindMap size={20} />
-                    <p>{address}</p>
+                    <p>{otherAddress}</p>
                   </div>
                 </div>
               </div>
