@@ -30,7 +30,6 @@ function MainFooter() {
     pinterestUrl,
     twitterUrl,
     apps,
-    aboutUs,
     service,
     phone,
     address,
