@@ -121,7 +121,7 @@ function MainFooter() {
                 </div>
                 <div className="footerList">
                   {service &&
-                    service.service.map((item, index) => {
+                    service.service.slice(0, 5).map((item, index) => {
                       return (
                         <p key={index}>
                           <a
@@ -139,6 +139,34 @@ function MainFooter() {
                         </p>
                       );
                     })}
+                </div>
+              </div>
+              <div className="service">
+                <div className="footerTitle">
+                  <h4>services</h4>
+                </div>
+                <div className="footerList">
+                  {service &&
+                    service.service
+                      .slice(5, service.length)
+                      .map((item, index) => {
+                        return (
+                          <p key={index}>
+                            <a
+                              className="mainFooter_nav_hover"
+                              href={item.url}
+                              style={{
+                                color: apps.color,
+                                fontWeight: "500",
+                                cursor: "pointer",
+                                textDecoration: "none",
+                              }}
+                            >
+                              {item.text}
+                            </a>
+                          </p>
+                        );
+                      })}
                 </div>
               </div>
             </div>
