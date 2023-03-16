@@ -1,0 +1,64 @@
+:root {
+  --primary: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
+  --btn-color: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
+}
+
+.btn,
+.btn-sm {
+  font-size: 1px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  /* text-transform: uppercase; */
+}
+
+.btn:hover {
+  color: #000;
+  transform: scale(105%);
+  transition: 250ms;
+}
+
+.btn--primary {
+  background: var(--primary);
+}
+.btn--outline {
+  background: transparent;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--btn-color);
+  transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #000;
+  font-weight: 600;
+}
+.btn--large {
+  padding: 15px 50px;
+  border-radius: 8px;
+  font-size: 25px;
+  font-weight: 600;
+  color: #000;
+}
+
+/* -----------Responsive code-------------- */
+@media screen and (max-width: 1150px) {
+  .btn-sm {
+    font-size: 15px;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 1073px) {
+  .header-btn-none {
+    display: none;
+  }
+}

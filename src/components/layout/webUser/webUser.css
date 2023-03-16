@@ -1,0 +1,38 @@
+.webUserWrapper {
+  /* padding-top: 3em; */
+}
+.webUserTitle {
+  text-align: center;
+}
+.webUserTitle span {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 1.5em;
+  background: linear-gradient(160deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.webUserTitle h2 {
+  margin-top: -15px;
+}
+
+.webUserComp {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: -2.5em;
+}
+
+/*
+812px - 3
+660 - 2
+425  - 1
+*/
+
+@media screen and (max-width: 768px) {
+  .webUserComp img {
+    width: 8rem;
+  }
+}

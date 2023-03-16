@@ -1,0 +1,81 @@
+.wrapper {
+  max-width: 1380px;
+  margin: 0px auto;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 20px;
+}
+
+section {
+  margin-top: 4em;
+}
+
+.divider {
+  margin-top: 4em;
+  background-color: #90909057;
+  width: auto;
+  height: 3px;
+  padding: 0px;
+}
+
+/* second title */
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+}
+
+/* second title */
+h2 {
+  font-size: 2.7em;
+  font-weight: 700;
+}
+
+/* subtitle */
+
+h3 {
+  font-size: 2.2em;
+  font-weight: 700;
+}
+
+/* card code*/
+
+h4 {
+  font-size: 1.7em;
+  font-weight: 700;
+}
+
+/* points something */
+h5 {
+  font-size: 1.4em;
+  font-weight: 700;
+}
+
+/* tackle  */
+h6 {
+  margin-top: 1em;
+  font-size: 1em;
+}
+p {
+  /* 15px 18px variant */
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #5f45ff;
+}
+
+@media screen and (max-width: 780px) {
+  h2 {
+    font-size: 2.3em;
+  }
+  h3 {
+    font-size: 1.7em;
+  }
+}
+
+#root {
+  background-color: #f9f9f9;
+}

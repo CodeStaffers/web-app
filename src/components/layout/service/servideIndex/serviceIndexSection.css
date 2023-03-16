@@ -1,0 +1,112 @@
+:root {
+  --primary--content: black;
+}
+
+.serviceIndexSection {
+  margin-top: 2em;
+}
+
+.service_index_card_section {
+  margin: 4em 0em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.service_index_content_section__body {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+}
+.service_index_content_section__body .service_index_content_tag {
+  max-width: 750px;
+  width: 100%;
+}
+
+.service_index_content_tag h3 {
+  color: black;
+  font-size: 2em;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.service_index_content_tag p {
+  font-size: 18px;
+  line-height: 1.7;
+}
+.service_index_section_image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.service_index_section_image img {
+  width: 80%;
+  display: block;
+  object-fit: contain;
+}
+.service_index_content_btn {
+  margin-top: 12px;
+  display: flex;
+}
+.toggle_section
+  .service_index_card_section:nth-child(even)
+  .service_index_content_tag,
+.toggle_section
+  .service_index_card_section:nth-child(even)
+  .service_index_content_btn {
+  padding-left: 50px;
+}
+
+@media screen and (max-width: 1150px) {
+  .serviceIndexSection {
+    margin-top: 5%;
+  }
+
+  .service_index_content_section__body {
+    flex: 1;
+  }
+
+  .service_index_section_image img {
+    width: 80%;
+  }
+  .service_index_content_btn {
+    margin-top: 2em;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .serviceIndexSection {
+    padding: 0em;
+  }
+  .toggle_section {
+    flex-direction: column;
+  }
+  .service_index_card_section {
+    display: block;
+  }
+  .service_index_content_section__body {
+    padding: 0px;
+    flex: 1;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  .service_index_section_image {
+    flex: 1;
+  }
+  .service_index_section_image {
+    margin-top: 2em;
+  }
+  .service_index_section_image img {
+    width: 80%;
+    display: block;
+    object-fit: contain;
+  }
+  .service_index_content_btn {
+    margin-top: 0em;
+  }
+}

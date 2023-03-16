@@ -1,0 +1,37 @@
+.slugDetailContainer {
+  margin-top: 0;
+  padding-top: 7em;
+}
+.slugDetailWrapper {
+  padding: 10px;
+}
+
+.slugDetailTitle h1 {
+  font-size: 3em;
+}
+.slugDetailTitle p {
+  margin-top: -2em;
+}
+.slugDetailMedia {
+  margin-top: 3em;
+}
+.slugDetailMedia img {
+  display: block;
+  object-fit: cover;
+  height: 50vh;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.slugDetailSummary {
+  margin-top: 3em;
+}
+.Detailtags {
+  margin-top: 3em;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.Detailtags p {
+}

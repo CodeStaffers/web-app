@@ -1,0 +1,105 @@
+::root {
+  --swiper-navigation-size: 44px;
+  --swiper-navigation-color: white;
+}
+.swiper {
+  background-color: #f9f9f9 !important;
+  width: 100%;
+  height: 100%;
+}
+
+.mySwiper > .swiper-button-next,
+.mySwiper > .swiper-button-prev {
+  position: absolute;
+  top: 95%;
+  width: calc(var(--swiper-navigation-size) / 44 * 27) !important;
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--swiper-navigation-color) !important;
+  transition: 0.5s ease all;
+}
+
+/* left */
+.mySwiper > .swiper-button-prev {
+  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+  border-radius: 50%;
+  padding: 0px 0em;
+  padding: 2px;
+  width: 42px !important;
+  height: 42px;
+}
+.mySwiper > .swiper-button-next {
+  background: linear-gradient(120deg, #FCC1FF 20.69%, #B1FCFA 79.69%);
+  border-radius: 50%;
+  padding: 0px 0em;
+  padding: 2px;
+  width: 42px !important;
+  height: 42px;
+}
+.mySwiper > .swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  right: 77px !important;
+}
+
+.mySwiper > .swiper-button-prev:hover,
+.mySwiper > .swiper-button-next:hover {
+  transform: scale(106%);
+}
+
+.mySwiper > .swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  right: 77px !important;
+}
+
+.mySwiper > .swiper-button-prev,
+.mySwiper > .swiper-rtl .mySwiper > .swiper-button-next {
+  right: 77px !important;
+}
+
+.mySwiper > .swiper-button-next::after,
+.mySwiper > .swiper-button-prev::after {
+  font-size: 20px !important;
+  font-weight: bold !important;
+  color: #000 !important;
+  text-transform: none !important;
+}
+
+.mySwiper > .swiper-button-next:after,
+.mySwiper > .swiper-button-prev:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  font-variant: initial;
+  line-height: 1;
+}
+.mySwiper > .swiper-button-prev,
+.mySwiper > .swiper-rtl .swiper-button-next {
+  left: auto;
+}
+.mySwiper > .swiper-button-prev:after,
+.mySwiper > .swiper-rtl .swiper-button-next:after {
+  content: "prev";
+}
+
+.mySwiper > .swiper-button-next:after,
+.mySwiper > .swiper-rtl .swiper-button-prev:after {
+  content: "next";
+}
+
+@media screen and (max-width: 780px) {
+  .mySwiper > .swiper-button-prev {
+    display: none;
+  }
+  .mySwiper > .swiper-button-next {
+    display: none;
+  }
+  .swiper {
+    padding-bottom: 0em !important;
+  }
+}

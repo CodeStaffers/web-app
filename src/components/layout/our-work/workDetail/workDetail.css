@@ -1,0 +1,208 @@
+.workDetailContainer {
+  margin-top: 0;
+  height: auto;
+}
+.workDetailBetaWrapper {
+  margin-top: 7%;
+  padding: 10px;
+}
+.workDetailWrapper {
+  margin-top: 3em;
+}
+.breadcombTitle p span {
+  color: rgba(53, 63, 60, 0.884);
+}
+.breadcombTitle p span {
+  color: rgba(7, 7, 7, 0.71);
+}
+.breadcombTitle p a {
+  color: black;
+  font-weight: 600;
+}
+.workDetailTitle {
+  text-align: center;
+  line-height: 1.2em;
+}
+.ourWorkTagsDetails {
+  margin-top: -1.5em;
+  height: 3em;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ourWorkTagsDetails p {
+  padding: 2px 5px;
+  border: 0.5px solid #5f45ff;
+  color: #5f45ff;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.workDetailClientInfo {
+  margin-top: 5em;
+  background-color: #f5f3f379;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.clientInfo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: -2em;
+}
+
+.clientLogo img {
+  object-fit: contain;
+  display: block;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+}
+.clientDetails {
+  padding-left: 1em;
+}
+.clientDetails h5 {
+  margin-top: 5px;
+}
+.clientDetails a {
+  display: block;
+  margin-top: -2em;
+}
+
+.clientSummary {
+  margin-top: 2.5em;
+}
+
+.clientFeedbackCard {
+  margin-top: 2em;
+}
+
+.clientCardUser {
+  flex: 1 1 15em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 1em;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  transition: all 0.5s ease;
+}
+
+.clientCardContent {
+  box-sizing: border-box;
+  padding: 1em 1em;
+}
+
+.clientCardContent h4 {
+  margin-top: 0.8em;
+}
+.clientCardContent p {
+  margin-top: -0.8em;
+}
+
+.clientCardQoute {
+  color: #b9b9b9b4;
+  font-size: 1.5em;
+}
+/* .tesnomialContent h3 {
+  margin-top: 0.5em;
+}
+.tesnomialContent p {
+  margin-top: -1em;
+} */
+.clientCardUserDetails {
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 1em;
+  justify-content: flex-start;
+  align-items: center;
+  height: auto;
+  background-color: #f5f3f379;
+}
+
+.testnomialImage img {
+  text-align: center;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+}
+.testnomialUser {
+  box-sizing: border-box;
+  margin-left: 1.5em;
+}
+
+/* swiper slide */
+
+.workDetailImage {
+  padding-top: 2em;
+}
+
+.swiper {
+  background-color: rgb(245 245 245);
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 10px;
+  width: 1200px;
+  height: 450px;
+}
+
+.swiper-button-prev {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0px 0.5em;
+}
+.swiper-button-next {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0px 0.5em;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px !important;
+  font-weight: bold !important;
+  color: black !important;
+  text-transform: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .workDetailBetaWrapper {
+    margin-top: 15%;
+  }
+  .workDetailTitle {
+    line-height: 1.9em;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .swiper-slide img {
+    height: 238px;
+  }
+}

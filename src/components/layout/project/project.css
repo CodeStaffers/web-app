@@ -1,0 +1,114 @@
+.ourProjectTitle span {
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(120deg, #fcc1ff 20.69%, #b1fcfa 79.69%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.ourProjectTitle h2 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+.ourProjectTitle p {
+  max-width: 60%;
+  font-size: 20px;
+}
+.ourProjectCardWrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+.ourProjectCard {
+  box-sizing: border-box;
+  width: calc(33.33% - 20px);
+  margin-bottom: 2em;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.ourProjectCard a {
+  color: black;
+  padding: 5px 20px;
+}
+.ourProjectSubtitle p {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+.ourProjectSubtitle h4 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.ourProjectImage {
+  display: block;
+  overflow: hidden;
+}
+.ourProjectImage img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 13em;
+}
+.ourProjectSubtitle {
+  padding: 20px 20px 0em 20px;
+  box-sizing: border-box;
+}
+.ourProjectSubtitle p {
+  font-size: 15px;
+}
+.ourProjectCard:hover {
+  transform: translateY(-10px);
+}
+
+/* responsive code */
+@media screen and (max-width: 1035px) {
+  .ourProjectCard {
+    box-sizing: border-box;
+    width: 31%;
+    margin-bottom: 1em;
+    margin-right: 1em;
+  }
+  .ourProjectTitle p {
+    max-width: 100%;
+  }
+  .ourProjectSubtitle {
+    box-sizing: border-box;
+    padding: 10px 0px 0em 10px;
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 835px) {
+  .ourProjectCard {
+    flex: 1 2 40%;
+  }
+}
+
+@media screen and (max-width: 635px) {
+  .ourProjectCardWrapper {
+    display: block;
+    flex-direction: column;
+    padding-top: 15px;
+  }
+  .ourProjectCard {
+    margin-top: 1em;
+    width: 100%;
+  }
+  .ourProjectImage img {
+    height: 12em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .ourProjectTitle h2 {
+    line-height: 1.2;
+    margin-top: 0em;
+    margin-bottom: -89px;
+    margin-bottom: 43px;
+  }
+}
